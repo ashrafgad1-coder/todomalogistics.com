@@ -15,6 +15,7 @@
             --white: #FFFFFF;
             --background: #F8FAFC;
             --text: #1E293B;
+            --text-light: #475569;
         }
         
         * {
@@ -27,7 +28,7 @@
             font-family: 'Cairo', 'Inter', sans-serif;
             background: var(--background);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.8;
         }
         
         .container {
@@ -53,7 +54,7 @@
         }
         
         .logo img {
-            height: 50px;
+            height: 65px;
         }
         
         nav {
@@ -122,15 +123,15 @@
             font-size: 48px;
             font-weight: 700;
             color: var(--primary);
-            line-height: 1.2;
+            line-height: 1.3;
             margin-bottom: 24px;
         }
         
         .hero p {
             font-size: 18px;
-            color: var(--text);
+            color: var(--text-light);
             margin-bottom: 40px;
-            line-height: 1.8;
+            line-height: 1.9;
         }
         
         .hero-buttons {
@@ -215,8 +216,9 @@
         }
         
         .card p {
-            color: var(--text);
-            line-height: 1.8;
+            color: var(--text-light);
+            line-height: 1.9;
+            font-size: 16px;
         }
         
         .operating-model {
@@ -267,6 +269,7 @@
             font-size: 16px;
             font-weight: 600;
             color: var(--primary);
+            line-height: 1.5;
         }
         
         .kpi-section {
@@ -397,6 +400,11 @@
         .footer-info a {
             color: var(--secondary);
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-info a:hover {
+            color: #fff;
         }
         
         .footer-bottom {
@@ -409,6 +417,14 @@
         @media (max-width: 1024px) {
             .hero-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .hero-grid > div:first-child {
+                order: 2;
+            }
+            
+            .hero-grid > div:last-child {
+                order: 1;
             }
             
             .cards-grid, .kpi-grid {
@@ -444,6 +460,7 @@
             
             .footer-content {
                 grid-template-columns: 1fr;
+                text-align: center;
             }
         }
     </style>
@@ -509,17 +526,17 @@
                 <div class="card">
                     <div class="card-icon">⚡</div>
                     <h3>استقرار تشغيلي</h3>
-                    <p>تقليل تأثير دوران العمالة على التشغيل من خلال نموذج إدارة أساطيل طويل المدى يضمن استمرارية الخدمة.</p>
+                    <p>تقليل تأثير دوران العمالة على التشغيل من خلال نموذج إدارة أساطيل طويل المدى يضمن استمرارية الخدمة دون انقطاع.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">📊</div>
                     <h3>التزام بمستويات الخدمة SLA</h3>
-                    <p>متابعة مؤشرات الأداء وتقديم تقارير تشغيل دورية تدعم اتخاذ القرار وتعزز الشفافية التشغيلية.</p>
+                    <p>متابعة مؤشرات الأداء وتقديم تقارير تشغيل دورية تدعم اتخاذ القرار وتعزز الشفافية التشغيلية الكاملة.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">🌍</div>
                     <h3>تغطية قابلة للتوسع</h3>
-                    <p>إمكانية دعم خطط النمو والتوسع الجغرافي ضمن إطار تعاقدي واضح يضمن المرونة والاستدامة.</p>
+                    <p>إمكانية دعم خطط النمو والتوسع الجغرافي ضمن إطار تعاقدي واضح يضمن المرونة والاستدامة التشغيلية.</p>
                 </div>
             </div>
         </div>
@@ -630,7 +647,7 @@
                 </div>
                 <div class="footer-info">
                     <h4 style="margin-bottom: 16px;">تواصل معنا</h4>
-                    <p>الهاتف: 01008330999</p>
+                    <p>الهاتف: <a href="tel:+201008330999">01008330999</a></p>
                     <p>البريد: <a href="mailto:info@todomalogistics.com">info@todomalogistics.com</a></p>
                 </div>
                 <div class="footer-info">
