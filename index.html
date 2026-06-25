@@ -11,32 +11,47 @@
             box-sizing: border-box;
         }
         
-        body, html {
+        html, body {
             width: 100%;
-            height: 100%;
-            background: #0a192f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100vh;
+            background: #051326;
             overflow: hidden;
         }
         
-        .logo {
-            width: 100%;
-            max-width: 550px;
-            height: auto;
-            display: block;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-            border-radius: 12px;
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
         
+        .logo {
+            max-width: 100%;
+            max-height: 95vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        }
+        
+        /* للشاشات الكبيرة - كمبيوتر */
+        @media (min-width: 1024px) {
+            .logo {
+                max-width: 500px;
+                max-height: 90vh;
+            }
+        }
+        
+        /* للموبايل */
         @media (max-width: 768px) {
             body {
-                padding: 20px;
+                padding: 15px;
             }
             .logo {
                 max-width: 100%;
-                border-radius: 8px;
+                max-height: 90vh;
+                border-radius: 12px;
             }
         }
     </style>
