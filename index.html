@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODOMA LOGISTICS - تودوما لوجيستيك</title>
+    <title>TODOMA LOGISTICS - Coming Soon | قريباً</title>
+    
+    <!-- SEO سريع -->
+    <meta name="description" content="TODOMA LOGISTICS - FAST | RELIABLE | DELIVERED - شركة لوجيستية متكاملة بالقاهرة الكبرى">
+    
+    <!-- الخط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -13,50 +22,85 @@
         
         html, body {
             width: 100%;
-            height: 100vh;
-            background: #051326;
+            height: 100%;
             overflow: hidden;
+            font-family: 'Cairo', sans-serif;
+            background: #0A192F;
         }
         
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+        .hero {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('todoma-bg.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
         }
         
-        .logo {
-            max-width: 100%;
-            max-height: 95vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 16px;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        /* أزرار مخفية فوق الرقم والإيميل */
+        .click-area {
+            position: absolute;
+            cursor: pointer;
+            z-index: 10;
         }
         
-        /* للشاشات الكبيرة - كمبيوتر */
-        @media (min-width: 1024px) {
-            .logo {
-                max-width: 500px;
-                max-height: 90vh;
-            }
+        .whatsapp-btn {
+            bottom: 8.5%;
+            right: 6.5%;
+            width: 18%;
+            height: 6%;
+        }
+        
+        .email-btn {
+            bottom: 8.5%;
+            right: 30%;
+            width: 22%;
+            height: 6%;
         }
         
         /* للموبايل */
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
+            .hero {
+                background-size: contain;
+                background-color: #0A192F;
             }
-            .logo {
-                max-width: 100%;
-                max-height: 90vh;
-                border-radius: 12px;
+            .whatsapp-btn {
+                bottom: 10%;
+                right: 5%;
+                width: 40%;
+                height: 5%;
+            }
+            .email-btn {
+                bottom: 16%;
+                right: 5%;
+                width: 50%;
+                height: 5%;
+            }
+        }
+        
+        /* للشاشات الكبيرة أوي */
+        @media (min-width: 1920px) {
+            .hero {
+                background-size: 100% 100%;
             }
         }
     </style>
 </head>
 <body>
-    <img src="todoma-coming-soon.png" alt="TODOMA LOGISTICS - Coming Soon" class="logo">
+    <div class="hero">
+        <!-- زرار واتساب شغال -->
+        <a href="https://wa.me/201008330999?text=مرحبا%20TODOMA%20LOGISTICS%20حباب%20استفسر%20عن%20خدماتكم" 
+           class="click-area whatsapp-btn" 
+           target="_blank" 
+           aria-label="تواصل واتساب">
+        </a>
+        
+        <!-- زرار الإيميل شغال -->
+        <a href="mailto:info@todomalogistics.com?subject=استفسار%20عن%20خدمات%20TODOMA" 
+           class="click-area email-btn" 
+           target="_blank"
+           aria-label="راسلنا بالإيميل">
+        </a>
+    </div>
 </body>
-</html>
