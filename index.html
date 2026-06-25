@@ -1,95 +1,435 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODOMA LOGISTICS - Coming Soon | قريباً</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #0A192F;
-        }
-        
-        .wrapper {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #0A192F;
-            position: relative;
-        }
-        
-        .bg-image {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        /* زرار واتساب فوق الرقم في الصورة */
-        .whatsapp-link {
-            position: absolute;
-            bottom: 8.5%;
-            right: 7%;
-            width: 16%;
-            height: 6%;
-            cursor: pointer;
-            z-index: 10;
-        }
-        
-        /* زرار الإيميل */
-        .email-link {
-            position: absolute;
-            bottom: 8.5%;
-            right: 29%;
-            width: 20%;
-            height: 6%;
-            cursor: pointer;
-            z-index: 10;
-        }
-        
-        /* موبايل */
-        @media (max-width: 768px) {
-            .whatsapp-link {
-                bottom: 9%;
-                right: 8%;
-                width: 35%;
-                height: 5%;
-            }
-            .email-link {
-                bottom: 15%;
-                right: 8%;
-                width: 45%;
-                height: 5%;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TODOMA LOGISTICS | شريكك اللوجيستي للنمو السريع</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root{
+--navy:#0A192F;
+--orange:#FF6B35;
+--white:#FFFFFF;
+--gray:#F5F7FA;
+--dark:#071221;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+line-height:1.7;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(10,25,47,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.logo{
+height:60px;
+}
+
+.btn-primary{
+background:var(--orange);
+color:#fff;
+padding:12px 24px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+background:#ff8555;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+background:
+linear-gradient(
+rgba(10,25,47,.88),
+rgba(10,25,47,.88)
+),
+url('todoma-coming-soon.png');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:flex;
+align-items:center;
+padding-top:100px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.hero h1{
+font-size:3rem;
+color:#fff;
+margin-bottom:20px;
+font-weight:800;
+}
+
+.hero p{
+color:#d8d8d8;
+margin-bottom:30px;
+font-size:1.1rem;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:30px;
+}
+
+.stat{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.08);
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat h3{
+color:var(--orange);
+font-size:2rem;
+font-weight:800;
+}
+
+.stat span{
+color:#fff;
+font-size:.95rem;
+}
+
+/* FORM */
+.form-card{
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.form-card h2{
+margin-bottom:20px;
+color:var(--navy);
+}
+
+.form-group{
+margin-bottom:15px;
+}
+
+.form-control{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none;
+font-size:16px;
+}
+
+.form-control:focus{
+border-color:var(--orange);
+}
+
+.submit-btn{
+width:100%;
+padding:15px;
+background:var(--navy);
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:1rem;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.submit-btn:hover{
+background:var(--orange);
+}
+
+/* FEATURES */
+.section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:2.3rem;
+color:var(--navy);
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.feature-card{
+background:#fff;
+padding:30px;
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+text-align:center;
+transition:.3s;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(255,107,53,.2);
+}
+
+.feature-card i{
+font-size:2.3rem;
+color:var(--orange);
+margin-bottom:15px;
+}
+
+.feature-card h3{
+margin-bottom:10px;
+color:var(--navy);
+}
+
+/* TECH */
+.tech{
+background:var(--gray);
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.tech-box{
+background:#fff;
+padding:30px;
+border-radius:16px;
+text-align:center;
+font-weight:700;
+font-size:1.1rem;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+footer{
+background:var(--navy);
+color:#fff;
+padding:50px 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.footer-item{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.footer-item i{
+color:var(--orange);
+}
+
+.footer-item a{
+color:#fff;
+text-decoration:none;
+}
+
+.footer-item a:hover{
+color:var(--orange);
+}
+
+.copyright{
+margin-top:30px;
+text-align:center;
+opacity:.8;
+}
+
+/* MOBILE */
+@media(max-width:992px){
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.tech-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:600px){
+.tech-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:1.8rem;
+}
+
+.logo{
+height:50px;
+}
+
+.form-card{
+padding:25px;
+}
+}
+
+</style>
 </head>
+
 <body>
-    <div class="wrapper">
-        <img src="todoma-coming-soon.png" alt="TODOMA LOGISTICS" class="bg-image">
-        
-        <!-- واتساب -->
-        <a href="https://wa.me/201008330999?text=مرحبا%20TODOMA%20LOGISTICS" 
-           class="whatsapp-link" 
-           target="_blank">
-        </a>
-        
-        <!-- إيميل -->
-        <a href="mailto:info@todomalogistics.com" 
-           class="email-link" 
-           target="_blank">
-        </a>
-    </div>
-</body>
-</html>
+
+<header>
+<div class="container navbar">
+<img src="logo.png" alt="TODOMA LOGISTICS" class="logo">
+<a href="#quote" class="btn-primary">اطلب عرض سعر</a>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<h1>شريكك اللوجيستي للنمو السريع</h1>
+<p>حلول لوجستية متكاملة للشركات والمتاجر الإلكترونية مع تغطية واسعة وأداء تشغيلي عالي.</p>
+<div class="stats">
+<div class="stat">
+<h3>3</h3>
+<span>ساعات توصيل</span>
+</div>
+<div class="stat">
+<h3>27</h3>
+<span>محافظة</span>
+</div>
+<div class="stat">
+<h3>99.8%</h3>
+<span>نسبة نجاح</span>
+</div>
+</div>
+</div>
+
+<div>
+<form id="quote" class="form-card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<h2>اطلب عرض سعر</h2>
+<div class="form-group">
+<input type="text" name="company" class="form-control" placeholder="اسم الشركة" required>
+</div>
+<div class="form-group">
+<input type="email" name="email" class="form-control" placeholder="البريد الإلكتروني" required>
+</div>
+<div class="form-group">
+<input type="tel" name="phone" class="form-control" placeholder="رقم التواصل" required>
+</div>
+<div class="form-group">
+<input type="number" name="shipments" class="form-control" placeholder="عدد الشحنات شهرياً">
+</div>
+<button class="submit-btn" type="submit">إرسال الطلب</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>لماذا TODOMA ؟</h2>
+</div>
+<div class="features">
+<div class="feature-card">
+<i class="fas fa-bolt"></i>
+<h3>توصيل سريع</h3>
+<p>سرعة تنفيذ عالية وتقليل زمن التسليم.</p>
+</div>
+<div class="feature-card">
+<i class="fas fa-code"></i>
+<h3>ربط API</h3>
+<p>تكامل مباشر مع أنظمتك الحالية.</p>
+</div>
+<div class="feature-card">
+<i class="fas fa-chart-line"></i>
+<h3>لوحة تحكم</h3>
+<p>متابعة كاملة للشحنات والأداء.</p>
+</div>
+<div class="feature-card">
+<i class="fas fa-shield-halved"></i>
+<h3>أمان</h3>
+<p>حماية ومتابعة دقيقة للطلبات.</p>
+</div>
+<div class="feature-card">
+<i class="fas fa-tags"></i>
+<h3>أسعار تنافسية</h3>
+<p>خطط مرنة تناسب مختلف الأحجام.</p>
+</div>
+<div class="feature-card">
+<i class="fas fa-headset"></i>
+<h3>دعم 24/7</h3>
+<p>فريق دعم متاح على مدار الساعة.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section tech">
+<div class="container">
+<div class="section-title">
+<h2>التكامل التقني</h2>
+</div>
+<div class="tech-grid">
+<div class="tech-box">REST API</div>
+<div class="tech-box"…
