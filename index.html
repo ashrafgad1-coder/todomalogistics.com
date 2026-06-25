@@ -1,113 +1,82 @@
-<!-- ========== قسم التكامل التقني - TODOMA ========== -->
-<section class="tech-integration" id="integration">
-  <div class="container">
-    <h2 class="section-title">التكامل التقني</h2>
-    <p class="section-subtitle">نوفر حلول تقنية متكاملة لربط موقعك بكل الأدوات اللي يحتاجها نشاطك التجاري</p>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOMA LOGISTICS | شريكك الاستراتيجي لإدارة أساطيل التوصيل</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <div class="integration-grid">
-      
-      <!-- المربع 1: REST API -->
-      <div class="integration-card">
-        <div class="icon">⚙️</div>
-        <h3>REST API</h3>
-        <p>واجهة برمجة تطبيقات احترافية تسمح بربط موقعك مع أي نظام CRM، ERP أو تطبيق موبايل بسهولة وأمان تام.</p>
-      </div>
-
-      <!-- المربع 2: Formspree Integration -->
-      <div class="integration-card">
-        <div class="icon">📧</div>
-        <h3>Formspree Integration</h3>
-        <p>استقبال كل رسائل العملاء من نموذج "تواصل معنا" على بريدك الإلكتروني فوراً مع حماية كاملة من الرسائل المزعجة.</p>
-      </div>
-
-      <!-- المربع 3: WhatsApp API -->
-      <div class="integration-card">
-        <div class="icon">💬</div>
-        <h3>WhatsApp API</h3>
-        <p>زرار واتساب ذكي يفتح محادثة مباشرة مع العميل برقمك، مع رسالة ترحيب جاهزة لزيادة نسبة التحويل.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<style>
-.tech-integration {
-  padding: 80px 20px;
-  background: #f8f9fa;
-  direction: rtl;
-  font-family: 'Cairo', 'Tajawal', sans-serif;
-}
-
-.tech-integration .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.tech-integration .section-title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 15px;
-}
-
-.tech-integration .section-subtitle {
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 50px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.integration-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.integration-card {
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-  border: 1px solid #eee;
-}
-
-.integration-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  border-color: #007bff;
-}
-
-.integration-card .icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.integration-card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-.integration-card p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #555;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .tech-integration .section-title {
-    font-size: 28px;
-  }
-  .integration-card {
-    padding: 30px 20px;
-  }
-}
-</style>
+    <style>
+        :root {
+            --primary: #0A192F;
+            --secondary: #FF6B35;
+            --white: #FFFFFF;
+            --background: #F8FAFC;
+            --text: #1E293B;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* HEADER */
+        header {
+            height: 90px;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
