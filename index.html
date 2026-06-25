@@ -3,80 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تودوما لوجستيك - TODOMA LOGISTICS</title>
+    <title>TODOMA LOGISTICS - تودوما لوجيستيك</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: #0A192F;
-            color: white;
+        body, html {
+            width: 100%;
+            height: 100%;
+            background: #0a192f;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: rgba(255,255,255,0.05);
-            padding: 50px 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 102, 0, 0.3);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            max-width: 600px;
+            overflow: hidden;
         }
         
         .logo {
-            width: 250px;
-            max-width: 80%;
-            margin-bottom: 25px;
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            display: block;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border-radius: 12px;
         }
         
-        h1 { 
-            font-size: 2.2rem; 
-            margin-bottom: 10px; 
-            font-weight: 900;
-        }
-        
-        h2 { 
-            font-size: 1.8rem; 
-            margin: 20px 0; 
-            color: #FF6600; 
-        }
-        
-        .info { 
-            margin: 25px 0; 
-            font-size: 1.1rem; 
-            line-height: 2; 
-        }
-        
-        .info a { 
-            color: #FF6600; 
-            text-decoration: none; 
-            font-weight: 700;
-        }
-        
-        .info a:hover {
-            text-decoration: underline;
-        }
-        
-        .tagline {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: #8892B0;
-            letter-spacing: 2px;
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            .logo {
+                max-width: 100%;
+                border-radius: 8px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- اللوجو الجديد -->
-        <img src="todoma-coming-soon.png" alt="TODOMA LOGISTICS - Coming Soon" class="logo">
-        
+    <img src="todoma-coming-soon.png" alt="TODOMA LOGISTICS - Coming Soon" class="logo">
 </body>
 </html>
