@@ -1,1155 +1,1717 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TODOMA LOGISTICS | شريكك الاستراتيجي لإدارة أساطيل التوصيل</title>
+<title>
+TODOMA LOGISTICS | شريكك الاستراتيجي لإدارة الأساطيل
+</title>
 
-<meta name="description" content="TODOMA LOGISTICS - شريك استراتيجي لتوريد وإدارة أساطيل تطبيقات التوصيل للشركات الكبرى في القاهرة والجيزة.">
+<meta name="description"
+content="TODOMA LOGISTICS شريك استراتيجي متخصص في إدارة وتوريد أساطيل التشغيل لشركات التوصيل والتجارة السريعة.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
-    --primary:#0A192F;
-    --secondary:#FF6B35;
-    --white:#FFFFFF;
-    --light:#F8FAFC;
-    --text:#1E293B;
-    --muted:#64748B;
-    --border:#E2E8F0;
+--primary:#0A192F;
+--secondary:#FF6B35;
+--white:#FFFFFF;
+--light:#F8FAFC;
+--text:#1E293B;
+--gray:#64748B;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Cairo',sans-serif;
-    background:var(--light);
-    color:var(--text);
-    line-height:1.8;
-}
-
-img{
-    max-width:100%;
-    display:block;
+font-family:'Cairo',sans-serif;
+background:#fff;
+color:var(--text);
+overflow-x:hidden;
+line-height:1.8;
 }
 
 a{
-    text-decoration:none;
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+display:block;
 }
 
 .container{
-    width:100%;
-    max-width:1280px;
-    margin:auto;
-    padding:0 24px;
+max-width:1280px;
+margin:auto;
+padding:0 24px;
 }
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#ffffff;
-    box-shadow:0 2px 12px rgba(0,0,0,.06);
-}
-
-.header-inner{
-    min-height:95px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo img{
-    height:70px;
-}
-
-.nav{
-    display:flex;
-    align-items:center;
-    gap:32px;
-}
-
-.nav a{
-    color:var(--text);
-    font-weight:600;
-    transition:.3s;
-}
-
-.nav a:hover{
-    color:var(--secondary);
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 28px;
-    border-radius:10px;
-    font-weight:700;
-    transition:.3s;
-    cursor:pointer;
-}
-
-.btn-primary{
-    background:var(--secondary);
-    color:#fff;
-}
-
-.btn-primary:hover{
-    transform:translateY(-2px);
-    background:#e55c2a;
-}
-
-.btn-outline{
-    border:2px solid var(--primary);
-    color:var(--primary);
-}
-
-.btn-outline:hover{
-    background:var(--primary);
-    color:#fff;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    background:
-    linear-gradient(
-    rgba(10,25,47,.88),
-    rgba(10,25,47,.88)
-    ),
-    url('todoma-coming-soon.png');
-
-    background-size:cover;
-    background-position:center;
-
-    min-height:90vh;
-
-    display:flex;
-    align-items:center;
-
-    color:#fff;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:60px;
-    align-items:center;
-}
-
-.hero-content h1{
-    font-size:56px;
-    line-height:1.3;
-    margin-bottom:24px;
-    font-weight:800;
-}
-
-.hero-content p{
-    font-size:20px;
-    color:#e2e8f0;
-    margin-bottom:36px;
-}
-
-.hero-actions{
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    margin-top:50px;
-}
-
-.stat-card{
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(12px);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    padding:24px;
-    border-radius:16px;
-    text-align:center;
-}
-
-.stat-number{
-    font-size:34px;
-    font-weight:800;
-    color:var(--secondary);
-}
-
-.stat-label{
-    color:#fff;
-    font-size:15px;
-}
-
-/* =========================
-   HERO FORM
-========================= */
-
-.hero-form{
-    background:#ffffff;
-    color:var(--text);
-
-    border-radius:20px;
-
-    padding:32px;
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.15);
-}
-
-.hero-form h3{
-    color:var(--primary);
-    margin-bottom:10px;
-    font-size:28px;
-}
-
-.hero-form p{
-    color:var(--muted);
-    margin-bottom:25px;
-}
-
-.form-group{
-    margin-bottom:18px;
-}
-
-.form-group label{
-    display:block;
-    margin-bottom:8px;
-    font-weight:600;
-}
-
-.form-control{
-    width:100%;
-    padding:14px;
-    border:2px solid var(--border);
-    border-radius:10px;
-    font-family:'Cairo',sans-serif;
-    font-size:15px;
-}
-
-.form-control:focus{
-    outline:none;
-    border-color:var(--secondary);
-}
-
-.full-btn{
-    width:100%;
-    border:none;
-}
-
-/* =========================
-   SECTION GLOBAL
-========================= */
 
 section{
-    padding:110px 0;
+padding:100px 0;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:20px;
-    color:var(--primary);
-    font-size:42px;
-    font-weight:800;
+font-size:44px;
+font-weight:800;
+text-align:center;
+color:var(--primary);
+margin-bottom:15px;
 }
 
 .section-subtitle{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    margin-bottom:60px;
-    color:var(--muted);
+text-align:center;
+max-width:800px;
+margin:auto;
+margin-bottom:60px;
+color:var(--gray);
+font-size:18px;
 }
 
-/* الجزء الأول ينتهي هنا */
-```
-```html id="8h3tm0"
-
-<body>
-
-<header>
-    <div class="container">
-        <div class="header-inner">
-
-            <div class="logo">
-                <img src="logo.png" alt="TODOMA LOGISTICS">
-            </div>
-
-            <nav class="nav">
-                <a href="#why">لماذا TODOMA</a>
-                <a href="#partnership">نموذج الشراكة</a>
-                <a href="#metrics">مؤشرات الأداء</a>
-                <a href="#contact">تواصل معنا</a>
-                <a href="#contact" class="btn btn-primary">
-                    اطلب عرض شراكة
-                </a>
-            </nav>
-
-        </div>
-    </div>
-</header>
-
-<!-- =========================
-     HERO SECTION
-========================= -->
-
-<section class="hero" id="home">
-
-    <div class="container">
-
-        <div class="hero-grid">
-
-            <!-- CONTENT -->
-
-            <div class="hero-content">
-
-                <h1>
-                    شريكك الاستراتيجي
-                    لإدارة وتوريد أساطيل
-                    تطبيقات التوصيل
-                </h1>
-
-                <p>
-                    نقدم حلول تشغيل متخصصة لشركات
-                    التوصيل والتجارة السريعة عبر عقود
-                    توريد وإدارة أساطيل احترافية تضمن
-                    الاستقرار التشغيلي وتحسين مؤشرات
-                    الأداء ومستويات الخدمة.
-                </p>
-
-                <div class="hero-actions">
-
-                    <a href="#contact"
-                       class="btn btn-primary">
-                        اطلب عرض شراكة
-                    </a>
-
-                    <a href="#partnership"
-                       class="btn btn-outline"
-                       style="background:#fff;">
-                        تعرف على نموذج العمل
-                    </a>
-
-                </div>
-
-                <!-- STATS -->
-
-                <div class="stats">
-
-                    <div class="stat-card">
-                        <div class="stat-number">
-                            99.8%
-                        </div>
-                        <div class="stat-label">
-                            التزام تشغيلي
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-number">
-                            SLA
-                        </div>
-                        <div class="stat-label">
-                            اتفاقيات مستوى خدمة
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-number">
-                            24/7
-                        </div>
-                        <div class="stat-label">
-                            متابعة تشغيلية
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- FORM -->
-
-            <div class="hero-form">
-
-                <h3>
-                    اطلب عرض شراكة
-                </h3>
-
-                <p>
-                    اترك بياناتك وسيتواصل فريق
-                    تطوير الأعمال معكم.
-                </p>
-
-                <form
-                    action="https://formsubmit.co/info@todomalogistics.com"
-                    method="POST">
-
-                    <input type="hidden"
-                           name="_subject"
-                           value="طلب شراكة جديد من موقع TODOMA LOGISTICS">
-
-                    <input type="hidden"
-                           name="_captcha"
-                           value="false">
-
-                    <input type="hidden"
-                           name="_template"
-                           value="table">
-
-                    <div class="form-group">
-
-                        <label>
-                            اسم الشركة
-                        </label>
-
-                        <input
-                            type="text"
-                            name="company"
-                            class="form-control"
-                            required>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>
-                            البريد الإلكتروني
-                        </label>
-
-                        <input
-                            type="email"
-                            name="email"
-                            class="form-control"
-                            required>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>
-                            رقم التواصل
-                        </label>
-
-                        <input
-                            type="tel"
-                            name="phone"
-                            class="form-control"
-                            required>
-
-                    </div>
-
-                    <div class="form-group">
-
-                        <label>
-                            عدد الوحدات التشغيلية المطلوبة
-                        </label>
-
-                        <select
-                            name="fleet"
-                            class="form-control"
-                            required>
-
-                            <option value="">
-                                اختر الحجم
-                            </option>
-
-                            <option>
-                                20 - 50
-                            </option>
-
-                            <option>
-                                50 - 100
-                            </option>
-
-                            <option>
-                                100 - 300
-                            </option>
-
-                            <option>
-                                300+
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                    <button
-                        type="submit"
-                        class="btn btn-primary full-btn">
-
-                        إرسال الطلب
-
-                    </button>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- الجزء الثاني ينتهي هنا -->
-
-```
-```html
-
-<!-- =========================
-     WHY TODOMA
-========================= -->
-
-<section id="why">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            لماذا TODOMA LOGISTICS؟
-        </h2>
-
-        <p class="section-subtitle">
-            نموذج تشغيل مصمم خصيصاً للشركات التي تبحث عن
-            شريك استراتيجي قادر على دعم النمو وتحقيق
-            الاستقرار التشغيلي طويل المدى.
-        </p>
-
-        <div class="cards-grid">
-
-            <div class="card">
-
-                <div class="card-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    استقرار تشغيلي
-                </h3>
-
-                <p>
-                    نساعد شركاءنا على تقليل تأثير
-                    دوران العمالة وتحقيق استمرارية
-                    التشغيل عبر نموذج إدارة أساطيل
-                    احترافي ومستدام.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <div class="card-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    إدارة SLA
-                </h3>
-
-                <p>
-                    متابعة مستمرة لمؤشرات الأداء
-                    ومستويات الخدمة مع تقارير دورية
-                    تدعم اتخاذ القرار وتحسين النتائج.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <div class="card-icon">
-                    ✓
-                </div>
-
-                <h3>
-                    تغطية قابلة للتوسع
-                </h3>
-
-                <p>
-                    دعم التوسع التشغيلي وفق احتياجات
-                    الأعمال وخطط النمو المستقبلية
-                    ضمن إطار تعاقدي واضح.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     PARTNERSHIP MODEL
-========================= -->
-
-<section
-    id="partnership"
-    style="background:#ffffff;">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            نموذج الشراكة مع TODOMA
-        </h2>
-
-        <p class="section-subtitle">
-            إطار عمل واضح يبدأ من دراسة الاحتياج
-            وينتهي بإدارة وتشغيل مستقر للأسطول.
-        </p>
-
-        <div class="timeline">
-
-            <div class="timeline-step">
-
-                <div class="step-number">
-                    1
-                </div>
-
-                <h4>
-                    تحليل الاحتياج التشغيلي
-                </h4>
-
-            </div>
-
-            <div class="timeline-step">
-
-                <div class="step-number">
-                    2
-                </div>
-
-                <h4>
-                    تصميم نموذج التوريد
-                </h4>
-
-            </div>
-
-            <div class="timeline-step">
-
-                <div class="step-number">
-                    3
-                </div>
-
-                <h4>
-                    توقيع عقد الشراكة
-                </h4>
-
-            </div>
-
-            <div class="timeline-step">
-
-                <div class="step-number">
-                    4
-                </div>
-
-                <h4>
-                    إدارة وتشغيل الأسطول
-                </h4>
-
-            </div>
-
-            <div class="timeline-step">
-
-                <div class="step-number">
-                    5
-                </div>
-
-                <h4>
-                    المتابعة والتطوير
-                </h4>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     KPI SECTION
-========================= -->
-
-<section id="metrics">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            مؤشرات الأداء
-        </h2>
-
-        <p class="section-subtitle">
-            نركز على القياس والتحسين المستمر لضمان
-            استقرار العمليات وتحقيق الأهداف التشغيلية.
-        </p>
-
-        <div class="kpi-grid">
-
-            <div class="kpi-card">
-
-                <div class="kpi-value">
-                    SLA
-                </div>
-
-                <div class="kpi-label">
-                    متابعة مستويات الخدمة
-                </div>
-
-            </div>
-
-            <div class="kpi-card">
-
-                <div class="kpi-value">
-                    KPI
-                </div>
-
-                <div class="kpi-label">
-                    تقارير أداء دورية
-                </div>
-
-            </div>
-
-            <div class="kpi-card">
-
-                <div class="kpi-value">
-                    24/7
-                </div>
-
-                <div class="kpi-label">
-                    رؤية تشغيلية مستمرة
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<style>
-
-/* =========================
-   TIMELINE
-========================= */
-
-.timeline{
-
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    margin-top:40px;
-    position:relative;
+/* =======================
+HEADER
+======================= */
+
+header{
+position:fixed;
+top:0;
+right:0;
+left:0;
+height:90px;
+background:#fff;
+box-shadow:0 2px 15px rgba(0,0,0,.06);
+z-index:999;
+}
+
+.header-wrapper{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo img{
+height:72px;
+width:auto;
+}
+
+.nav{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.nav a{
+font-weight:600;
+color:var(--text);
+transition:.3s;
+}
+
+.nav a:hover{
+color:var(--secondary);
+}
+
+.btn-primary{
+background:var(--secondary);
+color:#fff !important;
+padding:14px 28px;
+border-radius:10px;
+font-weight:700;
+display:inline-block;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+}
+
+.btn-outline{
+border:2px solid #fff;
+color:#fff;
+padding:14px 28px;
+border-radius:10px;
+font-weight:700;
+display:inline-block;
+}
+
+/* =======================
+HERO
+======================= */
+
+.hero{
+
+padding-top:180px;
+padding-bottom:120px;
+
+background:
+linear-gradient(
+135deg,
+rgba(10,25,47,.94),
+rgba(10,25,47,.88)
+),
+url('todoma-coming-soon.png');
+
+background-size:cover;
+background-position:center;
+
+color:#fff;
+}
+
+.hero-grid{
+
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:60px;
+align-items:center;
 
 }
 
-.timeline::before{
+.hero h1{
 
-    content:'';
-    position:absolute;
-    top:30px;
-    left:5%;
-    right:5%;
-    height:2px;
-    background:var(--secondary);
+font-size:60px;
+font-weight:800;
+line-height:1.25;
+margin-bottom:25px;
 
 }
 
-.timeline-step{
+.hero p{
 
-    flex:1;
-    text-align:center;
-    position:relative;
-    z-index:2;
-
-}
-
-.step-number{
-
-    width:60px;
-    height:60px;
-
-    margin:auto;
-
-    border-radius:50%;
-
-    background:var(--secondary);
-    color:white;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-weight:800;
-    font-size:20px;
-
-    margin-bottom:16px;
+font-size:20px;
+color:#E2E8F0;
+margin-bottom:40px;
 
 }
 
-.timeline-step h4{
+.hero-buttons{
 
-    color:var(--primary);
-    font-size:16px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+.hero-card{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.12);
+
+padding:35px;
+
+border-radius:18px;
+
+}
+
+.hero-card h3{
+
+font-size:24px;
+margin-bottom:25px;
+
+}
+
+.stat{
+
+display:flex;
+justify-content:space-between;
+
+padding:18px 0;
+
+border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.stat:last-child{
+border:none;
+}
+
+.stat strong{
+color:#fff;
+}
+
+/* =======================
+KPIs
+======================= */
+
+.kpis{
+background:#fff;
+}
+
+.kpi-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+
+}
+
+.kpi-card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.kpi-number{
+
+font-size:48px;
+font-weight:800;
+color:var(--secondary);
+
+margin-bottom:10px;
+
+}
+
+.kpi-title{
+
+font-weight:700;
+color:var(--primary);
+
+}
+
+/* =======================
+RESPONSIVE
+======================= */
 
 @media(max-width:992px){
 
-    .cards-grid{
-        grid-template-columns:1fr;
-    }
+.hero-grid{
+grid-template-columns:1fr;
+}
 
-    .timeline{
-        flex-direction:column;
-    }
+.kpi-grid{
+grid-template-columns:1fr 1fr;
+}
 
-    .timeline::before{
-        display:none;
-    }
+.nav{
+display:none;
+}
 
-    .kpi-grid{
-        grid-template-columns:1fr;
-    }
+.hero h1{
+font-size:42px;
+}
+
+}
+
+@media(max-width:768px){
+
+.kpi-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.section-title{
+font-size:30px;
+}
 
 }
 
 </style>
 
-<!-- الجزء الثالث ينتهي هنا -->
+</head>
 
-```
-```html
+<body>
 
-<!-- =========================
-     CONTACT SECTION
-========================= -->
+<header>
 
-<section id="contact">
+<div class="container">
 
-    <div class="container">
+<div class="header-wrapper">
 
-        <h2 class="section-title">
-            جاهز لبدء الشراكة؟
-        </h2>
+<a href="#" class="logo">
+<img src="logo.png" alt="TODOMA LOGISTICS">
+</a>
 
-        <p class="section-subtitle">
-            تواصل مع فريق TODOMA LOGISTICS لمناقشة احتياجاتك التشغيلية
-            وبناء نموذج تعاون يدعم أهداف النمو والاستقرار التشغيلي.
-        </p>
+<nav class="nav">
 
-        <div class="form-container">
+<a href="#why">
+لماذا TODOMA
+</a>
 
-            <form
-                action="https://formsubmit.co/info@todomalogistics.com"
-                method="POST">
+<a href="#model">
+نموذج الشراكة
+</a>
 
-                <input type="hidden"
-                       name="_subject"
-                       value="طلب شراكة جديد من موقع TODOMA LOGISTICS">
+<a href="#contract">
+محتوى العقد
+</a>
 
-                <input type="hidden"
-                       name="_captcha"
-                       value="false">
+<a href="#contact">
+تواصل معنا
+</a>
 
-                <input type="hidden"
-                       name="_template"
-                       value="table">
+<a href="#contact" class="btn-primary">
+اطلب عرض شراكة
+</a>
 
-                <div class="form-grid">
+</nav>
 
-                    <div class="form-group">
-                        <label>اسم الشركة</label>
-                        <input
-                            type="text"
-                            name="company_name"
-                            class="form-control"
-                            required>
-                    </div>
+</div>
 
-                    <div class="form-group">
-                        <label>المنصب الوظيفي</label>
-                        <input
-                            type="text"
-                            name="job_title"
-                            class="form-control"
-                            required>
-                    </div>
+</div>
 
-                    <div class="form-group">
-                        <label>البريد الإلكتروني</label>
-                        <input
-                            type="email"
-                            name="email"
-                            class="form-control"
-                            required>
-                    </div>
+</header>
 
-                    <div class="form-group">
-                        <label>رقم التواصل</label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            class="form-control"
-                            required>
-                    </div>
+<section class="hero">
 
-                    <div class="form-group full">
-                        <label>حجم الأسطول المطلوب</label>
+<div class="container">
 
-                        <select
-                            name="fleet_size"
-                            class="form-control"
-                            required>
+<div class="hero-grid">
 
-                            <option value="">
-                                اختر الحجم
-                            </option>
+<div>
 
-                            <option>20 - 50</option>
-                            <option>50 - 100</option>
-                            <option>100 - 300</option>
-                            <option>300+</option>
+<h1>
+شريكك الاستراتيجي
+لإدارة وتوريد أساطيل التشغيل
+</h1>
 
-                        </select>
-                    </div>
+<p>
+حلول تشغيل متخصصة لشركات التوصيل والتجارة السريعة
+بعقود طويلة المدى تضمن الاستقرار التشغيلي وتحقيق
+مؤشرات الأداء المتفق عليها.
+</p>
 
-                    <div class="form-group full">
-                        <label>رسالة إضافية</label>
+<div class="hero-buttons">
 
-                        <textarea
-                            name="message"
-                            class="form-control"
-                            rows="6"></textarea>
-                    </div>
+<a href="#contact" class="btn-primary">
+اطلب عرض شراكة
+</a>
 
-                </div>
+<a href="#" class="btn-outline">
+تحميل البروفايل التعريفي
+</a>
 
-                <button
-                    type="submit"
-                    class="btn btn-primary full-btn">
+</div>
 
-                    إرسال طلب الشراكة
+</div>
 
-                </button>
+<div class="hero-card">
 
-            </form>
+<h3>
+مؤشرات تشغيل رئيسية
+</h3>
 
-        </div>
+<div class="stat">
+<span>معدل الالتزام</span>
+<strong>99.8%</strong>
+</div>
 
-    </div>
+<div class="stat">
+<span>متابعة تشغيل</span>
+<strong>24/7</strong>
+</div>
+
+<div class="stat">
+<span>SLA Monitoring</span>
+<strong>نشط</strong>
+</div>
+
+<div class="stat">
+<span>التغطية الحالية</span>
+<strong>القاهرة والجيزة</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<section class="kpis">
+
+<div class="container">
+
+<h2 class="section-title">
+مؤشرات تعكس الاستقرار التشغيلي
+</h2>
+
+<p class="section-subtitle">
+نموذج تشغيل قائم على القياس والمتابعة والتحسين المستمر.
+</p>
+
+<div class="kpi-grid">
+
+<div class="kpi-card">
+<div class="kpi-number">99.8%</div>
+<div class="kpi-title">معدل الالتزام</div>
+</div>
+
+<div class="kpi-card">
+<div class="kpi-number">24/7</div>
+<div class="kpi-title">إدارة ومتابعة</div>
+</div>
+
+<div class="kpi-card">
+<div class="kpi-number">SLA</div>
+<div class="kpi-title">اتفاقيات خدمة</div>
+</div>
+
+<div class="kpi-card">
+<div class="kpi-number">2</div>
+<div class="kpi-title">محافظات التغطية</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- =======================
+WHY TODOMA
+======================= -->
+
+<section id="why" class="why-section">
+
+<div class="container">
+
+<h2 class="section-title">
+لماذا TODOMA LOGISTICS؟
+</h2>
+
+<p class="section-subtitle">
+نساعد شركات التوصيل والتجارة السريعة على تحقيق استقرار تشغيلي أعلى وتقليل الأعباء الإدارية المرتبطة بإدارة الأساطيل.
+</p>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-icon">
+🛡️
+</div>
+
+<h3>
+استقرار تشغيلي
+</h3>
+
+<p>
+إدارة منظمة للأسطول تركز على الاستمرارية وتقليل تأثير التغيرات التشغيلية على الأداء اليومي.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<div class="why-icon">
+📊
+</div>
+
+<h3>
+مؤشرات أداء واضحة
+</h3>
+
+<p>
+متابعة دورية لمستويات الخدمة ومؤشرات الأداء الرئيسية بما يدعم اتخاذ القرار.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<div class="why-icon">
+⚙️
+</div>
+
+<h3>
+إدارة تشغيل متكاملة
+</h3>
+
+<p>
+إشراف ومتابعة تشغيلية مستمرة تضمن وضوح المسؤوليات وتحسين الكفاءة التشغيلية.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================
+COMPARISON
+======================= -->
+
+<section class="comparison-section">
+
+<div class="container">
+
+<h2 class="section-title">
+التوظيف المباشر أم الشراكة مع TODOMA؟
+</h2>
+
+<p class="section-subtitle">
+مقارنة مبسطة بين إدارة الأساطيل داخلياً والاستفادة من نموذج الشراكة التشغيلية.
+</p>
+
+<div class="comparison-table">
+
+<div class="table-head">
+
+<div>
+التوظيف المباشر
+</div>
+
+<div>
+TODOMA LOGISTICS
+</div>
+
+</div>
+
+<div class="table-row">
+
+<div>
+عبء إداري مرتفع
+</div>
+
+<div>
+إدارة تشغيل مركزية
+</div>
+
+</div>
+
+<div class="table-row">
+
+<div>
+صعوبة التوسع
+</div>
+
+<div>
+خطة توسع منظمة
+</div>
+
+</div>
+
+<div class="table-row">
+
+<div>
+متابعة داخلية يومية
+</div>
+
+<div>
+تقارير تشغيل دورية
+</div>
+
+</div>
+
+<div class="table-row">
+
+<div>
+عدم وضوح SLA
+</div>
+
+<div>
+مؤشرات أداء متفق عليها
+</div>
+
+</div>
+
+<div class="table-row">
+
+<div>
+تكلفة تشغيل متغيرة
+</div>
+
+<div>
+نموذج شراكة واضح
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* =======================
+WHY SECTION
+======================= */
+
+.why-section{
+background:#F8FAFC;
+}
+
+.why-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
+}
+
+.why-card{
+
+background:#FFFFFF;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.why-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+.why-icon{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.why-card h3{
+
+color:var(--primary);
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.why-card p{
+
+color:var(--gray);
+
+}
+
+/* =======================
+COMPARISON
+======================= */
+
+.comparison-section{
+
+background:#FFFFFF;
+
+}
+
+.comparison-table{
+
+overflow:hidden;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.table-head{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+background:var(--primary);
+
+color:#FFFFFF;
+
+font-weight:700;
+
+}
+
+.table-head div{
+
+padding:25px;
+
+text-align:center;
+
+}
+
+.table-row{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.table-row:nth-child(even){
+
+background:#F8FAFC;
+
+}
+
+.table-row div{
+
+padding:22px;
+
+text-align:center;
+
+border-bottom:1px solid #E2E8F0;
+
+}
+
+@media(max-width:992px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.table-head,
+.table-row{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+<!-- =======================
+PARTNERSHIP MODEL
+======================= -->
+
+<section id="model" class="model-section">
+
+<div class="container">
+
+<h2 class="section-title">
+نموذج الشراكة مع TODOMA
+</h2>
+
+<p class="section-subtitle">
+عملية تشغيل واضحة تبدأ بتحليل الاحتياج وتنتهي بمتابعة الأداء والتحسين المستمر.
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-number">
+1
+</div>
+
+<h3>
+تحليل الاحتياج
+</h3>
+
+<p>
+دراسة حجم العمليات والتغطية المطلوبة وأهداف الأداء.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-number">
+2
+</div>
+
+<h3>
+تصميم نموذج التشغيل
+</h3>
+
+<p>
+بناء نموذج توريد وإدارة مناسب لحجم الأعمال والأهداف التشغيلية.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-number">
+3
+</div>
+
+<h3>
+توقيع اتفاقية الشراكة
+</h3>
+
+<p>
+اعتماد نطاق العمل ومستويات الخدمة ومؤشرات الأداء.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-number">
+4
+</div>
+
+<h3>
+الإدارة والمتابعة
+</h3>
+
+<p>
+إدارة تشغيلية مستمرة مع تقارير وتحسينات دورية.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================
+CONTRACT COVERAGE
+======================= -->
+
+<section id="contract" class="contract-section">
+
+<div class="container">
+
+<h2 class="section-title">
+ماذا يشمل عقد الشراكة؟
+</h2>
+
+<p class="section-subtitle">
+نموذج متكامل يركز على الاستقرار التشغيلي وإدارة الأداء.
+</p>
+
+<div class="contract-grid">
+
+<div class="contract-card">
+
+<div class="contract-icon">
+✓
+</div>
+
+<h3>
+إدارة الأسطول
+</h3>
+
+<p>
+متابعة تشغيلية مستمرة للأسطول وفق آليات واضحة.
+</p>
+
+</div>
+
+<div class="contract-card">
+
+<div class="contract-icon">
+✓
+</div>
+
+<h3>
+تقارير أداء
+</h3>
+
+<p>
+تقارير دورية تساعد على قياس النتائج وتحسين الكفاءة.
+</p>
+
+</div>
+
+<div class="contract-card">
+
+<div class="contract-icon">
+✓
+</div>
+
+<h3>
+إدارة SLA
+</h3>
+
+<p>
+متابعة مستويات الخدمة والتأكد من الالتزام بالمؤشرات.
+</p>
+
+</div>
+
+<div class="contract-card">
+
+<div class="contract-icon">
+✓
+</div>
+
+<h3>
+إشراف ميداني
+</h3>
+
+<p>
+متابعة تشغيلية ميدانية تدعم استقرار الأداء اليومي.
+</p>
+
+</div>
+
+<div class="contract-card">
+
+<div class="contract-icon">
+✓
+</div>
+
+<h3>
+خطط توسع
+</h3>
+
+<p>
+دعم خطط النمو والتوسع وفق احتياجات الأعمال.
+</p>
+
+</div>
+
+<div class="contract-card">
+
+<div class="contract-icon">
+✓
+</div>
+
+<h3>
+تحسين مستمر
+</h3>
+
+<p>
+مراجعة دورية للعمليات وتحسين مؤشرات الأداء.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================
+CTA
+======================= -->
+
+<section class="cta-section">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+جاهز لضمان استقرارك التشغيلي؟
+</h2>
+
+<p>
+تواصل مع فريق TODOMA LOGISTICS لمناقشة نموذج شراكة طويل المدى يدعم نمو أعمالك.
+</p>
+
+<a href="#contact" class="btn-primary">
+احجز اجتماع مع فريق الشراكات
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+/* =======================
+MODEL SECTION
+======================= */
+
+.model-section{
+background:#F8FAFC;
+}
+
+.timeline{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.timeline-item{
+
+background:#FFFFFF;
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.timeline-number{
+
+width:60px;
+height:60px;
+
+margin:auto auto 20px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:var(--secondary);
+
+color:#fff;
+
+font-size:22px;
+font-weight:700;
+
+}
+
+.timeline-item h3{
+
+margin-bottom:15px;
+
+color:var(--primary);
+
+}
+
+.timeline-item p{
+
+color:var(--gray);
+
+}
+
+/* =======================
+CONTRACT
+======================= */
+
+.contract-section{
+
+background:#FFFFFF;
+
+}
+
+.contract-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+.contract-card{
+
+background:#FFFFFF;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.contract-icon{
+
+width:55px;
+height:55px;
+
+margin:auto auto 20px;
+
+border-radius:50%;
+
+background:var(--secondary);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:#fff;
+
+font-size:22px;
+font-weight:700;
+
+}
+
+.contract-card h3{
+
+margin-bottom:15px;
+
+color:var(--primary);
+
+}
+
+.contract-card p{
+
+color:var(--gray);
+
+}
+
+/* =======================
+CTA
+======================= */
+
+.cta-section{
+
+background:var(--primary);
+
+}
+
+.cta-box{
+
+text-align:center;
+
+color:#FFFFFF;
+
+}
+
+.cta-box h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.cta-box p{
+
+max-width:800px;
+
+margin:auto auto 35px;
+
+color:#CBD5E1;
+
+font-size:18px;
+
+}
+
+/* =======================
+RESPONSIVE
+======================= */
+
+@media(max-width:992px){
+
+.timeline{
+
+grid-template-columns:1fr;
+
+}
+
+.contract-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+<!-- =======================
+CONTACT
+======================= -->
+
+<section id="contact" class="contact-section">
+
+<div class="container">
+
+<h2 class="section-title">
+ابدأ محادثة مع فريق الشراكات
+</h2>
+
+<p class="section-subtitle">
+أرسل بياناتك وسيتواصل معك فريق TODOMA LOGISTICS لمناقشة متطلبات التشغيل والشراكة.
+</p>
+
+<div class="contact-wrapper">
+
+<form
+action="https://formsubmit.co/info@todomalogistics.com"
+method="POST"
+class="contact-form">
+
+<input
+type="hidden"
+name="_subject"
+value="طلب شراكة جديد من موقع TODOMA LOGISTICS">
+
+<input
+type="hidden"
+name="_captcha"
+value="false">
+
+<input
+type="hidden"
+name="_template"
+value="table">
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>اسم الشركة</label>
+<input type="text" name="company" required>
+</div>
+
+<div class="form-group">
+<label>المنصب الوظيفي</label>
+<input type="text" name="position" required>
+</div>
+
+<div class="form-group">
+<label>البريد الإلكتروني</label>
+<input type="email" name="email" required>
+</div>
+
+<div class="form-group">
+<label>رقم التواصل</label>
+<input type="tel" name="phone" required>
+</div>
+
+<div class="form-group full">
+<label>حجم الأسطول المطلوب</label>
+
+<select name="fleet_size" required>
+
+<option value="">
+اختر الحجم
+</option>
+
+<option>
+20 - 50
+</option>
+
+<option>
+50 - 100
+</option>
+
+<option>
+100 - 300
+</option>
+
+<option>
+300+
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group full">
+
+<label>
+رسالة إضافية
+</label>
+
+<textarea
+name="message"
+rows="6"></textarea>
+
+</div>
+
+</div>
+
+<button
+type="submit"
+class="btn-primary submit-btn">
+
+إرسال طلب الشراكة
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================
+FOOTER
+======================= -->
 
 <footer>
 
-    <div class="container">
+<div class="container">
 
-        <div class="footer-content">
+<div class="footer-grid">
 
-            <div>
+<div>
 
-                <div class="footer-logo">
-                    TODOMA LOGISTICS
-                </div>
+<img
+src="logo.png"
+alt="TODOMA LOGISTICS"
+class="footer-logo">
 
-                <div class="footer-tagline">
-                    FAST | RELIABLE | DELIVERED
-                </div>
+<p class="footer-description">
 
-                <div class="footer-info">
+FAST | RELIABLE | DELIVERED
 
-                    <p>
-                        شريك استراتيجي لإدارة وتوريد أساطيل التشغيل
-                        بعقود B2B طويلة المدى.
-                    </p>
+</p>
 
-                </div>
+</div>
 
-            </div>
+<div>
 
-            <div>
+<h4>
+بيانات التواصل
+</h4>
 
-                <h4 style="margin-bottom:20px;">
-                    روابط سريعة
-                </h4>
+<ul>
 
-                <div class="footer-info">
+<li>
+📱 01008330999
+</li>
 
-                    <p>
-                        <a href="#home">
-                            الرئيسية
-                        </a>
-                    </p>
+<li>
+📧 info@todomalogistics.com
+</li>
 
-                    <p>
-                        <a href="#why">
-                            لماذا TODOMA
-                        </a>
-                    </p>
+<li>
+🌐 www.todomalogistics.com
+</li>
 
-                    <p>
-                        <a href="#partnership">
-                            نموذج الشراكة
-                        </a>
-                    </p>
+<li>
+📍 القاهرة الكبرى - مصر
+</li>
 
-                    <p>
-                        <a href="#contact">
-                            تواصل معنا
-                        </a>
-                    </p>
+</ul>
 
-                </div>
+</div>
 
-            </div>
+<div>
 
-            <div>
+<h4>
+روابط سريعة
+</h4>
 
-                <h4 style="margin-bottom:20px;">
-                    بيانات التواصل
-                </h4>
+<ul>
 
-                <div class="footer-info">
+<li>
+<a href="#why">
+لماذا TODOMA
+</a>
+</li>
 
-                    <p>
-                        📱 01008330999
-                    </p>
+<li>
+<a href="#model">
+نموذج الشراكة
+</a>
+</li>
 
-                    <p>
-                        📧 info@todomalogistics.com
-                    </p>
+<li>
+<a href="#contract">
+محتوى العقد
+</a>
+</li>
 
-                    <p>
-                        🌐 www.todomalogistics.com
-                    </p>
+<li>
+<a href="#contact">
+تواصل معنا
+</a>
+</li>
 
-                    <p>
-                        📍 القاهرة الكبرى - مصر
-                    </p>
+</ul>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </div>
+<div class="copyright">
 
-        <hr style="
-            border:none;
-            height:1px;
-            background:rgba(255,255,255,.1);
-            margin:40px 0 20px;">
+© 2026 TODOMA LOGISTICS
+جميع الحقوق محفوظة
 
-        <div style="
-            text-align:center;
-            color:#CBD5E1;">
+</div>
 
-            © 2026 TODOMA LOGISTICS
-            جميع الحقوق محفوظة
-
-        </div>
-
-    </div>
+</div>
 
 </footer>
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<style>
+
+/* =======================
+CONTACT
+======================= */
+
+.contact-section{
+
+background:#F8FAFC;
+
+}
+
+.contact-wrapper{
+
+max-width:900px;
+margin:auto;
+
+}
+
+.contact-form{
+
+background:#FFFFFF;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+.form-group{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.form-group label{
+
+margin-bottom:8px;
+
+font-weight:700;
+
+color:var(--primary);
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+padding:14px;
+
+border:1px solid #DCE3EA;
+
+border-radius:10px;
+
+font-family:'Cairo',sans-serif;
+
+}
+
+.form-group.full{
+
+grid-column:1 / -1;
+
+}
+
+.submit-btn{
+
+border:none;
+
+cursor:pointer;
+
+margin-top:20px;
+
+width:100%;
+
+font-size:18px;
+
+}
+
+/* =======================
+FOOTER
+======================= */
+
+footer{
+
+background:var(--primary);
+
+color:#FFFFFF;
+
+padding:70px 0 30px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:40px;
+
+margin-bottom:40px;
+
+}
+
+.footer-logo{
+
+height:80px;
+
+width:auto;
+
+margin-bottom:20px;
+
+}
+
+.footer-description{
+
+color:#CBD5E1;
+
+}
+
+footer h4{
+
+margin-bottom:15px;
+
+}
+
+footer ul{
+
+list-style:none;
+
+}
+
+footer li{
+
+margin-bottom:10px;
+
+}
+
+footer a{
+
+color:#CBD5E1;
+
+}
+
+footer a:hover{
+
+color:#FFFFFF;
+
+}
+
+.copyright{
+
+text-align:center;
+
+padding-top:25px;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+color:#CBD5E1;
+
+}
+
+/* =======================
+RESPONSIVE
+======================= */
+
+@media(max-width:992px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.footer-logo{
+
+margin:auto auto 20px;
+
+}
+
+}
+
+</style>
 
 <script>
 
-document
-.querySelectorAll('a[href^="#"]')
-.forEach(link => {
+window.addEventListener('scroll',function(){
 
-    link.addEventListener('click', function(e){
+const header =
+document.querySelector('header');
 
-        e.preventDefault();
+if(window.scrollY > 30){
 
-        const target =
-        document.querySelector(
-            this.getAttribute('href')
-        );
+header.style.boxShadow =
+'0 8px 25px rgba(0,0,0,.12)';
 
-        if(target){
+}else{
 
-            target.scrollIntoView({
-                behavior:'smooth'
-            });
+header.style.boxShadow =
+'0 2px 15px rgba(0,0,0,.06)';
 
-        }
-
-    });
+}
 
 });
 
-window.addEventListener('scroll', () => {
+document
+.querySelectorAll('a[href^="#"]')
+.forEach(link=>{
 
-    const header =
-    document.querySelector('header');
+link.addEventListener('click',function(e){
 
-    if(window.scrollY > 20){
+e.preventDefault();
 
-        header.style.boxShadow =
-        '0 6px 20px rgba(0,0,0,.08)';
+const target =
+document.querySelector(
+this.getAttribute('href')
+);
 
-    }else{
+if(target){
 
-        header.style.boxShadow =
-        '0 2px 12px rgba(0,0,0,.06)';
+target.scrollIntoView({
+behavior:'smooth'
+});
 
-    }
+}
+
+});
 
 });
 
 console.log(
-'TODOMA LOGISTICS Loaded Successfully'
+'TODOMA LOGISTICS Website Loaded'
 );
 
 </script>
 
 </body>
 </html>
-
-```
