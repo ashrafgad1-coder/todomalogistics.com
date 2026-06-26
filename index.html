@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -8,9 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+:root {--primary: #0A192F; --secondary: #FF6B35; --white: #FFFFFF; --background: #F8FAFC; --text: #1E293B; --text-light: #475569;}
 • {margin: 0; padding: 0; box-sizing: border-box;}
 body {font-family: 'Cairo', sans-serif; background: var(--background); color: var(--text); line-height: 1.8;}
-* {margin: 0; padding: 0; box-sizing: border-box;}
+.container {max-width: 1280px; margin: 0 auto; padding: 0 24px;}
 header {height: 130px; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;}
 .header-content {height: 100%; display: flex; justify-content: space-between; align-items: center;}
 .logo img {height: 125px; max-width: none; object-fit: contain; transform: scale(1.35); transform-origin: right center;}
@@ -19,7 +20,7 @@ nav a {text-decoration: none; color: var(--text); font-weight: 600; transition: 
 nav a:hover {color: var(--secondary);}
 .btn {padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; font-family: 'Cairo', sans-serif; font-size: 16px;}
 .btn-primary {background: var(--secondary); color: var(--white);}
-.btn-primary:hover {background: #e55a28; transform: translateY(-2px);}
+btn-primary:hover {background: #e55a28; transform: translateY(-2px);}
 .btn-secondary {background: transparent; color: var(--primary); border: 2px solid var(--primary);}
 .btn-secondary:hover {background: var(--primary); color: var(--white);}
 .hero {padding: 120px 0; background: var(--white);}
@@ -102,7 +103,6 @@ nav {display: none;}
 <a href="#contact" class="btn btn-primary">اطلب عرض شراكة</a>
 </nav>
 </div>
-</div>
 </header>
 <section class="hero" id="home">
 <div class="container">
@@ -117,132 +117,134 @@ nav {display: none;}
 </div>
 <div class="hero-image">
 <div class="dashboard-mock">
-<h3>Fleet Operations Dashboard</h3>
+<h3>لوحة التحكم التشغيلية</h3>
 <div class="dashboard-item">
-<span>التغطية الحالية</span>
-<strong>القاهرة، الجيزة</strong>
+<span>عدد السائقين النشطين</span>
+<strong>247</strong>
 </div>
 <div class="dashboard-item">
-<span>SLA Compliance</span>
-<strong>99%</strong>
+<span>متوسط معدل التسليم</span>
+<strong>97.8%</strong>
 </div>
 <div class="dashboard-item">
-<span>KPI Monitoring</span>
-<strong>24/7</strong>
+<span>متوسط زمن الاستجابة</span>
+<strong>12 دقيقة</strong>
 </div>
 <div class="dashboard-item">
-<span>Operational Map</span>
-<strong>Live</strong>
-</div>
+<span>معدل رضا العملاء</span>
+<strong>4.8/5</strong>
 </div>
 </div>
 </section>
 <section class="why-todoma">
 <div class="container">
-<h2 class="section-title">لماذا تعتمد تطبيقات التوصيل على TODOMA؟</h2>
+<h2 class="section-title">لماذا TODOMA LOGISTICS؟</h2>
 <div class="cards-grid">
 <div class="card">
 <div class="card-icon">⚡</div>
-<h3>استقرار تشغيلي للـ Quick Commerce</h3>
-<p>تقليل تأثير دوران الطيارين على التشغيل خلال أوقات الذروة من خلال نموذج توريد أساطيل مرن يضمن استمرارية الخدمة.</p>
+<h3>مرونة تشغيلية كاملة</h3>
+<p>نورد أساطيل سائقين حسب الطلب. زود أو قلل العدد في 48 ساعة. ادفع فقط مقابل السعة اللي بتستخدمها فعلياً.</p>
 </div>
 <div class="card">
 <div class="card-icon">📊</div>
-<h3>التزام بمستويات الخدمة SLA</h3>
-<p>متابعة مؤشرات الأداء لحظياً وتقديم تقارير تشغيل يومية تدعم فريق العمليات لديكم وتعزز الشفافية الكاملة.</p>
+<h3>شفافية في الأداء</h3>
+<p>لوحة تحكم لحظية بكل مؤشرات الأداء: معدل التسليم، زمن الرحلة، رضا العملاء. كل شيء موثق وواضح.</p>
 </div>
 <div class="card">
-<div class="card-icon">🌍</div>
-<h3>تغطية مركزة في القاهرة الكبرى</h3>
-<p>تركيز تشغيلي كامل على القاهرة والجيزة يضمن سرعة استجابة عالية وجودة خدمة متفوقة في أهم مناطق الطلب.</p>
+<div class="card-icon">🎯</div>
+<h3>التزام بمستويات الخدمة</h3>
+<p>عقود SLA واضحة مع غرامات على التقصير. نضمن معدل تسليم 96%+ وزمن استجابة أقل من 15 دقيقة.</p>
+</div>
+</div>
 </div>
 </section>
 <section class="operating-model" id="model">
 <div class="container">
-<h2 class="section-title">كيف تعمل الشراكة؟</h2>
+<h2 class="section-title">نموذج الشراكة التشغيلية</h2>
 <div class="timeline">
 <div class="timeline-step">
 <div class="step-number">1</div>
-<h4>تحليل احتياج الذروة التشغيلي</h4>
+<h4>تحديد احتياجاتك<br>وتوقيع العقد</h4>
 </div>
 <div class="timeline-step">
 <div class="step-number">2</div>
-<h4>تحديد نموذج التوريد المرن</h4>
+<h4>تجهيز وتدريب<br>الأسطول المخصص</h4>
 </div>
 <div class="timeline-step">
 <div class="step-number">3</div>
-<h4>توقيع عقد الشراكة B2B</h4>
+<h4>الربط التقني<br>وتشغيل تجريبي</h4>
 </div>
 <div class="timeline-step">
 <div class="step-number">4</div>
-<h4>تشغيل وإدارة الأسطول 24/7</h4>
+<h4>الإطلاق الكامل<br>ومتابعة 24/7</h4>
 </div>
 <div class="timeline-step">
 <div class="step-number">5</div>
-<h4>توسع تدريجي حسب النمو</h4>
+<h4>تقارير دورية<br>وتحسين مستمر</h4>
 </div>
 </div>
 </div>
 </section>
 <section class="kpi-section" id="kpi">
 <div class="container">
-<h2 class="section-title">مؤشرات الأداء التشغيلية</h2>
+<h2 class="section-title">مؤشرات الأداء اللي بنلتزم بيها</h2>
 <div class="kpi-grid">
 <div class="kpi-card">
-<div class="kpi-value">99%</div>
-<div class="kpi-label">SLA Compliance</div>
+<div class="kpi-value">96%+</div>
+<div class="kpi-label">معدل التسليم في الوقت المحدد</div>
 </div>
 <div class="kpi-card">
-<div class="kpi-value">2</div>
-<div class="kpi-label">القاهرة، الجيزة</div>
-</div>
+<div class="kpi-value">15</div>
+<div class="kpi-label">دقيقة متوسط زمن الاستجابة</div>
 <div class="kpi-card">
-<div class="kpi-value">24/7</div>
-<div class="kpi-label">Operational Visibility</div>
+<div class="kpi-value">4.7/5</div>
+<div class="kpi-label">متوسط تقييم رضا العملاء</div>
 </div>
-<p style="text-align: center; margin-top: 40px; color: #64748B;">ملاحظة: نعمل حالياً على توسيع التغطية تدريجياً وفق خطة النمو</p>
+</div>
 </div>
 </section>
 <section class="contact" id="contact">
 <div class="container">
-<h2 class="section-title">ناقش احتياجاتك التشغيلية</h2>
+<h2 class="section-title">جاهز تبدأ الشراكة؟</h2>
 <div class="form-container">
-<form id="partnershipForm" action="https://formsubmit.co/info@todomalogistics.com" method="POST">
-<input type="hidden" name="_subject" value="طلب شراكة جديد من موقع TODOMA LOGISTICS">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
+<form>
 <div class="form-grid">
 <div class="form-group">
-<label>اسم التطبيق/الشركة *</label>
-<input type="text" name="اسم الشركة" required>
+<label>اسم الشركة</label>
+<input type="text" placeholder="مثال: طلبات" required>
 </div>
 <div class="form-group">
-<label>المنصب الوظيفي *</label>
-<input type="text" name="المنصب" required>
+<label>اسم المسؤول</label>
+<input type="text" placeholder="الاسم الكامل" required>
 </div>
 <div class="form-group">
-<label>البريد الإلكتروني *</label>
-<input type="email" name="إيميل العميل" required>
+<label>البريد الإلكتروني</label>
+<input type="email" placeholder="example@company.com" required>
 </div>
 <div class="form-group">
-<label>رقم التواصل *</label>
-<input type="tel" name="رقم التواصل" required>
+<label>رقم الهاتف</label>
+<input type="tel" placeholder="01xxxxxxxxx" required>
 </div>
 <div class="form-group full">
-<label>عدد الطيارين المطلوب *</label>
-<select name="حجم الأسطول" required>
-<option value="">اختر حجم الأسطول</option>
-<option>20-50 طيار</option>
-<option>50-100 طيار</option>
-<option>100-300 طيار</option>
-<option>300+ طيار</option>
+<label>حجم الأسطول المطلوب</label>
+<select required>
+<option value="">اختر العدد التقريبي</option>
+<option>10 - 50 سائق</option>
+<option>50 - 100 سائق</option>
+<option>100 - 200 سائق</option>
+<option>200+ سائق</option>
 </select>
 </div>
 <div class="form-group full">
-<label>رسالة إضافية</label>
-<textarea name="الرسالة" placeholder="اشرح احتياجاتك التشغيلية في القاهرة والجيزة..."></textarea>
+<label>المناطق المستهدفة</label>
+<input type="text" placeholder="مثال: القاهرة الجديدة، الشيخ زايد، 6 أكتوبر">
 </div>
-<button type="submit" class="btn btn-primary" style="width: 100%;">إرسال طلب شراكة</button>
+<div class="form-group full">
+<label>تفاصيل إضافية</label>
+<textarea placeholder="احكيلنا أكتر عن احتياجاتك التشغيلية..."></textarea>
+</div>
+</div>
+<button type="submit" class="btn btn-primary" style="width: 100%;">اطلب عرض شراكة الآن</button>
 </form>
 </div>
 </section>
@@ -251,22 +253,30 @@ nav {display: none;}
 <div class="footer-content">
 <div>
 <div class="footer-logo">TODOMA LOGISTICS</div>
-<div class="footer-tagline">FAST | RELIABLE | DELIVERED</div>
-<p style="color: #CBD5E1;">شريكك التشغيلي لتوريد أساطيل تطبيقات التوصيل بعقود B2B مرنة</p>
-</div>
+<div class="footer-tagline">شريكك الاستراتيجي لإدارة أساطيل التوصيل</div>
 <div class="footer-info">
-<h4 style="margin-bottom: 16px;">تواصل معنا</h4>
-<p>الهاتف: <a href="tel:+201008330999">01008330999</a></p>
-<p>البريد: <a href="mailto:info@todomalogistics.com">info@todomalogistics.com</a></p>
+<p>نساعد تطبيقات التوصيل على النمو من خلال توريد أساطيل سائقين مرنة ومدارة بالكامل وفق أعلى معايير الجودة.</p>
 </div>
+</div>
+<div>
+<h4 style="margin-bottom: 20px; font-size: 18px;">روابط سريعة</h4>
 <div class="footer-info">
-<h4 style="margin-bottom: 16px;">مناطق التغطية</h4>
-<p>القاهرة - الجيزة</p>
-<p>الموقع: <a href="http://www.todomalogistics.com">www.todomalogistics.com</a></p>
+<p><a href="#home">الرئيسية</a></p>
+<p><a href="#model">نموذج الشراكة</a></p>
+<p><a href="#kpi">مؤشرات الأداء</a></p>
+<p><a href="#contact">تواصل معنا</a></p>
 </div>
+</div>
+<div>
+<h4 style="margin-bottom: 20px; font-size: 18px;">تواصل معنا</h4>
+<div class="footer-info">
+<p>📧 partners@todoma.com</p>
+<p>📱 +20 100 123 4567</p>
+<p>📍 الشيخ زايد، الجيزة، مصر</p>
+<p>🕐 الأحد - الخميس: 9ص - 6م</p>
 </div>
 <div class="footer-bottom">
-<p>حقوق النشر © 2026 TODOMA LOGISTICS. جميع الحقوق محفوظة</p>
+<p>© 2026 TODOMA LOGISTICS. جميع الحقوق محفوظة.</p>
 </div>
 </div>
 </footer>
@@ -276,10 +286,71 @@ anchor.addEventListener('click', function (e) {
 e.preventDefault();
 const target = document.querySelector(this.getAttribute('href'));
 if (target) {
-target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+target.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 });
+});
+document.querySelector('form').addEventListener('submit', function(e) {
+e.preventDefault();
+alert('شكراً لتواصلك معنا! فريق الشراكات هيتواصل معاك خلال 24 ساعة.');
+this.reset();
 });
 </script>
 </body>
 </html>
+window.addEventListener('scroll', function() {
+const header = document.querySelector('header');
+if (window.scrollY > 50) {
+header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+} else {
+header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+}
+});
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}
+});
+}, observerOptions);
+document.querySelectorAll('.card, .kpi-card, .timeline-step').forEach(el => {
+el.style.opacity = '0';
+el.style.transform = 'translateY(30px)';
+el.style.transition = 'all 0.6s ease';
+observer.observe(el);
+});
+function animateValue(element, start, end, duration) {
+let startTimestamp = null;
+const step = (timestamp) => {
+if (!startTimestamp) startTimestamp = timestamp;
+const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+const value = Math.floor(progress * (end - start) + start);
+element.textContent = value + (element.dataset.suffix || '');
+if (progress < 1) {
+window.requestAnimationFrame(step);
+}
+};
+window.requestAnimationFrame(step);
+}
+const kpiObserver = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const kpiValues = entry.target.querySelectorAll('.kpi-value');
+kpiValues.textContent = '96%+';
+kpiValues.textContent = '15';
+kpiValues.dataset.suffix = ' دقيقة';
+kpiValues.textContent = '4.7/5';
+kpiObserver.unobserve(entry.target);
+}
+});
+}, {threshold: 0.5});
+const kpiSection = document.querySelector('.kpi-section');
+if (kpiSection) {
+kpiObserver.observe(kpiSection);
+}
+console.log('TODOMA LOGISTICS - Website Loaded Successfully ✅');
