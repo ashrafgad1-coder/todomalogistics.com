@@ -657,30 +657,30 @@
         Executive: ashraf@todomalogistics.com
       </p>
     </div>
-    <div class="form-card reveal">
+    <form class="form-card reveal" action="https://formspree.io/f/mnjevyyj" method="POST">
       <div class="field">
         <label for="fullname">Full Name</label>
-        <input id="fullname" type="text" placeholder="Full name">
+        <input id="fullname" name="Full Name" type="text" placeholder="Full name" required>
       </div>
       <div class="field">
         <label for="companyname">Company Name</label>
-        <input id="companyname" type="text" placeholder="Company name">
+        <input id="companyname" name="Company Name" type="text" placeholder="Company name">
       </div>
       <div class="field">
         <label for="jobtitle">Job Title</label>
-        <input id="jobtitle" type="text" placeholder="e.g. Operations Manager">
+        <input id="jobtitle" name="Job Title" type="text" placeholder="e.g. Operations Manager">
       </div>
       <div class="field">
         <label for="mobile">Mobile Number</label>
-        <input id="mobile" type="tel" placeholder="+20 ...">
+        <input id="mobile" name="Mobile Number" type="tel" placeholder="+20 ...">
       </div>
       <div class="field">
         <label for="bizemail">Business Email</label>
-        <input id="bizemail" type="email" placeholder="you@company.com">
+        <input id="bizemail" name="Business Email" type="email" placeholder="you@company.com" required>
       </div>
       <div class="field">
         <label for="need">Current Operational Need</label>
-        <select id="need">
+        <select id="need" name="Operational Need">
           <option>Select an option</option>
           <option>Fleet Management</option>
           <option>Managed Delivery Operations</option>
@@ -692,10 +692,10 @@
       </div>
       <div class="field">
         <label for="message">Message</label>
-        <textarea id="message" placeholder="Tell us briefly about your delivery operations"></textarea>
+        <textarea id="message" name="Message" placeholder="Tell us briefly about your delivery operations"></textarea>
       </div>
-      <button class="btn btn-primary">Request Consultation</button>
-    </div>
+      <button class="btn btn-primary" type="submit">Request Consultation</button>
+    </form>
   </div>
 </section>
 
