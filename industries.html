@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>القطاعات التي ندعمها | تودوما لوجستيك</title>
+  <meta name="description" content="تودوما لوجستيك تدعم شركات التوصيل والتجارة السريعة، والتجارة الإلكترونية، وتوزيع المنتجات، واللوجستيات والنقل في القاهرة الكبرى.">
+  <meta property="og:title" content="القطاعات التي ندعمها | تودوما لوجستيك">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .industries-hero { padding: 96px 0 80px; background: var(--navy); }
+    .industries-hero .eyebrow { color: var(--orange); }
+    .industries-hero h1 { color: #fff; font-size: 44px; margin-bottom: 18px; }
+    .industries-hero p  { color: var(--muted-dark); font-size: 18px; max-width: 700px; }
+
+    .industry-block { padding: 80px 0; border-bottom: 1px solid var(--border); }
+    .industry-block:last-of-type { border-bottom: none; }
+    .industry-block:nth-child(even) { background: var(--bg-light); }
+    .industry-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .industry-inner.reverse { direction: ltr; }
+    .industry-inner.reverse > * { direction: rtl; }
+
+    .ind-num { font-size: 64px; font-weight: 800; color: var(--border); line-height: 1; margin-bottom: 6px; }
+    .ind-tag { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #fff; background: var(--orange); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
+    .industry-block h2 { font-size: 30px; margin-bottom: 16px; }
+    .industry-block p  { margin-bottom: 20px; }
+
+    .related-services { margin-top: 24px; }
+    .related-services h4 { font-size: 13px; font-weight: 700; color: var(--navy); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 12px; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .stag { background: var(--bg-light); border: 1px solid var(--border); color: var(--navy); font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; }
+
+    .ind-visual { border-radius: var(--radius-lg); overflow: hidden; position: relative; }
+    .ind-visual-inner { aspect-ratio: 4/3.2; position: relative; display: flex; align-items: center; justify-content: center; }
+    .iv-1 { background: linear-gradient(155deg, #1B4A78, #0A2540); }
+    .iv-2 { background: linear-gradient(155deg, #1B4A78, #16365C); }
+    .iv-3 { background: linear-gradient(155deg, #16365C, #0A2540); }
+    .iv-4 { background: linear-gradient(155deg, #0A2540, #15406A); }
+    .iv-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 32px 32px; }
+    .iv-icon svg { width: 80px; height: 80px; stroke: rgba(255,255,255,0.7); fill: none; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; position: relative; z-index: 2; }
+    .priority-badge { position: absolute; top: 16px; right: 16px; background: rgba(255,107,53,0.92); color: #fff; font-size: 12px; font-weight: 800; padding: 5px 12px; border-radius: 20px; z-index: 3; letter-spacing: 0.04em; }
+
+    .coverage-band { background: var(--navy); padding: 80px 0; }
+    .coverage-band h2 { color: #fff; text-align: center; margin-bottom: 48px; }
+    .coverage-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .cov-card { border-radius: var(--radius); padding: 36px 28px; text-align: center; border: 1.5px solid rgba(255,255,255,0.12); }
+    .cov-card.active { border-color: var(--orange); background: rgba(255,107,53,0.08); }
+    .cov-num { font-size: 36px; font-weight: 800; color: var(--orange); margin-bottom: 8px; }
+    .cov-card h3 { color: #fff; font-size: 18px; margin-bottom: 8px; }
+    .cov-card p  { color: var(--muted-dark); font-size: 14px; }
+
+    .cta-band { background: var(--bg-light); padding: 80px 0; text-align: center; border-top: 1px solid var(--border); }
+    .cta-band h2 { margin-bottom: 14px; }
+    .cta-band p  { color: var(--muted); margin-bottom: 36px; font-size: 17px; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 980px) {
+      .industry-inner { grid-template-columns: 1fr; gap: 36px; }
+      .industry-inner.reverse { direction: rtl; }
+      .coverage-grid { grid-template-columns: 1fr; }
+      .industries-hero h1 { font-size: 32px; }
+    }
+  
+  .logo-img { display: block; height: 72px; width: auto; object-fit: contain; }
+  .logo-img-footer { height: 44px; filter: brightness(0) invert(1); }
+  @media (max-width: 768px) { .logo-img { height: 54px; } .logo-img-footer { height: 36px; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap nav-wrap">
+    <a href="index.html" class="logo" aria-label="تودوما لوجستيك">
+      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="72">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="industries.html" style="opacity:1;font-weight:700;">القطاعات</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-outline btn-sm">EN</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">طلب استشارة</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="services.html">خدماتنا</a>
+    <a href="industries.html">القطاعات</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="contact.html" class="btn btn-primary">طلب استشارة</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="industries-hero">
+  <div class="wrap reveal in">
+    <div class="eyebrow">القطاعات التي ندعمها</div>
+    <h1>حلول تشغيلية مصممة للقطاعات التي تعتمد على الحركة والتوصيل</h1>
+    <p>تدعم تودوما لوجستيك مجموعة من القطاعات التي تعتمد على الكفاءة التشغيلية وسرعة التنفيذ واستمرارية الخدمة، من خلال حلول متخصصة في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي.</p>
+  </div>
+</section>
+
+<!-- INDUSTRY 1 — Delivery & Quick Commerce -->
+<section class="industry-block">
+  <div class="wrap industry-inner reveal">
+    <div>
+      <div class="ind-num">01</div>
+      <span class="ind-tag">سوق أساسي</span>
+      <h2>شركات التوصيل والتجارة السريعة</h2>
+      <p>تعتمد شركات التوصيل والتجارة السريعة على سرعة التنفيذ واستمرارية العمليات اليومية. تساعد تودوما لوجستيك هذه الشركات على إدارة الأساطيل وتشغيل عمليات التوصيل بكفاءة أعلى مع دعم الاستقرار التشغيلي وتحسين الأداء.</p>
+      <div class="related-services">
+        <h4>الخدمات المرتبطة</h4>
+        <div class="service-tags">
+          <span class="stag">إدارة عمليات الأسطول</span>
+          <span class="stag">إدارة عمليات التوصيل</span>
+          <span class="stag">مراقبة الأداء والتقارير</span>
+          <span class="stag">الدعم التشغيلي الميداني</span>
+        </div>
+      </div>
+    </div>
+    <div class="ind-visual">
+      <div class="ind-visual-inner iv-1">
+        <div class="iv-grid"></div>
+        <span class="priority-badge">سوق أساسي</span>
+        <div class="iv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 2 — E-Commerce -->
+<section class="industry-block">
+  <div class="wrap industry-inner reverse reveal">
+    <div class="ind-visual">
+      <div class="ind-visual-inner iv-2">
+        <div class="iv-grid"></div>
+        <span class="priority-badge">سوق أساسي</span>
+        <div class="iv-icon"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4v10l8 4 8-4z"/><path d="M12 3v18M4 7l8 4 8-4"/></svg></div>
+      </div>
+    </div>
+    <div>
+      <div class="ind-num">02</div>
+      <span class="ind-tag">سوق أساسي</span>
+      <h2>شركات التجارة الإلكترونية</h2>
+      <p>مع نمو الطلبات وتوسع نطاق التغطية، تحتاج شركات التجارة الإلكترونية إلى عمليات توصيل أكثر تنظيمًا وقابلية للتوسع. تقدم تودوما لوجستيك حلولًا تشغيلية تساعد على دعم النمو وتحسين كفاءة التنفيذ.</p>
+      <div class="related-services">
+        <h4>الخدمات المرتبطة</h4>
+        <div class="service-tags">
+          <span class="stag">إدارة عمليات التوصيل</span>
+          <span class="stag">مراقبة الأداء والتقارير</span>
+          <span class="stag">دعم توسيع الأسطول</span>
+          <span class="stag">الشحن الداخلي</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 3 — Product Distribution -->
+<section class="industry-block">
+  <div class="wrap industry-inner reveal">
+    <div>
+      <div class="ind-num">03</div>
+      <h2>شركات توزيع المنتجات</h2>
+      <p>تعتمد شركات التوزيع على التنسيق المستمر بين المخزون والنقل والتسليم. تساعد تودوما لوجستيك على تحسين العمليات التشغيلية المرتبطة بالتوزيع ودعم استمرارية الحركة اليومية للمنتجات في قطاعات مثل مستلزمات التجميل، والسلع الاستهلاكية، والمواد الغذائية، والإلكترونيات.</p>
+      <div class="related-services">
+        <h4>الخدمات المرتبطة</h4>
+        <div class="service-tags">
+          <span class="stag">إدارة عمليات الأسطول</span>
+          <span class="stag">الدعم التشغيلي الميداني</span>
+          <span class="stag">مراقبة الأداء والتقارير</span>
+          <span class="stag">الشحن الداخلي</span>
+        </div>
+      </div>
+    </div>
+    <div class="ind-visual">
+      <div class="ind-visual-inner iv-3">
+        <div class="iv-grid"></div>
+        <div class="iv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M9 9v11"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 4 — Logistics & Transport -->
+<section class="industry-block">
+  <div class="wrap industry-inner reverse reveal">
+    <div class="ind-visual">
+      <div class="ind-visual-inner iv-4">
+        <div class="iv-grid"></div>
+        <div class="iv-icon"><svg viewBox="0 0 24 24"><path d="M3 17h2l2-5h10l2 5h2M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg></div>
+      </div>
+    </div>
+    <div>
+      <div class="ind-num">04</div>
+      <h2>شركات اللوجستيات والنقل</h2>
+      <p>توفر تودوما لوجستيك دعمًا تشغيليًا مرنًا للشركات العاملة في مجال اللوجستيات والنقل، بما يساعد على تعزيز الكفاءة التشغيلية وتحسين إدارة العمليات اليومية.</p>
+      <div class="related-services">
+        <h4>الخدمات المرتبطة</h4>
+        <div class="service-tags">
+          <span class="stag">إدارة عمليات الأسطول</span>
+          <span class="stag">دعم توسيع الأسطول</span>
+          <span class="stag">الدعم التشغيلي الميداني</span>
+          <span class="stag">مراقبة الأداء والتقارير</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="coverage-band">
+  <div class="wrap">
+    <h2>نطاق التغطية الحالي وخطة التوسع</h2>
+    <div class="coverage-grid reveal">
+      <div class="cov-card active">
+        <div class="cov-num">01</div>
+        <h3>المرحلة الحالية</h3>
+        <p>القاهرة الكبرى — القاهرة والجيزة</p>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">02</div>
+        <h3>المرحلة التالية</h3>
+        <p>جميع محافظات مصر</p>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">03</div>
+        <h3>المرحلة المستقبلية</h3>
+        <p>الشحن الدولي</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>هل تبحث عن شريك لوجستي يفهم طبيعة أعمالك؟</h2>
+    <p>تحدث مع فريق تودوما لوجستيك لمناقشة احتياجاتك التشغيلية واللوجستية.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-primary btn-lg">طلب استشارة</a>
+      <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill="white" fill-rule="evenodd"/></svg>
+        تواصل عبر واتساب
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-white">
+          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="44">
+        </a>
+        <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">خدماتنا</a>
+        <a href="industries.html">القطاعات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="contact.html">طلب استشارة</a>
+        <a href="https://wa.me/201008330999" target="_blank" rel="noopener">واتساب</a>
+        <p class="footer-contact-info">وحدة 146، مول رويال تاورز، 6 أكتوبر، الجيزة، مصر<br>هاتف: 01008330999<br>info@todomalogistics.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 TODOMA Logistics. جميع الحقوق محفوظة.</p></div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); hamburger.classList.toggle('open'); });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); }));
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }); }, { threshold: 0.13 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

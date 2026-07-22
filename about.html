@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن | تودوما لوجستيك — شريك إدارة الأساطيل والتوصيل</title>
+  <meta name="description" content="تعرّف على تودوما لوجستيك — شركة لوجستيات متكاملة متخصصة في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.">
+  <meta property="og:title" content="من نحن | تودوما لوجستيك">
+  <meta property="og:description" content="شريكك التشغيلي في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── PAGE-SPECIFIC STYLES ── */
+    .about-hero { padding: 96px 0 80px; background: var(--navy); }
+    .about-hero .eyebrow { color: var(--orange); }
+    .about-hero h1 { color: #fff; font-size: 46px; margin-bottom: 18px; }
+    .about-hero p  { color: var(--muted-dark); font-size: 18px; max-width: 680px; }
+
+
+    .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .mv-card  { background: var(--bg-light); border-radius: var(--radius); padding: 36px 32px; border: 1.5px solid var(--border); }
+    .mv-card .eyebrow { margin-bottom: 10px; }
+    .mv-card h3 { font-size: 20px; margin-bottom: 14px; }
+    .mv-card p  { font-size: 15px; }
+
+    .values-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; }
+    .val-card { text-align: center; padding: 36px 24px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); transition: border-color .2s, transform .2s; }
+    .val-card:hover { border-color: var(--navy); transform: translateY(-3px); }
+    .val-icon { width: 52px; height: 52px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    .val-icon svg { width: 26px; height: 26px; stroke: var(--navy); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .val-card h3 { font-size: 17px; margin-bottom: 10px; }
+    .val-card p  { font-size: 14px; }
+
+    .growth-timeline { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .growth-step { text-align: center; padding: 36px 24px; border-radius: var(--radius); border: 1.5px solid var(--border); position: relative; }
+    .growth-step.active { background: var(--navy); border-color: var(--navy); }
+    .growth-step.active h3, .growth-step.active p { color: #fff; }
+    .growth-step.active p { color: var(--muted-dark); }
+    .step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--orange); color: #fff; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    .growth-step.active .step-num { background: rgba(255,107,53,0.9); }
+    .growth-step h3 { font-size: 18px; margin-bottom: 8px; }
+    .growth-step p  { font-size: 14px; }
+
+    .cta-band { background: var(--navy); padding: 80px 0; text-align: center; }
+    .cta-band h2 { color: #fff; margin-bottom: 14px; }
+    .cta-band p  { color: var(--muted-dark); margin-bottom: 36px; font-size: 17px; }
+    .cta-band .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 980px) {
+      .positioning-grid { grid-template-columns: 1fr; }
+      .mv-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .growth-timeline { grid-template-columns: 1fr; }
+      .about-hero h1 { font-size: 36px; }
+    }
+    @media (max-width: 640px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  
+  .logo-img { display: block; height: 72px; width: auto; object-fit: contain; }
+  .logo-img-footer { height: 44px; filter: brightness(0) invert(1); }
+  @media (max-width: 768px) { .logo-img { height: 54px; } .logo-img-footer { height: 36px; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap nav-wrap">
+    <a href="index.html" class="logo" aria-label="تودوما لوجستيك">
+      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="72">
+    </a>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html" style="opacity:1;font-weight:700;">من نحن</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="industries.html">القطاعات</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-outline btn-sm">EN</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">طلب استشارة</a>
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="services.html">خدماتنا</a>
+    <a href="industries.html">القطاعات</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="contact.html" class="btn btn-primary">طلب استشارة</a>
+    <a href="https://wa.me/201008330999" class="btn btn-whatsapp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill-rule="evenodd"/></svg>
+      واتساب
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="wrap">
+    <div class="reveal in">
+      <div class="eyebrow">من نحن</div>
+      <h1>تودوما لوجستيك...<br>شريكك التشغيلي في إدارة الأساطيل وعمليات التوصيل</h1>
+      <p>شركة لوجستيات متكاملة متخصصة في إدارة الأساطيل، وعمليات التوصيل المُدارة، والشحن الداخلي. نساعد الشركات على بناء عمليات أكثر استقرارًا وكفاءة من خلال إدارة وتشغيل ومتابعة الأنشطة اللوجستية اليومية وفق معايير واضحة وقابلة للتوسع.</p>
+    </div>
+  </div>
+</section>
+
+<!-- لماذا تأسست تودوما -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">القصة</div>
+      <h2>بدأت من مشكلة حقيقية</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div>
+        <p>تعتمد العديد من الشركات على عمليات توصيل معقدة تتطلب متابعة يومية وتنسيقًا مستمرًا للحفاظ على مستوى الخدمة واستمرارية التشغيل. ومع نمو الأعمال، تصبح إدارة الأسطول والعمليات اللوجستية أكثر تعقيدًا وتأثيرًا على الأداء العام للشركة.</p>
+        <p style="margin-top:16px;">تأسست تودوما لوجستيك لتكون شريكًا تشغيليًا يساعد الشركات على إدارة هذه العمليات بكفاءة أعلى وتركيز أكبر على النمو — من خلال إدارة الأساطيل وتشغيل عمليات التوصيل وخدمات الشحن الداخلي في القاهرة الكبرى.</p>
+      </div>
+      <div class="about-visual">
+        <div class="about-grid-bg"></div>
+        <div class="about-icon-center">
+          <svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l7-6 7 6v10M9 20v-6h6v6"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY TODOMA -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow">لماذا تودوما لوجستيك</div>
+      <h2>ما يجعلنا شريكًا تشغيليًا مختلفًا</h2>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        </div>
+        <h3>إدارة متكاملة للأسطول</h3>
+        <p>نتولى الإشراف الكامل على عمليات الأسطول يوميًا لضمان الكفاءة والاستمرارية.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>استمرارية التشغيل</h3>
+        <p>نضمن سير العمليات بثبات واتساق حتى في أوقات الذروة والتحديات التشغيلية.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
+        </div>
+        <h3>رؤية تشغيلية واضحة</h3>
+        <p>تقارير دورية ومتابعة مستمرة لمؤشرات الأداء لدعم قرارات أعمالك.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
+        </div>
+        <h3>شريك موثوق للنمو</h3>
+        <p>نبني علاقات تشغيلية طويلة الأمد تنمو مع احتياجات أعمالك وتوسعك المستقبلي.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow">رسالتنا ورؤيتنا</div>
+      <h2>ما نسعى إليه</h2>
+    </div>
+    <div class="mv-grid reveal">
+      <div class="mv-card">
+        <div class="eyebrow">رسالتنا</div>
+        <h3>لماذا نعمل كل يوم</h3>
+        <p>تقديم خدمات لوجستية وتشغيلية تساعد الشركات على تحسين الأداء، وتعزيز استمرارية الأعمال، وإدارة الأساطيل وعمليات التوصيل بكفاءة ومرونة.</p>
+      </div>
+      <div class="mv-card">
+        <div class="eyebrow">رؤيتنا</div>
+        <h3>إلى أين نتجه</h3>
+        <p>أن تصبح تودوما لوجستيك شريكًا تشغيليًا موثوقًا للشركات التي تعتمد على الخدمات اللوجستية والتوصيل، وأن تبني شبكة تشغيلية قابلة للتوسع داخل مصر ثم الشحن الدولي.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow">قيمنا</div>
+      <h2>المبادئ التي تقود عملنا</h2>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>الكفاءة التشغيلية</h3>
+        <p>نعمل وفق إجراءات واضحة وقابلة للقياس.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
+        </div>
+        <h3>الموثوقية</h3>
+        <p>نلتزم باستمرارية التشغيل وجودة التنفيذ.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>الشراكة</h3>
+        <p>ننجح عندما ينجح عملاؤنا.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
+        </div>
+        <h3>التطوير المستمر</h3>
+        <p>نسعى دائمًا لتحسين الأداء والعمليات.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GROWTH ROADMAP -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow">خطة النمو</div>
+      <h2>رحلة النمو</h2>
+    </div>
+    <div class="growth-timeline reveal">
+      <div class="growth-step active">
+        <div class="step-num">01</div>
+        <h3>المرحلة الحالية</h3>
+        <p>القاهرة الكبرى — إدارة الأساطيل، عمليات التوصيل، والشحن الداخلي في القاهرة والجيزة.</p>
+      </div>
+      <div class="growth-step">
+        <div class="step-num">02</div>
+        <h3>المرحلة التالية</h3>
+        <p>التوسع ليشمل جميع محافظات مصر بعد إثبات الموثوقية في السوق الحالي.</p>
+      </div>
+      <div class="growth-step">
+        <div class="step-num">03</div>
+        <h3>المرحلة المستقبلية</h3>
+        <p>الشحن الدولي وتوسيع نطاق الخدمات اللوجستية خارج مصر.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>هل تبحث عن شريك تشغيلي موثوق؟</h2>
+    <p>تحدث مع فريق تودوما لوجستيك لمناقشة احتياجاتك التشغيلية واللوجستية.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-primary btn-lg">طلب استشارة</a>
+      <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill="white" fill-rule="evenodd"/></svg>
+        تواصل عبر واتساب
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-white">
+          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="44">
+        </a>
+        <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">خدماتنا</a>
+        <a href="industries.html">القطاعات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="contact.html">طلب استشارة</a>
+        <a href="https://wa.me/201008330999" target="_blank" rel="noopener">واتساب</a>
+        <p class="footer-contact-info">
+          وحدة 146، مول رويال تاورز، 6 أكتوبر، الجيزة، مصر<br>
+          هاتف: 01008330999<br>
+          info@todomalogistics.com
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 TODOMA Logistics. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); hamburger.classList.toggle('open'); });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); }));
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }); }, { threshold: 0.13 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

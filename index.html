@@ -1,409 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TODOMA LOGISTICS — Homepage Mockup V2.0</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تودوما لوجستيك | إدارة الأساطيل وعمليات التوصيل والشحن الداخلي</title>
+  <meta name="description" content="تودوما لوجستيك — شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى. حتى لا يتوقف عملك أبدًا.">
+  <meta property="og:title" content="تودوما لوجستيك | إدارة الأساطيل وعمليات التوصيل والشحن الداخلي">
+  <meta property="og:description" content="نُدير عمليات التوصيل حتى لا يتوقف عملك أبدًا">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
 <style>
-  :root{
-    --navy:#0A2540;
-    --navy-2:#0F3258;
-    --orange:#FF6B00;
-    --bg:#FFFFFF;
-    --bg-light:#F8FAFC;
-    --border:#E2E8F0;
-    --muted:#5B6B82;
-    --muted-on-navy:#9FB0C5;
-    --radius:10px;
-    --maxw:1200px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Inter',sans-serif;
-    color:var(--navy);
-    background:var(--bg);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  img{max-width:100%;display:block;}
-  a{color:inherit;text-decoration:none;}
-  button{font-family:inherit;cursor:pointer;border:none;background:none;}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 80px;}
-  @media (max-width:1100px){ .wrap{padding:0 48px;} }
-  @media (max-width:640px){ .wrap{padding:0 24px;} }
-
-  .eyebrow{
-    display:inline-block;
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--orange);
-    margin-bottom:16px;
-  }
-  h1,h2,h3{font-weight:600;letter-spacing:-0.01em;}
-  h1{font-size:60px;line-height:1.1;letter-spacing:-0.02em;}
-  h2{font-size:38px;line-height:1.2;}
-  h3{font-size:21px;line-height:1.3;}
-  p{color:var(--muted);}
-  .section{padding:120px 0;}
-  @media (max-width:1100px){ .section{padding:80px 0;} }
-  @media (max-width:640px){ .section{padding:64px 0; h1{font-size:38px;} } }
-  .section-light{background:var(--bg-light);}
-  .center{text-align:center;}
-  .section-head{max-width:600px;margin:0 auto 64px;}
-  .section-head.left{margin:0 0 56px;text-align:left;}
-
-  /* fade-in on scroll */
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1;transform:translateY(0);}
-
-  /* ---------- NAV ---------- */
-  header{
-    position:sticky;top:0;z-index:100;
-    background:rgba(255,255,255,0.96);
-    border-bottom:1px solid var(--border);
-    backdrop-filter:blur(6px);
-  }
-  .navbar{
-    max-width:var(--maxw);margin:0 auto;padding:0 80px;
-    height:80px;display:flex;align-items:center;justify-content:space-between;
-  }
-  @media (max-width:1100px){ .navbar{padding:0 48px;} }
-  @media (max-width:640px){ .navbar{padding:0 24px;height:68px;} }
-  .logo{font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--navy);display:flex;align-items:center;gap:8px;}
-  .logo .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
-  nav.nav-links{display:flex;gap:40px;font-size:15px;font-weight:500;}
-  nav.nav-links a{color:var(--navy);opacity:0.78;transition:opacity .2s;}
-  nav.nav-links a:hover{opacity:1;}
-  .nav-right{display:flex;align-items:center;gap:20px;}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    font-size:15px;font-weight:600;border-radius:8px;
-    padding:13px 28px;transition:all .18s ease;white-space:nowrap;
-  }
-  .btn-primary{background:var(--navy);color:#fff;}
-  .btn-primary:hover{background:var(--navy-2);}
-  .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}
-  .btn-outline:hover{background:var(--navy);color:#fff;}
-  .btn-sm{padding:11px 22px;font-size:14px;}
-  .hamburger{display:none;flex-direction:column;gap:5px;width:24px;}
-  .hamburger span{height:2px;background:var(--navy);width:100%;display:block;}
-  @media (max-width:880px){
-    nav.nav-links{display:none;}
-    .nav-right .btn-outline{display:none;}
-    .hamburger{display:flex;}
-  }
-
-  /* mobile menu */
-  .mobile-menu{
-    display:none;position:fixed;inset:0;top:68px;background:var(--navy);
-    z-index:99;padding:32px 24px;flex-direction:column;gap:8px;
-  }
-  .mobile-menu.open{display:flex;}
-  .mobile-menu a{color:#fff;font-size:18px;padding:16px 4px;border-bottom:1px solid rgba(255,255,255,0.12);}
-  .mobile-menu .btn-primary{margin-top:16px;width:100%;}
-
-  /* ---------- HERO ---------- */
-  .hero{padding:90px 0 100px;}
-  .hero-grid{
-    display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center;
-  }
-  @media (max-width:880px){
-    .hero{padding:48px 0 56px;}
-    .hero-grid{grid-template-columns:1fr;gap:40px;}
-  }
-  .hero-sub{font-size:18px;max-width:480px;margin:24px 0 36px;color:var(--muted);}
-  .hero-ctas{display:flex;gap:16px;}
-  @media (max-width:520px){ .hero-ctas{flex-direction:column;} .hero-ctas .btn{width:100%;} }
-
-  /* hero visual: illustrated ops dashboard */
-  .hero-visual{position:relative;}
-  .dash-card{
-    background:linear-gradient(155deg,#0A2540 0%, #123660 65%, #0A2540 100%);
-    border-radius:16px;padding:28px;position:relative;overflow:hidden;
-    box-shadow:0 20px 50px -20px rgba(10,37,64,0.35);
-    aspect-ratio:4/3.1;
-  }
-  .dash-card::before{
-    content:"";position:absolute;inset:0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size:28px 28px;
-    mask-image:radial-gradient(circle at 60% 40%, black, transparent 75%);
-  }
-  .dash-label{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted-on-navy);position:relative;z-index:2;}
-  .dash-route{
-    position:absolute;inset:0;z-index:1;
-  }
-  .pulse-dot{
-    width:9px;height:9px;border-radius:50%;background:var(--orange);
-    position:absolute;box-shadow:0 0 0 0 rgba(255,107,0,0.6);
-    animation:pulse 2.4s infinite;
-  }
-  @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(255,107,0,0.45);}
-    70%{box-shadow:0 0 0 12px rgba(255,107,0,0);}
-    100%{box-shadow:0 0 0 0 rgba(255,107,0,0);}
-  }
-  .float-card{
-    position:absolute;bottom:-22px;left:24px;right:24px;
-    background:#fff;border-radius:12px;padding:18px 22px;
-    box-shadow:0 24px 48px -16px rgba(10,37,64,0.25);
-    display:flex;justify-content:space-between;align-items:center;
-    z-index:3;
-  }
-  .float-stat{display:flex;align-items:center;gap:10px;}
-  .status-chip{
-    font-size:13px;font-weight:600;padding:5px 12px;border-radius:20px;
-    background:#EEF6F0;color:#1A7F4A;display:flex;align-items:center;gap:6px;
-  }
-  .status-chip .d{width:6px;height:6px;border-radius:50%;background:#1A7F4A;}
-  .float-label{font-size:13px;color:var(--muted);font-weight:500;}
-
-  /* ---------- WHY TODOMA ---------- */
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px;}
-  @media (max-width:980px){ .why-grid{grid-template-columns:1fr 1fr;gap:40px;} }
-  @media (max-width:560px){ .why-grid{grid-template-columns:1fr;gap:36px;} }
-  .why-item .icon-wrap{margin-bottom:18px;}
-  .why-item h3{margin-bottom:8px;}
-  .why-item p{font-size:15px;}
-
-  /* icon style */
-  .icon{width:30px;height:30px;color:var(--navy);}
-  .icon svg{width:100%;height:100%;stroke:var(--navy);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-
-  /* ---------- SERVICES ---------- */
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
-  .services-grid .card:nth-child(4){grid-column:1 / span 1;}
-  @media (min-width:981px){
-    .services-grid{grid-template-columns:repeat(6,1fr);}
-    .services-grid .card{grid-column:span 2;}
-    .services-grid .card:nth-child(4){grid-column:2 / span 2;}
-    .services-grid .card:nth-child(5){grid-column:4 / span 2;}
-  }
-  @media (max-width:980px){ .services-grid{grid-template-columns:1fr 1fr;} .services-grid .card:nth-child(4){grid-column:auto;} }
-  @media (max-width:680px){ .services-grid{grid-template-columns:1fr;} }
-  .card{
-    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-    padding:36px 32px;transition:border-color .2s ease, transform .2s ease;
-  }
-  .card:hover{border-color:var(--navy);transform:translateY(-3px);}
-  .badge{
-    width:48px;height:48px;border-radius:10px;background:#F1F5F9;
-    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
-  }
-  .badge .icon{width:24px;height:24px;}
-  .card h3{margin-bottom:10px;}
-  .card p{font-size:15px;margin-bottom:14px;}
-  .sub-capability{
-    font-size:14px;color:var(--muted);background:var(--bg-light);
-    border-left:2px solid var(--orange);padding:8px 12px;border-radius:4px;margin:14px 0;
-  }
-  .card-link{font-size:14px;font-weight:600;color:var(--orange);}
-
-  /* ---------- HOW WE OPERATE (dark) ---------- */
-  .operate-section{background:var(--navy);color:#fff;}
-  .operate-section h2{color:#fff;}
-  .operate-section .section-head p{color:var(--muted-on-navy);}
-  .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative;}
-  .timeline::before{
-    content:"";position:absolute;top:18px;left:0;right:0;height:1px;
-    background:rgba(255,255,255,0.16);
-  }
-  @media (max-width:880px){
-    .timeline{grid-template-columns:1fr;gap:0;}
-    .timeline::before{display:none;}
-    .t-step{
-      display:grid;grid-template-columns:36px 1fr;gap:20px;
-      padding-bottom:36px;position:relative;
-    }
-    .t-step::before{
-      content:"";position:absolute;left:17px;top:40px;bottom:0;width:1px;
-      background:rgba(255,255,255,0.16);
-    }
-    .t-step:last-child::before{display:none;}
-  }
-  .t-marker{
-    width:36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
-    position:relative;z-index:2;margin-bottom:20px;
-  }
-  @media (max-width:880px){ .t-marker{margin-bottom:0;} }
-  .t-step h3{color:#fff;margin-bottom:8px;}
-  .t-step p{color:var(--muted-on-navy);font-size:15px;}
-
-  /* ---------- INDUSTRIES ---------- */
-  .industries-featured{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;}
-  @media (max-width:760px){ .industries-featured{grid-template-columns:1fr;} }
-  .industries-standard{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  @media (max-width:760px){ .industries-standard{grid-template-columns:1fr 1fr;} }
-  @media (max-width:460px){ .industries-standard{grid-template-columns:1fr;} }
-  .ind-card.featured{position:relative;}
-  .ind-card.featured .ind-visual{aspect-ratio:16/10;}
-  .ind-card.featured .ind-body{padding:24px 24px 28px;}
-  .ind-card.featured h3{font-size:19px;}
-  .ind-card.featured p{font-size:14.5px;}
-  .priority-tag{
-    position:absolute;top:16px;left:16px;z-index:2;
-    font-size:11.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
-    color:#fff;background:rgba(255,107,0,0.92);padding:5px 10px;border-radius:20px;
-  }
-  .ind-card.standard .ind-visual{aspect-ratio:4/3;}
-  .ind-card.standard h3{font-size:16px;}
-  .ind-card.standard p{font-size:13px;}
-  .ind-card{
-    border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .ind-card:hover{border-color:var(--navy);transform:translateY(-3px);}
-  .ind-visual{
-    aspect-ratio:4/3;position:relative;
-    display:flex;align-items:flex-end;padding:16px;
-  }
-  .ind-visual .icon{width:30px;height:30px;color:#fff;}
-  .ind-visual .icon svg{stroke:#fff;}
-  .ind-body{padding:18px 18px 22px;}
-  .ind-body h3{font-size:17px;margin-bottom:8px;}
-  .ind-body p{font-size:13.5px;line-height:1.55;}
-
-  /* ---------- ABOUT ---------- */
-  .about-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center;}
-  @media (max-width:880px){ .about-grid{grid-template-columns:1fr;gap:36px;} }
-  .about-grid p{margin-bottom:16px;max-width:520px;}
-  .about-visual{
-    border-radius:16px;overflow:hidden;aspect-ratio:4/3.4;position:relative;
-    background:linear-gradient(160deg,#0A2540, #1B4A78);
-  }
-  .about-visual .grid-pattern{
-    position:absolute;inset:0;
-    background-image:linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-    background-size:32px 32px;
-  }
-  .about-visual .center-icon{
-    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  }
-  .about-visual .center-icon .icon{width:64px;height:64px;color:rgba(255,255,255,0.85);}
-  .about-visual .center-icon .icon svg{stroke:rgba(255,255,255,0.85);stroke-width:1.2;}
-
-  /* ---------- LEADERSHIP ---------- */
-  .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;text-align:center;}
-  @media (max-width:760px){ .lead-grid{grid-template-columns:1fr;gap:40px;} }
-  .avatar{
-    width:104px;height:104px;border-radius:50%;margin:0 auto 16px;
-    background:var(--bg-light);
-    border:1.5px dashed #C7D2DE;
-    color:var(--navy);display:flex;align-items:center;justify-content:center;
-    font-size:26px;font-weight:600;letter-spacing:0.02em;position:relative;
-  }
-  .avatar .icon{width:28px;height:28px;color:#9AAAC0;}
-  .avatar .icon svg{stroke:#9AAAC0;}
-  .photo-pending{
-    font-size:11.5px;color:var(--muted);letter-spacing:0.03em;
-    display:block;margin-bottom:14px;
-  }
-  .lead-grid h3{margin-bottom:4px;}
-  .lead-title{font-size:13px;font-weight:600;color:var(--orange);letter-spacing:0.02em;}
-
-  /* ---------- CONTACT ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:flex-start;}
-  @media (max-width:880px){ .contact-grid{grid-template-columns:1fr;gap:40px;} }
-  .contact-quote{
-    font-size:19px;color:var(--navy);font-weight:500;line-height:1.5;
-    margin-top:24px;padding-left:20px;border-left:3px solid var(--orange);
-  }
-  .form-card{
-    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-    padding:40px;
-  }
-  .field{margin-bottom:20px;}
-  .field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:8px;color:var(--navy);}
-  .field input, .field select{
-    width:100%;height:48px;border:1px solid var(--border);border-radius:8px;
-    padding:0 16px;font-size:15px;font-family:inherit;color:var(--navy);background:#fff;
-  }
-  .field textarea{
-    width:100%;min-height:96px;border:1px solid var(--border);border-radius:8px;
-    padding:12px 16px;font-size:15px;font-family:inherit;color:var(--navy);background:#fff;resize:vertical;
-  }
-  .field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--navy);outline-offset:1px;}
-  .form-card .btn-primary{width:100%;height:50px;font-size:15px;margin-top:8px;}
-
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--navy);color:var(--muted-on-navy);padding:64px 0 28px;}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.12);}
-  @media (max-width:760px){ .footer-grid{grid-template-columns:1fr;gap:32px;} }
-  .footer-grid .logo{color:#fff;margin-bottom:12px;}
-  .footer-grid p{color:var(--muted-on-navy);font-size:14px;max-width:280px;}
-  .footer-grid h4{color:#fff;font-size:14px;margin-bottom:16px;font-weight:600;}
-  .footer-grid a{display:block;color:var(--muted-on-navy);font-size:14px;margin-bottom:12px;}
-  .footer-grid a:hover{color:#fff;}
-  .copyright{text-align:center;font-size:13px;color:#6E83A0;padding-top:24px;}
+  .logo-img { display: block; height: 72px; width: auto; object-fit: contain; }
+  .logo-img-footer { height: 44px; filter: brightness(0) invert(1); }
+  @media (max-width: 768px) { .logo-img { height: 54px; } .logo-img-footer { height: 36px; } }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="navbar">
-    <div class="logo"><span class="dot"></span>TODOMA<span style="font-weight:400;opacity:0.6;">&nbsp;LOGISTICS</span></div>
-    <nav class="nav-links">
-      <a href="#why">Home</a>
-      <a href="#services">Services</a>
-      <a href="#industries">Industries</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap nav-wrap">
+    <a href="index.html" class="logo" aria-label="تودوما لوجستيك">
+      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="72">
+    </a>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="industries.html">القطاعات</a>
+      <a href="contact.html">تواصل معنا</a>
     </nav>
-    <div class="nav-right">
-      <a href="#contact" class="btn btn-outline btn-sm">Book Discovery Call</a>
-      <a href="#contact" class="btn btn-primary btn-sm">Request Consultation</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-outline btn-sm">EN</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">طلب استشارة</a>
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#why">Home</a>
-    <a href="#services">Services</a>
-    <a href="#industries">Industries</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" class="btn btn-primary">Request Consultation</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="services.html">خدماتنا</a>
+    <a href="industries.html">القطاعات</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="contact.html" class="btn btn-primary">طلب استشارة</a>
+    <a href="https://wa.me/201008330999" class="btn btn-whatsapp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill-rule="evenodd"/></svg>
+      واتساب
+    </a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero section-dark">
   <div class="wrap hero-grid">
-    <div class="reveal in">
-      <div class="eyebrow">Operational Control. Reliable Delivery.</div>
-      <h1>We Manage Delivery Operations So Your Business Never Stops</h1>
-      <p class="hero-sub">TODOMA helps businesses maintain reliable delivery operations through managed fleet execution, operational control, and scalable support across Greater Cairo.</p>
+    <div class="hero-content reveal">
+      <div class="eyebrow">التحكم التشغيلي. التوصيل الموثوق.</div>
+      <h1 class="hero-h1">شريكك اللوجستي المتكامل<br>في القاهرة الكبرى</h1>
+      <p class="hero-sub">تودوما لوجستيك تُدير الأساطيل وعمليات التوصيل والشحن الداخلي — حتى لا يتوقف عملك أبدًا.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Request Consultation</a>
-        <a href="#contact" class="btn btn-outline">Book Discovery Call</a>
+        <a href="contact.html" class="btn btn-primary btn-lg">طلب استشارة مجانية</a>
+        <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill-rule="evenodd"/></svg>
+          تواصل عبر واتساب
+        </a>
       </div>
     </div>
-    <div class="hero-visual reveal in">
+    <div class="hero-visual reveal">
       <div class="dash-card">
-        <div class="dash-label">GREATER CAIRO — COVERAGE OVERVIEW</div>
-        <svg class="dash-route" viewBox="0 0 400 280" preserveAspectRatio="none">
-          <path d="M30,220 C90,150 130,180 170,110 C210,40 260,90 300,50 C330,25 350,40 370,20"
-                stroke="rgba(255,107,0,0.55)" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
-          <path d="M20,90 C70,120 110,70 160,140 C200,195 250,160 300,200 C330,222 350,210 380,235"
-                stroke="rgba(255,255,255,0.18)" stroke-width="1.4" fill="none"/>
+        <div class="dash-label">القاهرة الكبرى — نظرة عامة على التغطية</div>
+        <svg class="dash-route" viewBox="0 0 400 240" preserveAspectRatio="none">
+          <path d="M30,200 C90,140 130,165 170,100 C210,35 260,80 300,45 C330,20 350,36 380,16" stroke="rgba(255,107,53,0.55)" stroke-width="2.2" fill="none" stroke-dasharray="5 7"/>
+          <path d="M20,80 C70,110 110,62 160,128 C200,182 250,150 300,188 C330,210 350,198 385,225" stroke="rgba(255,255,255,0.14)" stroke-width="1.4" fill="none"/>
+          <path d="M60,160 C100,130 160,145 200,105 C240,65 280,90 340,70" stroke="rgba(255,107,53,0.3)" stroke-width="1.4" fill="none" stroke-dasharray="3 5"/>
         </svg>
-        <div class="pulse-dot" style="top:42%;left:42%;"></div>
-        <div class="pulse-dot" style="top:18%;left:78%;animation-delay:.6s;"></div>
-        <div class="pulse-dot" style="top:68%;left:22%;animation-delay:1.1s;"></div>
+        <div class="pulse-dot" style="top:40%;left:40%;"></div>
+        <div class="pulse-dot" style="top:17%;left:75%;animation-delay:.7s;"></div>
+        <div class="pulse-dot" style="top:65%;left:20%;animation-delay:1.3s;"></div>
         <div class="float-card">
           <div class="float-stat">
-            <span class="status-chip"><span class="d"></span>Active</span>
-            <span class="float-label">Fleet Coverage</span>
+            <span class="status-chip status-active"><span class="d"></span>نشط</span>
+            <span class="float-label">تغطية الأسطول</span>
           </div>
-          <span class="status-chip" style="background:#FFF1E6;color:var(--orange);"><span class="d" style="background:var(--orange);"></span>Monitoring</span>
+          <span class="status-chip status-monitor"><span class="d" style="background:var(--orange);"></span>مراقبة</span>
         </div>
       </div>
     </div>
@@ -414,36 +99,37 @@
 <section class="section section-light" id="why">
   <div class="wrap">
     <div class="section-head center reveal">
-      <h2>Why TODOMA</h2>
+      <div class="eyebrow">لماذا تودوما</div>
+      <h2>ما الذي يجعل تودوما مختلفة</h2>
     </div>
     <div class="why-grid">
       <div class="why-item reveal">
-        <div class="icon-wrap"><span class="icon">
+        <div class="why-icon">
           <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
-        </span></div>
-        <h3>Fleet Management</h3>
-        <p>Structured oversight of delivery fleets, built for consistency.</p>
+        </div>
+        <h3>إدارة الأسطول</h3>
+        <p>إشراف منظم ومستمر على أسطول التوصيل لضمان الاتساق والكفاءة اليومية.</p>
       </div>
       <div class="why-item reveal">
-        <div class="icon-wrap"><span class="icon">
+        <div class="why-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        </span></div>
-        <h3>Operational Control</h3>
-        <p>Clear processes and accountability across daily execution.</p>
+        </div>
+        <h3>التحكم التشغيلي</h3>
+        <p>عمليات واضحة ومساءلة كاملة في كل تفصيلة من تفاصيل التنفيذ اليومي.</p>
       </div>
       <div class="why-item reveal">
-        <div class="icon-wrap"><span class="icon">
+        <div class="why-icon">
           <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
-        </span></div>
-        <h3>Performance Monitoring</h3>
-        <p>Ongoing visibility into operations to keep delivery on track.</p>
+        </div>
+        <h3>مراقبة الأداء</h3>
+        <p>رؤية مستمرة وشاملة للعمليات لضمان سير التوصيل وفق المعايير المطلوبة.</p>
       </div>
       <div class="why-item reveal">
-        <div class="icon-wrap"><span class="icon">
+        <div class="why-icon">
           <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
-        </span></div>
-        <h3>Business Continuity</h3>
-        <p>Operational support designed to keep your business moving.</p>
+        </div>
+        <h3>استمرارية الأعمال</h3>
+        <p>دعم تشغيلي مصمم لحفظ استمرارية عملك حتى في أصعب الظروف.</p>
       </div>
     </div>
   </div>
@@ -453,88 +139,93 @@
 <section class="section" id="services">
   <div class="wrap">
     <div class="section-head center reveal">
-      <h2>Services</h2>
-      <p style="margin-top:14px;">Comprehensive logistics, fleet management, workforce supply and operational support solutions across Egypt.</p>
+      <div class="eyebrow">خدماتنا</div>
+      <h2>حلول لوجستية وتشغيلية متكاملة</h2>
+      <p>منظومة متكاملة من خدمات إدارة الأسطول والعمليات اللوجستية، تُدار بالكامل من قِبَل فريق تودوما.</p>
     </div>
     <div class="services-grid">
       <div class="card reveal">
-        <div class="badge"><span class="icon">
+        <div class="badge">
           <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
-        </span></div>
-        <h3>Fleet Management</h3>
-        <p>End-to-end oversight of delivery fleets — coordination, scheduling, and performance accountability.</p>
-        <a href="#contact" class="card-link">Learn more →</a>
+        </div>
+        <h3>إدارة عمليات الأسطول</h3>
+        <p>إشراف شامل على أسطول التوصيل — التنسيق، والجدولة، والمساءلة التشغيلية الكاملة.</p>
+        <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
       <div class="card reveal">
-        <div class="badge"><span class="icon">
+        <div class="badge">
           <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
-        </span></div>
-        <h3>Delivery Workforce Supply</h3>
-        <p>Daily operational execution and monitoring, run by TODOMA so internal teams can focus on growth.</p>
-        <a href="#contact" class="card-link">Learn more →</a>
+        </div>
+        <h3>إدارة عمليات التوصيل</h3>
+        <p>إدارة متكاملة لعمليات التوصيل اليومية بما يضمن تنفيذ العمليات بسلاسة واستقرار مع الحفاظ على جودة الخدمة.</p>
+        <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
       <div class="card reveal">
-        <div class="badge"><span class="icon">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        </div>
+        <h3>مراقبة الأداء والتقارير</h3>
+        <p>رصد مستمر لمؤشرات أداء الأسطول مع تقارير دورية دقيقة لدعم القرار التشغيلي.</p>
+        <a href="services.html" class="card-link">اعرف المزيد ←</a>
+      </div>
+      <div class="card reveal">
+        <div class="badge">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
-        </span></div>
-        <h3>Commercial Agency Services</h3>
-        <p>Structured coordination of delivery personnel, integrated within the broader fleet system.</p>
-        <a href="#contact" class="card-link">Learn more →</a>
+        </div>
+        <h3>الدعم التشغيلي الميداني</h3>
+        <p>دعم العمليات الميدانية اليومية لضمان استمرارية الأداء والتنسيق السلس بين جميع عناصر التشغيل.</p>
+        <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
       <div class="card reveal">
-        <div class="badge"><span class="icon">
+        <div class="badge">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
-        </span></div>
-        <h3>Commercial Agency Services</h3>
-        <p>Representation and business development support for logistics, transportation and commercial partners.</p>
-        <a href="#contact" class="card-link">Learn more →</a>
+        </div>
+        <h3>دعم توسيع الأسطول</h3>
+        <p>مساعدة الشركات على التخطيط للتوسع التشغيلي وتطوير قدرات الأسطول بما يتوافق مع أهداف النمو المستقبلية.</p>
+        <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
-      <div class="card reveal">
-        <div class="badge"><span class="icon">
-          <svg viewBox="0 0 24 24"><path d="M3 17h2l2-5h10l2 5h2M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg>
-        </span></div>
-        <h3>Distribution & Logistics Coordination</h3>
-        <p>Coordination of shipment movement, distribution networks and logistics operations across multiple locations.</p>
-        <a href="#contact" class="card-link">Learn more →</a>
-      </div>
+    </div>
+    <div class="center" style="margin-top:48px;">
+      <a href="services.html" class="btn btn-outline">استعرض جميع الخدمات</a>
     </div>
   </div>
 </section>
 
 <!-- HOW WE OPERATE -->
-<section class="section operate-section">
+<section class="section section-dark operate-section">
   <div class="wrap">
     <div class="section-head center reveal">
-      <h2>How We Operate</h2>
-      <p>A consistent operating rhythm, applied across every account.</p>
+      <div class="eyebrow" style="color:var(--orange)">آلية عملنا</div>
+      <h2 style="color:#fff">منهجية تشغيلية واضحة في كل خطوة</h2>
+      <p style="color:var(--muted-dark)">نطبق منظومة تشغيلية ثابتة ومدروسة على كل حساب نخدمه.</p>
     </div>
     <div class="timeline">
       <div class="t-step reveal">
         <div class="t-marker">01</div>
-        <div>
-          <h3>Understand Requirements</h3>
-          <p>We map your delivery volume, coverage area, and operational priorities before anything goes live.</p>
+        <div class="t-body">
+          <h3>فهم المتطلبات</h3>
+          <p>نرسم خريطة دقيقة لحجم التوصيل ونطاق التغطية والأولويات التشغيلية قبل أي تنفيذ.</p>
         </div>
       </div>
       <div class="t-step reveal">
         <div class="t-marker">02</div>
-        <div>
-          <h3>Prepare Operations</h3>
-          <p>Fleet structure, coverage, and escalation paths are set up around your specific operating pattern.</p>
+        <div class="t-body">
+          <h3>تجهيز العمليات</h3>
+          <p>نُعِد هيكل الأسطول ومناطق التغطية وآليات التصعيد بما يتوافق مع نمط عمل عميلنا.</p>
         </div>
       </div>
       <div class="t-step reveal">
         <div class="t-marker">03</div>
-        <div>
-          <h3>Daily Monitoring</h3>
-          <p>Operations are tracked and adjusted in real time to keep delivery consistent through the day.</p>
+        <div class="t-body">
+          <h3>المراقبة اليومية</h3>
+          <p>نتابع العمليات ونُعدّل الأداء في الوقت الفعلي لضمان اتساق التوصيل على مدار اليوم.</p>
         </div>
       </div>
       <div class="t-step reveal">
         <div class="t-marker">04</div>
-        <div>
-          <h3>Continuous Improvement</h3>
-          <p>Performance is reviewed regularly and operations are refined as your business grows.</p>
+        <div class="t-body">
+          <h3>التحسين المستمر</h3>
+          <p>نستعرض الأداء بانتظام ونُطوِّر العمليات مع نمو أعمال عميلنا.</p>
         </div>
       </div>
     </div>
@@ -545,205 +236,221 @@
 <section class="section section-light" id="industries">
   <div class="wrap">
     <div class="section-head center reveal">
-      <h2>Industries We Serve</h2>
-      <p>Operational support shaped around how each industry actually moves.</p>
+      <div class="eyebrow">القطاعات التي نخدمها</div>
+      <h2>نخدم الشركات التي تعتمد على التشغيل اللوجستي والتوصيل</h2>
+      <p>حلول تشغيلية مُصمَّمة خصيصًا لكيفية عمل كل قطاع فعليًا.</p>
     </div>
     <div class="industries-featured">
       <div class="ind-card featured reveal">
-        <div class="ind-visual" style="background:linear-gradient(155deg,#1B4A78,#0A2540);">
-          <span class="priority-tag">Priority Market</span>
-          <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+        <div class="ind-visual ind-qc">
+          <span class="priority-tag">سوق أساسي</span>
+          <div class="ind-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
         </div>
         <div class="ind-body">
-          <h3>Delivery & Quick Commerce Companies</h3>
-          <p>Sustaining reliability through rapid, high-frequency order cycles — where minutes define customer experience.</p>
+          <h3>شركات التوصيل والتجارة السريعة</h3>
+          <p>الحفاظ على الموثوقية خلال دورات الطلبات السريعة وعالية التردد — حيث تُحدد الدقائق تجربة العميل.</p>
         </div>
       </div>
       <div class="ind-card featured reveal">
-        <div class="ind-visual" style="background:linear-gradient(155deg,#1B4A78,#16365C);">
-          <span class="priority-tag">Priority Market</span>
-          <span class="icon"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4v10l8 4 8-4z"/><path d="M12 3v18M4 7l8 4 8-4"/></svg></span>
+        <div class="ind-visual ind-ecom">
+          <span class="priority-tag">سوق أساسي</span>
+          <div class="ind-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4v10l8 4 8-4z"/><path d="M12 3v18M4 7l8 4 8-4"/></svg>
+          </div>
         </div>
         <div class="ind-body">
-          <h3>E-Commerce Businesses</h3>
-          <p>Scalable fulfillment support as order volume grows, built to handle demand surges without breaking continuity.</p>
+          <h3>شركات التجارة الإلكترونية</h3>
+          <p>دعم التنفيذ القابل للتوسع مع نمو حجم الطلبات، مصمم لاستيعاب ارتفاعات الطلب دون انقطاع.</p>
         </div>
       </div>
     </div>
-    <div class="industries-standard" style="grid-template-columns:1fr 1fr;max-width:760px;margin:0 auto;">
+    <div class="industries-standard">
       <div class="ind-card standard reveal">
-        <div class="ind-visual" style="background:linear-gradient(155deg,#16365C,#0A2540);">
-          <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M9 9v11"/></svg></span>
+        <div class="ind-visual ind-dist">
+          <div class="ind-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M9 9v11"/></svg>
+          </div>
         </div>
         <div class="ind-body">
-          <h3>Product Distribution Companies</h3>
-          <p>Coordinated delivery support across cosmetics, FMCG, F&B, consumer goods, and electronics distribution.</p>
+          <h3>شركات توزيع المنتجات</h3>
+          <p>دعم موزعي السلع الاستهلاكية والمواد الغذائية والإلكترونيات ومستلزمات التجميل.</p>
         </div>
       </div>
       <div class="ind-card standard reveal">
-        <div class="ind-visual" style="background:linear-gradient(155deg,#0A2540,#15406A);">
-          <span class="icon"><svg viewBox="0 0 24 24"><path d="M3 17h2l2-5h10l2 5h2M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg></span>
+        <div class="ind-visual ind-log">
+          <div class="ind-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 17h2l2-5h10l2 5h2M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg>
+          </div>
         </div>
         <div class="ind-body">
-          <h3>Logistics & Transportation Companies</h3>
-          <p>Operational continuity layered onto existing logistics and transportation networks.</p>
+          <h3>شركات اللوجستيات والنقل</h3>
+          <p>استمرارية تشغيلية متكاملة تُضاف إلى شبكات اللوجستيات والنقل القائمة.</p>
         </div>
       </div>
+    </div>
+    <div class="center" style="margin-top:40px;">
+      <a href="industries.html" class="btn btn-outline">استعرض جميع القطاعات</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT SNIPPET -->
 <section class="section" id="about">
   <div class="wrap about-grid">
     <div class="reveal">
-      <h2 style="margin-bottom:24px;">About TODOMA</h2>
-      <p>TODOMA was founded to solve a problem most delivery businesses face but rarely name directly: operations that depend on people are inherently fragile unless someone is actively managing them.</p>
-      <p>We act as an operational partner — not a rider supplier — providing fleet management, managed delivery operations, and broader logistics support services so our clients can focus on growing their business rather than running it.</p>
-      <p>Greater Cairo is one of the densest, fastest-moving delivery markets in the region — high order volumes, congested routes, and rapidly scaling demand from quick commerce, e-commerce, distribution, and logistics operators alike. Operating reliably here requires more than coverage; it requires structured, hands-on management of fleets day to day.</p>
-      <p>TODOMA is built specifically for this market: a Phase 1 focus on Greater Cairo, with the operational discipline to prove reliability before expanding further across Egypt.</p>
+      <div class="eyebrow">من نحن</div>
+      <h2>شريك تشغيلي، لا مجرد مزود خدمة</h2>
+      <p>تأسست تودوما لوجستيك لتكون شريكًا تشغيليًا يساعد الشركات على إدارة الأساطيل وتشغيل عمليات التوصيل والشحن الداخلي بكفاءة أعلى واستمرارية أكبر.</p>
+      <p>تعتمد العمليات اللوجستية الناجحة على إدارة دقيقة ومتابعة مستمرة لضمان الاستقرار والنمو — وهذا بالضبط ما تتولاه تودوما لوجستيك نيابةً عن عملائها حتى يتفرغوا لتنمية أعمالهم.</p>
+      <p>نتمركز حاليًا في القاهرة الكبرى — أحد أكثر أسواق اللوجستيات كثافةً وحيويةً في المنطقة — ونبني نموذجًا يُثبت موثوقيته قبل التوسع.</p>
+      <a href="about.html" class="btn btn-primary" style="margin-top:24px;">اعرف المزيد عنا</a>
     </div>
     <div class="about-visual reveal">
-      <div class="grid-pattern"></div>
-      <div class="center-icon">
-        <span class="icon">
-          <svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l7-6 7 6v10M9 20v-6h6v6"/></svg>
-        </span>
+      <div class="about-grid-bg"></div>
+      <div class="about-icon-center">
+        <svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l7-6 7 6v10M9 20v-6h6v6"/></svg>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LEADERSHIP -->
-<section class="section section-light">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <h2>Leadership</h2>
-    </div>
-    <div class="lead-grid">
-      <div class="reveal">
-        <div class="avatar" data-founder-photo="ashraf-gad-el-karim"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></span></div>
-        <span class="photo-pending">Photo coming soon</span>
-        <h3>Ashraf Gad El Karim</h3>
-        <div class="lead-title">Co-Founder & Managing Director</div>
-      </div>
-      <div class="reveal">
-        <div class="avatar" data-founder-photo="ayman-salama"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></span></div>
-        <span class="photo-pending">Photo coming soon</span>
-        <h3>Ayman Salama</h3>
-        <div class="lead-title">Co-Founder</div>
-      </div>
-      <div class="reveal">
-        <div class="avatar" data-founder-photo="sami-tawfik"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></span></div>
-        <span class="photo-pending">Photo coming soon</span>
-        <h3>Sami Tawfik</h3>
-        <div class="lead-title">Co-Founder</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
+<!-- CONTACT CTA -->
 <section class="section" id="contact">
   <div class="wrap contact-grid">
     <div class="reveal">
-      <h2>Let's Build Reliable Operations Together</h2>
-      <p style="margin-top:16px;">Tell us about your delivery operations and we'll follow up to discuss how TODOMA can support continuity and growth.</p>
-      <p class="contact-quote">We help businesses focus on growth while we focus on operational continuity.</p>
-      <p style="margin-top:28px;font-size:15px;line-height:1.8;">
-        6th of October City, Giza, Egypt<br>
-        Phone: 01008330999<br>
-        Email: info@todomalogistics.com<br>
-        Executive: ashraf@todomalogistics.com
-      </p>
+      <div class="eyebrow">لنبني معًا عمليات موثوقة</div>
+      <h2>تواصل مع فريق تودوما</h2>
+      <p>أخبرنا عن احتياجاتك اللوجستية أو التشغيلية وسنتواصل معك لمناقشة الحل الأنسب.</p>
+      <p class="contact-quote">نحن نُركّز على العمليات حتى تُركّز أنت على النمو.</p>
+      <div class="contact-info-block">
+        <div class="contact-info-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>وحدة 146، مول رويال تاورز، 6 أكتوبر، الجيزة، مصر</span>
+        </div>
+        <div class="contact-info-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.4 2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.25-1.25a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+201008330999">01008330999</a>
+        </div>
+        <div class="contact-info-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@todomalogistics.com">info@todomalogistics.com</a>
+        </div>
+      </div>
     </div>
-    <form class="form-card reveal" action="https://formspree.io/f/mnjevyyj" method="POST">
+    <form class="form-card reveal" action="https://formspree.io/f/mnjevyyj" method="POST" id="contactForm">
+      <input type="hidden" name="_subject" value="طلب استشارة جديد — تودوما لوجستيك">
+      <input type="hidden" name="_language" value="ar">
       <div class="field">
-        <label for="fullname">Full Name</label>
-        <input id="fullname" name="Full Name" type="text" placeholder="Full name" required>
+        <label for="fullname">الاسم الكامل</label>
+        <input id="fullname" name="الاسم الكامل" type="text" placeholder="الاسم الكامل" required>
       </div>
       <div class="field">
-        <label for="companyname">Company Name</label>
-        <input id="companyname" name="Company Name" type="text" placeholder="Company name">
+        <label for="companyname">اسم الشركة</label>
+        <input id="companyname" name="اسم الشركة" type="text" placeholder="اسم الشركة" required>
       </div>
       <div class="field">
-        <label for="jobtitle">Job Title</label>
-        <input id="jobtitle" name="Job Title" type="text" placeholder="e.g. Operations Manager">
+        <label for="jobtitle">المسمى الوظيفي</label>
+        <input id="jobtitle" name="المسمى الوظيفي" type="text" placeholder="مثال: مدير العمليات" required>
       </div>
       <div class="field">
-        <label for="mobile">Mobile Number</label>
-        <input id="mobile" name="Mobile Number" type="tel" placeholder="+20 ...">
+        <label for="mobile">رقم الجوال</label>
+        <input id="mobile" name="رقم الجوال" type="tel" placeholder="+20 ..." required>
       </div>
       <div class="field">
-        <label for="bizemail">Business Email</label>
-        <input id="bizemail" name="Business Email" type="email" placeholder="you@company.com" required>
+        <label for="bizemail">البريد الإلكتروني للعمل</label>
+        <input id="bizemail" name="البريد الإلكتروني" type="email" placeholder="you@company.com" required>
       </div>
       <div class="field">
-        <label for="need">Current Operational Need</label>
-        <select id="need" name="Operational Need">
-          <option>Select an option</option>
-          <option>Fleet Management</option>
-          <option>Managed Delivery Operations</option>
-          <option>Delivery Workforce Coordination</option>
-          <option>Operational Support Services</option>
-          <option>Distribution & Logistics Coordination</option>
-          <option>Not sure yet — need guidance</option>
+        <label for="industry">قطاع العمل</label>
+        <select id="industry" name="قطاع العمل" required>
+          <option value="">اختر قطاع عملك</option>
+          <option>شركات التوصيل والتجارة السريعة</option>
+          <option>شركات التجارة الإلكترونية</option>
+          <option>شركات توزيع المنتجات</option>
+          <option>شركات اللوجستيات والنقل</option>
+          <option>أخرى / غير متأكد</option>
         </select>
       </div>
       <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="Message" placeholder="Tell us briefly about your delivery operations"></textarea>
+        <label for="need">الاحتياج التشغيلي الحالي</label>
+        <select id="need" name="الاحتياج التشغيلي" required>
+          <option value="">اختر الخدمة المطلوبة</option>
+          <option>إدارة عمليات الأسطول</option>
+          <option>إدارة عمليات التوصيل</option>
+          <option>مراقبة الأداء والتقارير</option>
+          <option>الدعم التشغيلي الميداني</option>
+          <option>دعم توسيع الأسطول</option>
+          <option>الشحن الداخلي</option>
+          <option>غير متأكد — أحتاج إلى استشارة</option>
+        </select>
       </div>
-      <button class="btn btn-primary" type="submit">Request Consultation</button>
+      <div class="field">
+        <label for="message">رسالتك</label>
+        <textarea id="message" name="الرسالة" placeholder="أخبرنا باختصار عن احتياجاتك اللوجستية أو التشغيلية"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">إرسال الطلب</button>
+      <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-full" target="_blank" rel="noopener" style="margin-top:12px;">
+        <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill="white" fill-rule="evenodd"/></svg>
+        أو تواصل عبر واتساب مباشرة
+      </a>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="wrap">
+<footer class="footer">
+  <div class="wrap footer-inner">
     <div class="footer-grid">
-      <div>
-        <div class="logo">TODOMA<span style="font-weight:400;opacity:0.6;">&nbsp;LOGISTICS</span></div>
-        <p>Integrated Logistics & Operational Solutions. TODOMA Logistics provides fleet management, delivery workforce, logistics support, commercial agency services, and operational solutions across Egypt.</p>
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-white">
+          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="44">
+        </a>
+        <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
       </div>
       <div>
-        <h4>Company</h4>
-        <a href="#why">Home</a>
-        <a href="#services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#about">About</a>
+        <h4>روابط سريعة</h4>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">خدماتنا</a>
+        <a href="industries.html">القطاعات</a>
+        <a href="contact.html">تواصل معنا</a>
       </div>
       <div>
-        <h4>Get in Touch</h4>
-        <a href="#contact">Contact Us</a>
-        <a href="#contact">Request Consultation</a>
-        <a href="#contact">Book Discovery Call</a>
-        <p style="margin-top:14px;font-size:13.5px;line-height:1.7;">
-          6th of October City, Giza, Egypt<br>
-Phone: <a href="tel:+201008330999">+20 100 833 0999</a><br>
-
-Email: <a href="mailto:info@todomalogistics.com">info@todomalogistics.com</a><br>
-
-Executive: <a href="mailto:ashraf@todomalogistics.com">ashraf@todomalogistics.com</a>        </p>
+        <h4>تواصل معنا</h4>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="contact.html">طلب استشارة</a>
+        <a href="https://wa.me/201008330999" target="_blank" rel="noopener">واتساب</a>
+        <p class="footer-contact-info">
+          وحدة 146، مول رويال تاورز، 6 أكتوبر، الجيزة، مصر<br>
+          هاتف: 01008330999<br>
+          info@todomalogistics.com
+        </p>
       </div>
     </div>
-    <div class="copyright">© 2026 TODOMA Logistics. All rights reserved.</div>
+    <div class="footer-bottom">
+      <p>© 2026 TODOMA Logistics. جميع الحقوق محفوظة.</p>
+    </div>
   </div>
 </footer>
 
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
-
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }));
   const reveals = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); } });
-  }, {threshold:0.15});
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.13 });
   reveals.forEach(el => io.observe(el));
 </script>
-
 </body>
 </html>
