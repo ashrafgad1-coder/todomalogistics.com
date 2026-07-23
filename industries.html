@@ -35,13 +35,13 @@
     .service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .stag { background: var(--bg-light); border: 1px solid var(--border); color: var(--navy); font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; }
 
-    .ind-visual { border-radius: var(--radius-lg); overflow: hidden; position: relative; max-width: 88%; margin: 0 auto; background: var(--white); border: 1.5px solid var(--border); box-shadow: 0 4px 24px rgba(10,37,64,0.06); }
-    .ind-visual-inner { aspect-ratio: 4/3.4; position: relative; display: flex; align-items: center; justify-content: center; }
-    .iv-1, .iv-2, .iv-3, .iv-4 { background: var(--white); }
-    .iv-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(10,37,64,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(10,37,64,0.035) 1px, transparent 1px); background-size: 32px 32px; }
-    .iv-icon { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; width: 132px; height: 132px; border-radius: 50%; background: var(--bg-light); border: 1.5px solid var(--border); }
-    .iv-icon svg { width: 56px; height: 56px; stroke: var(--navy); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
-    .priority-badge { position: absolute; top: 16px; right: 16px; background: rgba(255,107,53,0.92); color: #fff; font-size: 12px; font-weight: 800; padding: 5px 12px; border-radius: 20px; z-index: 3; letter-spacing: 0.04em; }
+    .ind-visual { border-radius: var(--radius-lg); overflow: hidden; position: relative; background: var(--white); border: 1.5px solid var(--border); box-shadow: 0 6px 22px rgba(10,37,64,0.08); transition: box-shadow .3s ease, transform .3s ease; }
+    .ind-visual:hover { box-shadow: 0 14px 34px rgba(10,37,64,0.14); transform: translateY(-3px); }
+    .ind-visual-inner { height: 320px; position: relative; }
+    .ind-visual-inner svg.scene { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform .5s ease; }
+    .ind-visual:hover .scene { transform: scale(1.03); }
+    .priority-badge { position: absolute; top: 16px; right: 16px; background: rgba(255,107,53,0.95); color: #fff; font-size: 12px; font-weight: 800; padding: 5px 12px; border-radius: 20px; z-index: 3; letter-spacing: 0.04em; }
+    @media (max-width: 640px) { .ind-visual-inner { height: 260px; } }
 
     .coverage-band { background: var(--navy); padding: 56px 0; }
     .coverage-band h2 { color: #fff; text-align: center; margin-bottom: 48px; }
@@ -128,9 +128,28 @@
     </div>
     <div class="ind-visual">
       <div class="ind-visual-inner iv-1">
-        <div class="iv-grid"></div>
+        <svg class="scene" viewBox="0 0 700 320" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#DCE4EE"/></linearGradient></defs>
+          <rect width="700" height="320" fill="url(#g1)"/>
+          <rect x="0" y="150" width="90" height="90" fill="#C7D3E2"/>
+          <rect x="100" y="110" width="70" height="130" fill="#B7C6D9"/>
+          <rect x="560" y="120" width="80" height="120" fill="#C7D3E2"/>
+          <rect x="640" y="160" width="60" height="80" fill="#B7C6D9"/>
+          <rect x="0" y="255" width="700" height="65" fill="#C7D3E2"/>
+          <path d="M0 255 L700 255" stroke="rgba(10,37,64,0.15)" stroke-width="2" stroke-dasharray="14 12"/>
+          <g stroke="rgba(255,107,53,0.55)" stroke-width="2.5" fill="none">
+            <path d="M330 150 L370 150"/><path d="M320 165 L365 165"/><path d="M335 180 L375 180"/>
+          </g>
+          <g transform="translate(400,150)">
+            <circle cx="0" cy="90" r="20" fill="#0A2540" stroke="#0A2540" stroke-width="3"/>
+            <circle cx="95" cy="90" r="20" fill="#0A2540" stroke="#0A2540" stroke-width="3"/>
+            <path d="M-10 90 L20 40 L70 40 L95 90" stroke="#0A2540" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="55" y="15" width="34" height="28" rx="3" fill="#FF6B35"/>
+            <circle cx="35" cy="20" r="10" fill="#0A2540"/>
+          </g>
+          <rect x="1" y="1" width="698" height="318" fill="none" stroke="#D7DEE7" stroke-width="2"/>
+        </svg>
         <span class="priority-badge">سوق أساسي</span>
-        <div class="iv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
       </div>
     </div>
   </div>
@@ -141,9 +160,24 @@
   <div class="wrap industry-inner reverse reveal">
     <div class="ind-visual">
       <div class="ind-visual-inner iv-2">
-        <div class="iv-grid"></div>
+        <svg class="scene" viewBox="0 0 700 320" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#DCE4EE"/></linearGradient></defs>
+          <rect width="700" height="320" fill="url(#g2)"/>
+          <rect x="60" y="120" width="90" height="90" rx="4" fill="#fff" stroke="#0A2540" stroke-width="2.5"/>
+          <path d="M60 145 L150 145 M60 170 L150 170" stroke="#0A2540" stroke-width="2"/>
+          <rect x="170" y="160" width="70" height="70" rx="4" fill="#fff" stroke="#0A2540" stroke-width="2.5"/>
+          <rect x="480" y="130" width="80" height="80" rx="4" fill="#fff" stroke="#0A2540" stroke-width="2.5"/>
+          <rect x="570" y="160" width="60" height="60" rx="4" fill="#fff" stroke="#0A2540" stroke-width="2.5"/>
+          <g transform="translate(300,110)">
+            <rect x="0" y="0" width="100" height="100" rx="6" fill="#FF6B35"/>
+            <path d="M0 35 L100 35 M50 35 L50 100" stroke="rgba(10,37,64,0.55)" stroke-width="5"/>
+            <path d="M15 0 L15 35 M85 0 L85 35" stroke="rgba(10,37,64,0.35)" stroke-width="4"/>
+          </g>
+          <rect x="0" y="270" width="700" height="50" fill="#C7D3E2"/>
+          <path d="M0 270 L700 270" stroke="rgba(10,37,64,0.18)" stroke-width="3"/>
+          <rect x="1" y="1" width="698" height="318" fill="none" stroke="#D7DEE7" stroke-width="2"/>
+        </svg>
         <span class="priority-badge">سوق أساسي</span>
-        <div class="iv-icon"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4v10l8 4 8-4z"/><path d="M12 3v18M4 7l8 4 8-4"/></svg></div>
       </div>
     </div>
     <div>
@@ -183,8 +217,27 @@
     </div>
     <div class="ind-visual">
       <div class="ind-visual-inner iv-3">
-        <div class="iv-grid"></div>
-        <div class="iv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M9 9v11"/></svg></div>
+        <svg class="scene" viewBox="0 0 700 320" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#DCE4EE"/></linearGradient></defs>
+          <rect width="700" height="320" fill="url(#g3)"/>
+          <g stroke="rgba(10,37,64,0.25)" stroke-width="2">
+            <path d="M40 60 L40 280 M180 60 L180 280 M320 60 L320 280"/>
+            <path d="M40 100 L320 100 M40 160 L320 160 M40 220 L320 220"/>
+          </g>
+          <rect x="55" y="110" width="45" height="42" fill="#FF6B35"/>
+          <rect x="195" y="110" width="45" height="42" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+          <rect x="55" y="170" width="45" height="42" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+          <rect x="195" y="170" width="45" height="42" fill="#FF6B35"/>
+          <rect x="55" y="230" width="45" height="42" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+          <g transform="translate(430,130)">
+            <rect x="0" y="70" width="130" height="16" fill="#0A2540"/>
+            <rect x="10" y="20" width="60" height="50" fill="#fff" stroke="#0A2540" stroke-width="2.5"/>
+            <rect x="70" y="45" width="45" height="25" fill="#FF6B35"/>
+            <circle cx="30" cy="95" r="14" fill="#0A2540"/>
+            <circle cx="100" cy="95" r="14" fill="#0A2540"/>
+          </g>
+          <rect x="1" y="1" width="698" height="318" fill="none" stroke="#D7DEE7" stroke-width="2"/>
+        </svg>
       </div>
     </div>
   </div>
@@ -195,8 +248,23 @@
   <div class="wrap industry-inner reverse reveal">
     <div class="ind-visual">
       <div class="ind-visual-inner iv-4">
-        <div class="iv-grid"></div>
-        <div class="iv-icon"><svg viewBox="0 0 24 24"><path d="M3 17h2l2-5h10l2 5h2M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg></div>
+        <svg class="scene" viewBox="0 0 700 320" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2F8"/><stop offset="1" stop-color="#DCE4EE"/></linearGradient></defs>
+          <rect width="700" height="320" fill="url(#g4)"/>
+          <path d="M0 210 L200 170 L420 195 L700 150 L700 320 L0 320 Z" fill="#C7D3E2"/>
+          <rect x="0" y="245" width="700" height="75" fill="#C7D3E2"/>
+          <path d="M0 245 L700 245" stroke="rgba(10,37,64,0.2)" stroke-width="2"/>
+          <path d="M40 282 L140 282 M200 282 L300 282 M360 282 L460 282 M520 282 L620 282" stroke="rgba(10,37,64,0.3)" stroke-width="4" stroke-dasharray="30 20"/>
+          <g transform="translate(260,175)">
+            <rect x="0" y="30" width="150" height="55" rx="4" fill="#fff" stroke="#0A2540" stroke-width="2.5"/>
+            <rect x="150" y="0" width="70" height="85" rx="4" fill="#FF6B35"/>
+            <path d="M160 20 L210 20 M160 40 L210 40 M160 60 L210 60" stroke="rgba(10,37,64,0.5)" stroke-width="4"/>
+            <circle cx="35" cy="90" r="16" fill="#0A2540"/>
+            <circle cx="120" cy="90" r="16" fill="#0A2540"/>
+            <circle cx="190" cy="90" r="16" fill="#0A2540"/>
+          </g>
+          <rect x="1" y="1" width="698" height="318" fill="none" stroke="#D7DEE7" stroke-width="2"/>
+        </svg>
       </div>
     </div>
     <div>
@@ -248,7 +316,8 @@
     <div class="cta-btns">
       <a href="contact.html" class="btn btn-primary btn-lg">طلب استشارة</a>
       <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill="white" fill-rule="evenodd"/></svg>
+        <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill="white" fill-rule="evenodd"/>
+        </svg>
         تواصل عبر واتساب
       </a>
     </div>

@@ -18,6 +18,18 @@
   .logo-img { display: block; height: 90px; width: auto; object-fit: contain; }
   .logo-img-footer { height: 55px; filter: brightness(0) invert(1); }
   @media (max-width: 768px) { .logo-img { height: 68px; } .logo-img-footer { height: 45px; } }
+
+  .capability-band { background: var(--bg-light); padding: 56px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .capability-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+  .capability-item { text-align: center; }
+  .capability-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+  .capability-icon svg { width: 26px; height: 26px; stroke: var(--navy); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .capability-item span { font-size: 15px; font-weight: 700; color: var(--navy); }
+  @media (max-width: 768px) { .capability-grid { grid-template-columns: 1fr 1fr; } }
+
+  .final-cta-band { background: var(--navy); padding: 64px 0; text-align: center; }
+  .final-cta-band h2 { color: #fff; margin-bottom: 28px; font-size: 28px; }
+  .final-cta-band .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 </style>
 </head>
 <body>
@@ -242,10 +254,22 @@
     <div class="industries-featured">
       <div class="ind-card featured reveal">
         <div class="ind-visual ind-qc">
+          <svg class="scene" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="hqc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset="1" stop-color="#EDF1F6"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#hqc)"/>
+            <rect x="0" y="150" width="400" height="45" fill="#E2E8F0"/>
+            <path d="M0 150 L400 150" stroke="rgba(10,37,64,0.15)" stroke-width="2" stroke-dasharray="10 8"/>
+            <g stroke="rgba(255,107,53,0.55)" stroke-width="2" fill="none">
+              <path d="M170 90 L200 90"/><path d="M162 100 L198 100"/>
+            </g>
+            <g transform="translate(220,85)">
+              <circle cx="0" cy="55" r="14" fill="#0A2540"/>
+              <circle cx="62" cy="55" r="14" fill="#0A2540"/>
+              <path d="M-6 55 L14 24 L46 24 L62 55" stroke="#0A2540" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="36" y="8" width="22" height="18" rx="2" fill="#FF6B35"/>
+            </g>
+          </svg>
           <span class="priority-tag">سوق أساسي</span>
-          <div class="ind-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          </div>
         </div>
         <div class="ind-body">
           <h3>شركات التوصيل والتجارة السريعة</h3>
@@ -254,10 +278,18 @@
       </div>
       <div class="ind-card featured reveal">
         <div class="ind-visual ind-ecom">
+          <svg class="scene" viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="hecom" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset="1" stop-color="#EDF1F6"/></linearGradient></defs>
+            <rect width="400" height="225" fill="url(#hecom)"/>
+            <rect x="40" y="80" width="55" height="55" rx="3" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+            <rect x="300" y="70" width="55" height="55" rx="3" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+            <g transform="translate(150,55)">
+              <rect x="0" y="0" width="90" height="90" rx="5" fill="#FF6B35"/>
+              <path d="M0 32 L90 32 M45 32 L45 90" stroke="rgba(10,37,64,0.55)" stroke-width="4.5"/>
+            </g>
+            <rect x="0" y="170" width="400" height="30" fill="#E2E8F0"/>
+          </svg>
           <span class="priority-tag">سوق أساسي</span>
-          <div class="ind-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4v10l8 4 8-4z"/><path d="M12 3v18M4 7l8 4 8-4"/></svg>
-          </div>
         </div>
         <div class="ind-body">
           <h3>شركات التجارة الإلكترونية</h3>
@@ -268,9 +300,19 @@
     <div class="industries-standard">
       <div class="ind-card standard reveal">
         <div class="ind-visual ind-dist">
-          <div class="ind-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9h18M9 9v11"/></svg>
-          </div>
+          <svg class="scene" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="hdist" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset="1" stop-color="#EDF1F6"/></linearGradient></defs>
+            <rect width="400" height="300" fill="url(#hdist)"/>
+            <g stroke="rgba(10,37,64,0.25)" stroke-width="2">
+              <path d="M60 60 L60 240 M200 60 L200 240 M340 60 L340 240"/>
+              <path d="M60 100 L340 100 M60 160 L340 160 M60 220 L340 220"/>
+            </g>
+            <rect x="75" y="110" width="42" height="38" fill="#FF6B35"/>
+            <rect x="218" y="110" width="42" height="38" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+            <rect x="75" y="170" width="42" height="38" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+            <rect x="218" y="170" width="42" height="38" fill="#FF6B35"/>
+            <rect x="75" y="228" width="42" height="8" fill="#0A2540"/>
+          </svg>
         </div>
         <div class="ind-body">
           <h3>شركات توزيع المنتجات</h3>
@@ -279,9 +321,20 @@
       </div>
       <div class="ind-card standard reveal">
         <div class="ind-visual ind-log">
-          <div class="ind-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 17h2l2-5h10l2 5h2M5 12V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="16.5" cy="19" r="1.5"/></svg>
-          </div>
+          <svg class="scene" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="hlog" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F9FC"/><stop offset="1" stop-color="#EDF1F6"/></linearGradient></defs>
+            <rect width="400" height="300" fill="url(#hlog)"/>
+            <rect x="0" y="215" width="400" height="45" fill="#E2E8F0"/>
+            <path d="M30 250 L110 250 M150 250 L230 250 M270 250 L350 250" stroke="rgba(10,37,64,0.28)" stroke-width="3" stroke-dasharray="20 14"/>
+            <g transform="translate(120,140)">
+              <rect x="0" y="30" width="110" height="45" rx="3" fill="#fff" stroke="#0A2540" stroke-width="2"/>
+              <rect x="110" y="5" width="55" height="70" rx="3" fill="#FF6B35"/>
+              <path d="M118 20 L157 20 M118 35 L157 35" stroke="rgba(10,37,64,0.45)" stroke-width="3"/>
+              <circle cx="25" cy="78" r="12" fill="#0A2540"/>
+              <circle cx="90" cy="78" r="12" fill="#0A2540"/>
+              <circle cx="145" cy="78" r="12" fill="#0A2540"/>
+            </g>
+          </svg>
         </div>
         <div class="ind-body">
           <h3>شركات اللوجستيات والنقل</h3>
@@ -311,6 +364,42 @@
       <div class="about-icon-center">
         <svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l7-6 7 6v10M9 20v-6h6v6"/></svg>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITY BAND -->
+<section class="capability-band">
+  <div class="wrap capability-grid">
+    <div class="capability-item reveal">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg></div>
+      <span>إدارة أساطيل</span>
+    </div>
+    <div class="capability-item reveal">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg></div>
+      <span>تقارير أداء</span>
+    </div>
+    <div class="capability-item reveal">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
+      <span>دعم ميداني</span>
+    </div>
+    <div class="capability-item reveal">
+      <div class="capability-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <span>متابعة تشغيلية</span>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta-band">
+  <div class="wrap">
+    <h2>هل تبحث عن شريك لوجستي موثوق؟</h2>
+    <div class="cta-btns">
+      <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill="white" fill-rule="evenodd"/></svg>
+        واتساب
+      </a>
+      <a href="contact.html" class="btn btn-primary btn-lg">تواصل معنا</a>
     </div>
   </div>
 </section>
