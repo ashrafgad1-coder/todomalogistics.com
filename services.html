@@ -13,12 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .services-hero { padding: 96px 0 80px; background: var(--navy); }
+    .services-hero { padding: 67px 0 56px; background: var(--navy); }
     .services-hero .eyebrow { color: var(--orange); }
     .services-hero h1 { color: #fff; font-size: 46px; margin-bottom: 18px; }
     .services-hero p  { color: var(--muted-dark); font-size: 18px; max-width: 680px; }
 
-    .service-block { padding: 80px 0; border-bottom: 1px solid var(--border); }
+    .service-block { padding: 56px 0; border-bottom: 1px solid var(--border); }
     .service-block:last-of-type { border-bottom: none; }
     .service-block:nth-child(even) { background: var(--bg-light); }
     .service-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -33,23 +33,21 @@
     .service-points li:last-child { border-bottom: none; }
     .service-points li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
 
-    .service-visual { border-radius: var(--radius-lg); aspect-ratio: 4/3; position: relative; overflow: hidden; }
-    .sv-1 { background: linear-gradient(155deg, #0F3258, #0A2540); }
-    .sv-2 { background: linear-gradient(155deg, #1B4A78, #0A2540); }
-    .sv-3 { background: linear-gradient(155deg, #16365C, #0A2540); }
-    .sv-4 { background: linear-gradient(155deg, #0A2540, #15406A); }
-    .sv-5 { background: linear-gradient(155deg, #1B4A78, #16365C); }
-    .sv-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 32px 32px; }
+    .service-visual { border-radius: var(--radius-lg); aspect-ratio: 4/3.2; position: relative; overflow: hidden; max-width: 88%; margin: 0 auto; background: var(--white); border: 1.5px solid var(--border); box-shadow: 0 4px 24px rgba(10,37,64,0.06); }
+    .sv-1, .sv-2, .sv-3, .sv-4, .sv-5 { background: var(--white); }
+    .sv-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(10,37,64,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(10,37,64,0.035) 1px, transparent 1px); background-size: 32px 32px; }
     .sv-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-    .sv-icon svg { width: 72px; height: 72px; stroke: rgba(255,255,255,0.7); fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+    .sv-icon::before { content: ""; position: absolute; width: 116px; height: 116px; border-radius: 50%; background: var(--bg-light); border: 1.5px solid var(--border); }
+    .sv-icon .service-num-tag { position: absolute; top: 20px; right: 20px; font-size: 12px; font-weight: 800; letter-spacing: 0.06em; color: var(--orange); background: rgba(255,107,53,0.08); padding: 5px 12px; border-radius: 20px; }
+    .sv-icon svg { position: relative; width: 52px; height: 52px; stroke: var(--navy); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
 
-    .why-band { background: var(--navy); padding: 80px 0; }
+    .why-band { background: var(--navy); padding: 56px 0; }
     .why-band h2 { color: #fff; text-align: center; margin-bottom: 16px; }
     .why-band .sub { color: var(--muted-dark); text-align: center; font-size: 17px; max-width: 620px; margin: 0 auto 56px; }
     .why-pills { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
     .pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); color: #fff; border-radius: 40px; padding: 12px 24px; font-size: 15px; }
 
-    .cta-band { background: var(--bg-light); padding: 80px 0; text-align: center; border-top: 1px solid var(--border); }
+    .cta-band { background: var(--bg-light); padding: 56px 0; text-align: center; border-top: 1px solid var(--border); }
     .cta-band h2 { margin-bottom: 14px; }
     .cta-band p  { color: var(--muted); margin-bottom: 36px; font-size: 17px; }
     .cta-band .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -60,9 +58,9 @@
       .services-hero h1 { font-size: 34px; }
     }
   
-  .logo-img { display: block; height: 72px; width: auto; object-fit: contain; }
-  .logo-img-footer { height: 44px; filter: brightness(0) invert(1); }
-  @media (max-width: 768px) { .logo-img { height: 54px; } .logo-img-footer { height: 36px; } }
+  .logo-img { display: block; height: 90px; width: auto; object-fit: contain; }
+  .logo-img-footer { height: 55px; filter: brightness(0) invert(1); }
+  @media (max-width: 768px) { .logo-img { height: 68px; } .logo-img-footer { height: 45px; } }
 </style>
 </head>
 <body>
@@ -71,7 +69,7 @@
 <header class="header" id="header">
   <div class="wrap nav-wrap">
     <a href="index.html" class="logo" aria-label="تودوما لوجستيك">
-      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="72">
+      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="90">
     </a>
     <nav class="nav-links" aria-label="القائمة الرئيسية">
       <a href="index.html">الرئيسية</a>
@@ -81,7 +79,6 @@
       <a href="contact.html">تواصل معنا</a>
     </nav>
     <div class="nav-actions">
-      <a href="contact.html" class="btn btn-outline btn-sm">EN</a>
       <a href="contact.html" class="btn btn-primary btn-sm">طلب استشارة</a>
       <button class="hamburger" id="hamburger" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
     </div>
@@ -122,7 +119,7 @@
     </div>
     <div class="service-visual sv-1">
       <div class="sv-grid"></div>
-      <div class="sv-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg></div>
+      <div class="sv-icon"><span class="service-num-tag">01</span><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg></div>
     </div>
   </div>
 </section>
@@ -132,7 +129,7 @@
   <div class="wrap service-inner reverse reveal">
     <div class="service-visual sv-2">
       <div class="sv-grid"></div>
-      <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg></div>
+      <div class="sv-icon"><span class="service-num-tag">02</span><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg></div>
     </div>
     <div>
       <div class="service-num">02</div>
@@ -166,7 +163,7 @@
     </div>
     <div class="service-visual sv-3">
       <div class="sv-grid"></div>
-      <div class="sv-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg></div>
+      <div class="sv-icon"><span class="service-num-tag">03</span><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg></div>
     </div>
   </div>
 </section>
@@ -176,7 +173,7 @@
   <div class="wrap service-inner reverse reveal">
     <div class="service-visual sv-4">
       <div class="sv-grid"></div>
-      <div class="sv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
+      <div class="sv-icon"><span class="service-num-tag">04</span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
     </div>
     <div>
       <div class="service-num">04</div>
@@ -210,7 +207,7 @@
     </div>
     <div class="service-visual sv-5">
       <div class="sv-grid"></div>
-      <div class="sv-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+      <div class="sv-icon"><span class="service-num-tag">05</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
     </div>
   </div>
 </section>
@@ -231,7 +228,7 @@
 </section>
 
 <!-- INDUSTRIES LINK -->
-<section class="section section-light" style="padding:64px 0;">
+<section class="section section-light" style="padding:45px 0;">
   <div class="wrap center">
     <div class="eyebrow">القطاعات</div>
     <h2 style="margin-bottom:14px;">نخدم القطاعات التي تعتمد على التشغيل اللوجستي</h2>
@@ -261,7 +258,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo logo-white">
-          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="44">
+          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="55">
         </a>
         <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
       </div>

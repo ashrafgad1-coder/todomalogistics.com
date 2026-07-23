@@ -13,12 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .contact-hero { padding: 80px 0 64px; background: var(--navy); }
+    .contact-hero { padding: 56px 0 45px; background: var(--navy); }
     .contact-hero .eyebrow { color: var(--orange); }
     .contact-hero h1 { color: #fff; font-size: 40px; margin-bottom: 14px; }
     .contact-hero p  { color: var(--muted-dark); font-size: 17px; max-width: 620px; }
 
-    .contact-main { padding: 80px 0; }
+    .contact-main { padding: 56px 0; }
     .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
 
     /* Left column — info */
@@ -41,7 +41,7 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
     /* Next steps */
-    .next-steps { padding: 80px 0; background: var(--bg-light); border-top: 1px solid var(--border); }
+    .next-steps { padding: 56px 0; background: var(--bg-light); border-top: 1px solid var(--border); }
     .next-steps h2 { text-align: center; margin-bottom: 48px; }
     .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
     .step-card { text-align: center; padding: 36px 24px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); }
@@ -64,9 +64,9 @@
       .contact-form-card { padding: 28px 20px; }
     }
   
-  .logo-img { display: block; height: 72px; width: auto; object-fit: contain; }
-  .logo-img-footer { height: 44px; filter: brightness(0) invert(1); }
-  @media (max-width: 768px) { .logo-img { height: 54px; } .logo-img-footer { height: 36px; } }
+  .logo-img { display: block; height: 90px; width: auto; object-fit: contain; }
+  .logo-img-footer { height: 55px; filter: brightness(0) invert(1); }
+  @media (max-width: 768px) { .logo-img { height: 68px; } .logo-img-footer { height: 45px; } }
 </style>
 </head>
 <body>
@@ -75,7 +75,7 @@
 <header class="header" id="header">
   <div class="wrap nav-wrap">
     <a href="index.html" class="logo" aria-label="تودوما لوجستيك">
-      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="72">
+      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="90">
     </a>
     <nav class="nav-links">
       <a href="index.html">الرئيسية</a>
@@ -85,7 +85,6 @@
       <a href="contact.html" style="opacity:1;font-weight:700;">تواصل معنا</a>
     </nav>
     <div class="nav-actions">
-      <a href="contact.html" class="btn btn-outline btn-sm">EN</a>
       <a href="contact.html" class="btn btn-primary btn-sm">طلب استشارة</a>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
@@ -224,7 +223,7 @@
     <div class="steps-grid reveal">
       <div class="step-card">
         <div class="step-circle">01</div>
-        <h3>استلام وم راجعة الطلب</h3>
+        <h3>استلام ومراجعة الطلب</h3>
         <p>يقوم فريق تودوما لوجستيك بمراجعة طلبك وتفاصيل احتياجك التشغيلي.</p>
       </div>
       <div class="step-card">
@@ -247,7 +246,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo logo-white">
-          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="44">
+          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="55">
         </a>
         <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
       </div>
@@ -280,10 +279,56 @@
   const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }); }, { threshold: 0.13 });
   reveals.forEach(el => io.observe(el));
 
-  function handleSubmit(e) {
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnjevyyj';
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('submitBtn').style.display = 'none';
-    document.getElementById('successMsg').style.display = 'block';
+
+    const requiredFields = ['fullname', 'companyname', 'jobtitle', 'mobile', 'bizemail', 'industry', 'need'];
+    for (const id of requiredFields) {
+      const el = document.getElementById(id);
+      if (!el.value.trim()) {
+        el.focus();
+        return;
+      }
+    }
+
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'جاري الإرسال...';
+
+    const payload = {
+      fullname: document.getElementById('fullname').value,
+      companyname: document.getElementById('companyname').value,
+      jobtitle: document.getElementById('jobtitle').value,
+      mobile: document.getElementById('mobile').value,
+      bizemail: document.getElementById('bizemail').value,
+      industry: document.getElementById('industry').value,
+      need: document.getElementById('need').value,
+      message: document.getElementById('message').value
+    };
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        submitBtn.style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        alert('حدث خطأ أثناء إرسال طلبك. برجاء المحاولة مرة أخرى أو التواصل عبر واتساب.');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      alert('تعذر الاتصال بالخادم. برجاء التحقق من اتصالك بالإنترنت أو التواصل عبر واتساب.');
+    }
   }
 </script>
 </body>

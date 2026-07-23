@@ -13,12 +13,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .industries-hero { padding: 96px 0 80px; background: var(--navy); }
+    .industries-hero { padding: 67px 0 56px; background: var(--navy); }
     .industries-hero .eyebrow { color: var(--orange); }
     .industries-hero h1 { color: #fff; font-size: 44px; margin-bottom: 18px; }
     .industries-hero p  { color: var(--muted-dark); font-size: 18px; max-width: 700px; }
 
-    .industry-block { padding: 80px 0; border-bottom: 1px solid var(--border); }
+    .industry-block { padding: 56px 0; border-bottom: 1px solid var(--border); }
     .industry-block:last-of-type { border-bottom: none; }
     .industry-block:nth-child(even) { background: var(--bg-light); }
     .industry-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -35,17 +35,15 @@
     .service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .stag { background: var(--bg-light); border: 1px solid var(--border); color: var(--navy); font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; }
 
-    .ind-visual { border-radius: var(--radius-lg); overflow: hidden; position: relative; }
-    .ind-visual-inner { aspect-ratio: 4/3.2; position: relative; display: flex; align-items: center; justify-content: center; }
-    .iv-1 { background: linear-gradient(155deg, #1B4A78, #0A2540); }
-    .iv-2 { background: linear-gradient(155deg, #1B4A78, #16365C); }
-    .iv-3 { background: linear-gradient(155deg, #16365C, #0A2540); }
-    .iv-4 { background: linear-gradient(155deg, #0A2540, #15406A); }
-    .iv-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 32px 32px; }
-    .iv-icon svg { width: 80px; height: 80px; stroke: rgba(255,255,255,0.7); fill: none; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; position: relative; z-index: 2; }
+    .ind-visual { border-radius: var(--radius-lg); overflow: hidden; position: relative; max-width: 88%; margin: 0 auto; background: var(--white); border: 1.5px solid var(--border); box-shadow: 0 4px 24px rgba(10,37,64,0.06); }
+    .ind-visual-inner { aspect-ratio: 4/3.4; position: relative; display: flex; align-items: center; justify-content: center; }
+    .iv-1, .iv-2, .iv-3, .iv-4 { background: var(--white); }
+    .iv-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(10,37,64,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(10,37,64,0.035) 1px, transparent 1px); background-size: 32px 32px; }
+    .iv-icon { position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; width: 132px; height: 132px; border-radius: 50%; background: var(--bg-light); border: 1.5px solid var(--border); }
+    .iv-icon svg { width: 56px; height: 56px; stroke: var(--navy); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
     .priority-badge { position: absolute; top: 16px; right: 16px; background: rgba(255,107,53,0.92); color: #fff; font-size: 12px; font-weight: 800; padding: 5px 12px; border-radius: 20px; z-index: 3; letter-spacing: 0.04em; }
 
-    .coverage-band { background: var(--navy); padding: 80px 0; }
+    .coverage-band { background: var(--navy); padding: 56px 0; }
     .coverage-band h2 { color: #fff; text-align: center; margin-bottom: 48px; }
     .coverage-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
     .cov-card { border-radius: var(--radius); padding: 36px 28px; text-align: center; border: 1.5px solid rgba(255,255,255,0.12); }
@@ -54,7 +52,7 @@
     .cov-card h3 { color: #fff; font-size: 18px; margin-bottom: 8px; }
     .cov-card p  { color: var(--muted-dark); font-size: 14px; }
 
-    .cta-band { background: var(--bg-light); padding: 80px 0; text-align: center; border-top: 1px solid var(--border); }
+    .cta-band { background: var(--bg-light); padding: 56px 0; text-align: center; border-top: 1px solid var(--border); }
     .cta-band h2 { margin-bottom: 14px; }
     .cta-band p  { color: var(--muted); margin-bottom: 36px; font-size: 17px; }
     .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -66,9 +64,9 @@
       .industries-hero h1 { font-size: 32px; }
     }
   
-  .logo-img { display: block; height: 72px; width: auto; object-fit: contain; }
-  .logo-img-footer { height: 44px; filter: brightness(0) invert(1); }
-  @media (max-width: 768px) { .logo-img { height: 54px; } .logo-img-footer { height: 36px; } }
+  .logo-img { display: block; height: 90px; width: auto; object-fit: contain; }
+  .logo-img-footer { height: 55px; filter: brightness(0) invert(1); }
+  @media (max-width: 768px) { .logo-img { height: 68px; } .logo-img-footer { height: 45px; } }
 </style>
 </head>
 <body>
@@ -77,7 +75,7 @@
 <header class="header" id="header">
   <div class="wrap nav-wrap">
     <a href="index.html" class="logo" aria-label="تودوما لوجستيك">
-      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="72">
+      <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="90">
     </a>
     <nav class="nav-links">
       <a href="index.html">الرئيسية</a>
@@ -87,7 +85,6 @@
       <a href="contact.html">تواصل معنا</a>
     </nav>
     <div class="nav-actions">
-      <a href="contact.html" class="btn btn-outline btn-sm">EN</a>
       <a href="contact.html" class="btn btn-primary btn-sm">طلب استشارة</a>
       <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
     </div>
@@ -264,7 +261,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo logo-white">
-          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="44">
+          <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="55">
         </a>
         <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
       </div>
