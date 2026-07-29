@@ -54,11 +54,18 @@
       "https://instagram.com/todoma.logistics",
       "https://linkedin.com/company/todomalogistics",
       "https://wa.me/201008330999"
-    ]
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+201008330999",
+      "email": "info@todomalogistics.com",
+      "contactType": "customer service",
+      "areaServed": "EG"
+    }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=block" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     /* ── PAGE-SPECIFIC STYLES ── */
@@ -68,13 +75,11 @@
     .about-hero p  { color: var(--muted-dark); font-size: 18px; max-width: 680px; }
 
 
-    .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .mv-card  { background: var(--bg-light); border-radius: var(--radius); padding: 36px 32px; border: 1.5px solid var(--border); }
-    .mv-card .eyebrow { margin-bottom: 10px; }
-    .mv-card h3 { font-size: 20px; margin-bottom: 14px; }
-    .mv-card p  { font-size: 15px; }
-
-    .values-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; }
+    
+    .values-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 28px; }
+    .values-grid .val-card { grid-column: span 2; }
+    .values-grid .val-card:nth-child(4) { grid-column: 2 / span 2; }
+    .values-grid .val-card:nth-child(5) { grid-column: 4 / span 2; }
     .val-card { text-align: center; padding: 36px 24px; background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius); transition: border-color .2s, transform .2s; }
     .val-card:hover { border-color: var(--navy); transform: translateY(-3px); }
     .val-icon { width: 52px; height: 52px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
@@ -99,12 +104,14 @@
 
     @media (max-width: 980px) {
       .positioning-grid { grid-template-columns: 1fr; }
-      .mv-grid { grid-template-columns: 1fr; }
       .values-grid { grid-template-columns: 1fr 1fr; }
+      .values-grid .val-card,
+      .values-grid .val-card:nth-child(4),
+      .values-grid .val-card:nth-child(5) { grid-column: auto; }
       .growth-timeline { grid-template-columns: 1fr; }
       .about-hero h1 { font-size: 36px; }
     }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .values-grid { grid-template-columns: 1fr; }
     }
   
@@ -153,24 +160,22 @@
 <section class="about-hero">
   <div class="wrap">
     <div class="reveal in">
-      <div class="eyebrow">من نحن</div>
-      <h1>تودوما لوجستيك...<br>شريكك التشغيلي في إدارة الأساطيل وعمليات التوصيل</h1>
-      <p>شركة لوجستيات متكاملة متخصصة في إدارة الأساطيل، وعمليات التوصيل المُدارة، والشحن الداخلي. نساعد الشركات على بناء عمليات أكثر استقرارًا وكفاءة من خلال إدارة وتشغيل ومتابعة الأنشطة اللوجستية اليومية وفق معايير واضحة وقابلة للتوسع.</p>
+      <h1>عن تودوما لوجستيك</h1>
+      <p>تقدم هذه الصفحة نظرة أعمق على تودوما لوجستيك، من خلال توضيح هويتها المؤسسية، والمنهج الذي تستند إليه في إدارة العمليات اللوجستية، والمبادئ التي توجه طريقة عملها، دون الدخول في تفاصيل الخدمات التي تقدمها.</p>
     </div>
   </div>
 </section>
 
-<!-- لماذا تأسست تودوما -->
+<!-- من نحن -->
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">القصة</div>
-      <h2>بدأت من مشكلة حقيقية</h2>
+      <h2>من نحن</h2>
     </div>
     <div class="about-grid reveal">
       <div>
-        <p>تعتمد العديد من الشركات على عمليات توصيل معقدة تتطلب متابعة يومية وتنسيقًا مستمرًا للحفاظ على مستوى الخدمة واستمرارية التشغيل. ومع نمو الأعمال، تصبح إدارة الأسطول والعمليات اللوجستية أكثر تعقيدًا وتأثيرًا على الأداء العام للشركة.</p>
-        <p style="margin-top:16px;">تأسست تودوما لوجستيك لتكون شريكًا تشغيليًا يساعد الشركات على إدارة هذه العمليات بكفاءة أعلى وتركيز أكبر على النمو — من خلال إدارة الأساطيل وتشغيل عمليات التوصيل وخدمات الشحن الداخلي في القاهرة الكبرى.</p>
+        <p>تودوما لوجستيك شركة لوجستية متكاملة تؤمن بأن نجاح العمليات يبدأ بالتخطيط الدقيق والتنفيذ المنظم. نعمل على إدارة عمليات النقل والشحن المحلي ضمن منظومة تشغيل احترافية تدعم الشركات في مختلف القطاعات، مع الالتزام بمعايير جودة واضحة، وشفافية في التعامل، وبناء شراكات طويلة الأمد.</p>
+        <p style="margin-top:16px;">تأسست الشركة برؤية تهدف إلى تقديم حلول لوجستية موثوقة، من خلال فريق عمل مؤهل، ونظام تشغيل احترافي، وثقافة مؤسسية تقوم على الدقة والشفافية والمسؤولية.</p>
       </div>
       <div class="about-visual">
         <div class="about-grid-bg"></div>
@@ -186,60 +191,8 @@
 <section class="section section-light">
   <div class="wrap">
     <div class="section-head center reveal">
-      <div class="eyebrow">لماذا تودوما لوجستيك</div>
-      <h2>ما يجعلنا شريكًا تشغيليًا مختلفًا</h2>
-    </div>
-    <div class="values-grid">
-      <div class="val-card reveal">
-        <div class="val-icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
-        </div>
-        <h3>إدارة متكاملة للأسطول</h3>
-        <p>نتولى الإشراف الكامل على عمليات الأسطول يوميًا لضمان الكفاءة والاستمرارية.</p>
-      </div>
-      <div class="val-card reveal">
-        <div class="val-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        </div>
-        <h3>استمرارية التشغيل</h3>
-        <p>نضمن سير العمليات بثبات واتساق حتى في أوقات الذروة والتحديات التشغيلية.</p>
-      </div>
-      <div class="val-card reveal">
-        <div class="val-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
-        </div>
-        <h3>رؤية تشغيلية واضحة</h3>
-        <p>تقارير دورية ومتابعة مستمرة لمؤشرات الأداء لدعم قرارات أعمالك.</p>
-      </div>
-      <div class="val-card reveal">
-        <div class="val-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
-        </div>
-        <h3>شريك موثوق للنمو</h3>
-        <p>نبني علاقات تشغيلية طويلة الأمد تنمو مع احتياجات أعمالك وتوسعك المستقبلي.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION & VISION -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <div class="eyebrow">رسالتنا ورؤيتنا</div>
-      <h2>ما نسعى إليه</h2>
-    </div>
-    <div class="mv-grid reveal">
-      <div class="mv-card">
-        <div class="eyebrow">رسالتنا</div>
-        <h3>لماذا نعمل كل يوم</h3>
-        <p>تقديم خدمات لوجستية وتشغيلية تساعد الشركات على تحسين الأداء، وتعزيز استمرارية الأعمال، وإدارة الأساطيل وعمليات التوصيل بكفاءة ومرونة.</p>
-      </div>
-      <div class="mv-card">
-        <div class="eyebrow">رؤيتنا</div>
-        <h3>إلى أين نتجه</h3>
-        <p>أن تصبح تودوما لوجستيك شريكًا تشغيليًا موثوقًا للشركات التي تعتمد على الخدمات اللوجستية والتوصيل، وأن تبني شبكة تشغيلية قابلة للتوسع داخل مصر ثم الشحن الدولي.</p>
-      </div>
+      <h2>فلسفتنا التشغيلية</h2>
+      <p>في تودوما لوجستيك نؤمن بأن نجاح العمليات اللوجستية يبدأ ببناء نظام عمل واضح قبل تنفيذ أي مهمة. ومن هذا المنطلق، ننظر إلى العمليات باعتبارها أجزاءً من منظومة واحدة، يكون نجاحها مرتبطًا بوضوح الفكرة التي تقودها قبل تفاصيل تنفيذها.</p>
     </div>
   </div>
 </section>
@@ -248,54 +201,101 @@
 <section class="section section-light">
   <div class="wrap">
     <div class="section-head center reveal">
-      <div class="eyebrow">قيمنا</div>
-      <h2>المبادئ التي تقود عملنا</h2>
+      <h2>المبادئ التي توجه طريقة عملنا</h2>
+      <p>تعتمد تودوما لوجستيك على مجموعة من المبادئ التشغيلية التي تشكل الأساس العملي لطريقة إدارة العمليات واتخاذ القرارات.</p>
     </div>
     <div class="values-grid">
       <div class="val-card reveal">
         <div class="val-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         </div>
-        <h3>الكفاءة التشغيلية</h3>
-        <p>نعمل وفق إجراءات واضحة وقابلة للقياس.</p>
-      </div>
-      <div class="val-card reveal">
-        <div class="val-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
-        </div>
-        <h3>الموثوقية</h3>
-        <p>نلتزم باستمرارية التشغيل وجودة التنفيذ.</p>
+        <h3>وضوح قبل التنفيذ</h3>
+        <p>نبدأ كل عملية بفهم واضح للأهداف وآلية التنفيذ، بما يحد من الغموض ويدعم اتخاذ القرار منذ البداية.</p>
       </div>
       <div class="val-card reveal">
         <div class="val-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>الشراكة</h3>
-        <p>ننجح عندما ينجح عملاؤنا.</p>
+        <h3>ملكية واضحة للمهام</h3>
+        <p>يعرف كل فرد في الفريق نطاق دوره ضمن العملية، بما يقلل الازدواجية ويدعم سرعة اتخاذ القرار عند الحاجة.</p>
       </div>
       <div class="val-card reveal">
         <div class="val-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
         </div>
-        <h3>التطوير المستمر</h3>
-        <p>نسعى دائمًا لتحسين الأداء والعمليات.</p>
+        <h3>تنفيذ قابل للتكرار</h3>
+        <p>نبني أساليب العمل بحيث يمكن تطبيقها بصورة متسقة عبر مختلف العمليات، مع الحفاظ على مستوى ثابت من الجودة التشغيلية.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        </div>
+        <h3>اكتشاف مبكر للتحديات</h3>
+        <p>نولي أهمية للملاحظة المبكرة للمؤشرات التشغيلية، بما يتيح معالجة التحديات قبل أن تؤثر في سير العمل.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
+        </div>
+        <h3>تحسين مستمر</h3>
+        <p>نتعامل مع كل عملية باعتبارها فرصة للتعلم، ونعيد تطوير أسلوب العمل كلما ظهرت ممارسات أكثر كفاءة.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GROWTH ROADMAP -->
+<!-- HOW THE PHILOSOPHY APPEARS IN PRACTICE -->
 <section class="section">
   <div class="wrap">
     <div class="section-head center reveal">
-      <div class="eyebrow">خطة النمو</div>
-      <h2>رحلة النمو</h2>
+      <h2>كيف تظهر هذه الفلسفة في الممارسة؟</h2>
+      <p>تظهر فلسفتنا التشغيلية في الطريقة التي تسير بها العمليات على أرض الواقع، من لحظة بدء التنفيذ وحتى اكتمالها، بما ينعكس على تجربة العمل اليومية بصورة يمكن ملاحظتها.</p>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <h3>انطلاقة مستقرة للعملية</h3>
+        <p>ينتقل التنفيذ بين مراحله دون الحاجة إلى العودة المتكررة لحسم أدوار أو استكمال معلومات كان ينبغي تحديدها مسبقًا.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        </div>
+        <h3>اتساق في التنفيذ</h3>
+        <p>تحافظ العمليات على مستوى متقارب من الاتساق حتى مع اختلاف طبيعة المهام، بما يجعل تجربة التنفيذ أكثر استقرارًا.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        </div>
+        <h3>استجابة أسرع للتغيرات</h3>
+        <p>يمكن استيعاب المستجدات التشغيلية دون أن يؤدي ذلك إلى تعطيل سير العملية أو فقدان ترابطها.</p>
+      </div>
+      <div class="val-card reveal">
+        <div class="val-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>تطور متراكم في الأداء</h3>
+        <p>تنعكس الخبرات المكتسبة على جودة تنفيذ العمليات اللاحقة، بحيث تستفيد كل مرحلة من الدروس المستخلصة من سابقاتها.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- إلى أين نتجه -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>إلى أين نتجه</h2>
+      <p>نتجه لأن نكون شريكًا تشغيليًا موثوقًا للشركات التي تعتمد على الخدمات اللوجستية والتوصيل، من خلال بناء شبكة تشغيلية قابلة للتوسع داخل مصر أولًا ثم إلى خارجها.</p>
     </div>
     <div class="growth-timeline reveal">
       <div class="growth-step active">
         <div class="step-num">01</div>
         <h3>المرحلة الحالية</h3>
-        <p>القاهرة الكبرى — إدارة الأساطيل، عمليات التوصيل، والشحن الداخلي في القاهرة والجيزة.</p>
+        <p>القاهرة الكبرى — إدارة الأساطيل وعمليات التوصيل في القاهرة والجيزة.</p>
       </div>
       <div class="growth-step">
         <div class="step-num">02</div>
@@ -307,6 +307,16 @@
         <h3>المرحلة المستقبلية</h3>
         <p>الشحن الدولي وتوسيع نطاق الخدمات اللوجستية خارج مصر.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING TRANSITION -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>منهج يقود كل ما نقوم به</h2>
+      <p>ما ورد في هذه الصفحة لا يمثل مجموعة من المبادئ النظرية، بل الإطار الذي تستند إليه طريقة عمل تودوما لوجستيك في مختلف عملياتها. ومن هذا المنطلق، تمثل الخدمات التي نقدمها امتدادًا عمليًا لهذه الفلسفة، وتجسيدًا للمبادئ التي توجه أسلوب عملنا في كل مرحلة من مراحل التنفيذ.</p>
     </div>
   </div>
 </section>
@@ -334,7 +344,7 @@
         <a href="index.html" class="logo logo-white">
           <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="55">
         </a>
-        <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
+        <p>شريكك في إدارة الأساطيل وعمليات التوصيل في القاهرة الكبرى.</p>
       </div>
       <div>
         <h4>روابط سريعة</h4>

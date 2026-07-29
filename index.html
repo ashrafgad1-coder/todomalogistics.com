@@ -54,11 +54,27 @@
       "https://instagram.com/todoma.logistics",
       "https://linkedin.com/company/todomalogistics",
       "https://wa.me/201008330999"
-    ]
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+201008330999",
+      "email": "info@todomalogistics.com",
+      "contactType": "customer service",
+      "areaServed": "EG"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TODOMA Logistics",
+    "url": "https://todomalogistics.com",
+    "inLanguage": "ar"
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=block" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
 <style>
@@ -75,7 +91,8 @@
   @media (max-width: 768px) { .capability-grid { grid-template-columns: 1fr 1fr; } }
 
   .final-cta-band { background: var(--navy); padding: 64px 0; text-align: center; }
-  .final-cta-band h2 { color: #fff; margin-bottom: 28px; font-size: 28px; }
+  .final-cta-band h2 { color: #fff; margin-bottom: 16px; font-size: 28px; }
+  .final-cta-band p { color: var(--muted-dark); font-size: 16px; max-width: 560px; margin: 0 auto 28px; }
   .final-cta-band .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 </style>
 </head>
@@ -88,7 +105,7 @@
       <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img" height="90">
     </a>
     <nav class="nav-links" aria-label="القائمة الرئيسية">
-      <a href="index.html">الرئيسية</a>
+      <a href="index.html" style="opacity:1;font-weight:700;">الرئيسية</a>
       <a href="about.html">من نحن</a>
       <a href="services.html">خدماتنا</a>
       <a href="industries.html">القطاعات</a>
@@ -120,14 +137,11 @@
   <div class="wrap hero-grid">
     <div class="hero-content reveal">
       <div class="eyebrow">التحكم التشغيلي. التوصيل الموثوق.</div>
-      <h1 class="hero-h1">شريكك اللوجستي المتكامل<br>في القاهرة الكبرى</h1>
-      <p class="hero-sub">تودوما لوجستيك تُدير الأساطيل وعمليات التوصيل والشحن الداخلي — حتى لا يتوقف عملك أبدًا.</p>
+      <h1 class="hero-h1">شريكك في إدارة الأساطيل والعمليات اللوجستية بالقاهرة والجيزة</h1>
+      <p class="hero-sub">تساعد تودوما لوجستيك الشركات على تطوير وإدارة العمليات اللوجستية من خلال حلول تشغيلية متكاملة لإدارة الأساطيل وعمليات التوصيل والدعم التشغيلي ومتابعة الأداء، بما يساهم في رفع كفاءة التشغيل ودعم النمو المستدام.</p>
       <div class="hero-ctas">
-        <a href="contact.html" class="btn btn-primary btn-lg">طلب استشارة مجانية</a>
-        <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill-rule="evenodd"/></svg>
-          تواصل عبر واتساب
-        </a>
+        <a href="contact.html" class="btn btn-primary btn-lg">طلب استشارة</a>
+        <a href="services.html" class="btn btn-outline btn-lg">اعرف المزيد</a>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -141,54 +155,51 @@
         <div class="pulse-dot" style="top:40%;left:40%;"></div>
         <div class="pulse-dot" style="top:17%;left:75%;animation-delay:.7s;"></div>
         <div class="pulse-dot" style="top:65%;left:20%;animation-delay:1.3s;"></div>
-        <div class="float-card">
-          <div class="float-stat">
-            <span class="status-chip status-active"><span class="d"></span>نشط</span>
-            <span class="float-label">تغطية الأسطول</span>
-          </div>
-          <span class="status-chip status-monitor"><span class="d" style="background:var(--orange);"></span>مراقبة</span>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY TODOMA -->
+<!-- COMPANY SNAPSHOT -->
 <section class="section section-light" id="why">
   <div class="wrap">
     <div class="section-head center reveal">
-      <div class="eyebrow">لماذا تودوما</div>
-      <h2>ما الذي يجعل تودوما مختلفة</h2>
+      <h2>منهجية عملنا</h2>
+      <p>انطلقت تودوما لوجستيك لتقديم منهج تشغيلي منظم يساعد الشركات على إدارة الأساطيل، وتنسيق عمليات التوصيل، ودعم الأنشطة التشغيلية اليومية بكفاءة ووضوح.</p>
+      <p>نؤمن بأن نجاح العمليات اللوجستية يعتمد على التخطيط الجيد، والتنفيذ المنظم، والمتابعة المستمرة، لذلك بُنيت خدماتنا على منهجية تشغيل واضحة يمكن تطويرها وتوسيعها بما يتناسب مع احتياجات كل عميل.</p>
     </div>
     <div class="why-grid">
       <div class="why-item reveal">
         <div class="why-icon">
           <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
         </div>
-        <h3>إدارة الأسطول</h3>
-        <p>إشراف منظم ومستمر على أسطول التوصيل لضمان الاتساق والكفاءة اليومية.</p>
+        <h3>منهجية واضحة</h3>
+        <p>كل خدمة تبدأ بخطة تشغيل محددة وأهداف قابلة للقياس.</p>
       </div>
       <div class="why-item reveal">
         <div class="why-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         </div>
-        <h3>التحكم التشغيلي</h3>
-        <p>عمليات واضحة ومساءلة كاملة في كل تفصيلة من تفاصيل التنفيذ اليومي.</p>
+        <h3>تنفيذ منظم</h3>
+        <p>تنسيق العمليات وفق إجراءات واضحة ومسؤوليات محددة.</p>
       </div>
       <div class="why-item reveal">
         <div class="why-icon">
           <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
         </div>
-        <h3>مراقبة الأداء</h3>
-        <p>رؤية مستمرة وشاملة للعمليات لضمان سير التوصيل وفق المعايير المطلوبة.</p>
+        <h3>متابعة مستمرة</h3>
+        <p>مراجعة الأداء بشكل دوري لدعم التحسين المستمر.</p>
       </div>
       <div class="why-item reveal">
         <div class="why-icon">
           <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
         </div>
-        <h3>استمرارية الأعمال</h3>
-        <p>دعم تشغيلي مصمم لحفظ استمرارية عملك حتى في أصعب الظروف.</p>
+        <h3>نمو قابل للتوسع</h3>
+        <p>تصميم العمليات بحيث يمكن تطويرها مع توسع أعمال العميل.</p>
       </div>
+    </div>
+    <div class="center" style="margin-top:40px;">
+      <a href="about.html" class="btn btn-outline">اعرف المزيد عن تودوما</a>
     </div>
   </div>
 </section>
@@ -197,49 +208,48 @@
 <section class="section" id="services">
   <div class="wrap">
     <div class="section-head center reveal">
-      <div class="eyebrow">خدماتنا</div>
-      <h2>حلول لوجستية وتشغيلية متكاملة</h2>
-      <p>منظومة متكاملة من خدمات إدارة الأسطول والعمليات اللوجستية، تُدار بالكامل من قِبَل فريق تودوما.</p>
+      <h2>لمحة عن خدماتنا</h2>
+      <p>تقدم تودوما لوجستيك مجموعة من الخدمات التشغيلية المصممة لدعم إدارة الأساطيل والعمليات اللوجستية بأسلوب منظم وقابل للتوسع. تغطي خدماتنا مختلف مراحل التشغيل، بدءًا من إدارة العمليات اليومية ووصولًا إلى المتابعة المستمرة للأداء، بما يساعد الشركات على تنظيم عملياتها بكفاءة ووضوح.</p>
     </div>
     <div class="services-grid">
       <div class="card reveal">
         <div class="badge">
           <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
         </div>
-        <h3>إدارة عمليات الأسطول</h3>
-        <p>إشراف شامل على أسطول التوصيل — التنسيق، والجدولة، والمساءلة التشغيلية الكاملة.</p>
+        <h3>Fleet Operations Management</h3>
+        <p>تنظم هذه الخدمة العمليات اليومية للأسطول من خلال متابعة أداء المركبات وتنسيق المهام التشغيلية، ودعم استمرارية العمليات وفق متطلبات كل نشاط.</p>
         <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
       <div class="card reveal">
         <div class="badge">
           <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
         </div>
-        <h3>إدارة عمليات التوصيل</h3>
-        <p>إدارة متكاملة لعمليات التوصيل اليومية بما يضمن تنفيذ العمليات بسلاسة واستقرار مع الحفاظ على جودة الخدمة.</p>
-        <a href="services.html" class="card-link">اعرف المزيد ←</a>
-      </div>
-      <div class="card reveal">
-        <div class="badge">
-          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
-        </div>
-        <h3>مراقبة الأداء والتقارير</h3>
-        <p>رصد مستمر لمؤشرات أداء الأسطول مع تقارير دورية دقيقة لدعم القرار التشغيلي.</p>
+        <h3>Managed Delivery Operations</h3>
+        <p>تختص هذه الخدمة بإدارة دورة التوصيل ومتابعة تنفيذها بما يتوافق مع متطلبات كل مشروع.</p>
         <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
       <div class="card reveal">
         <div class="badge">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
         </div>
-        <h3>الدعم التشغيلي الميداني</h3>
-        <p>دعم العمليات الميدانية اليومية لضمان استمرارية الأداء والتنسيق السلس بين جميع عناصر التشغيل.</p>
+        <h3>Field Operational Support</h3>
+        <p>تركز هذه الخدمة على دعم الأنشطة التشغيلية الميدانية من خلال التنسيق مع فرق العمل، ومتابعة متطلبات التنفيذ بما يتوافق مع طبيعة العمليات اليومية.</p>
         <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
       <div class="card reveal">
         <div class="badge">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
         </div>
-        <h3>دعم توسيع الأسطول</h3>
-        <p>مساعدة الشركات على التخطيط للتوسع التشغيلي وتطوير قدرات الأسطول بما يتوافق مع أهداف النمو المستقبلية.</p>
+        <h3>Fleet Expansion Support</h3>
+        <p>تدعم هذه الخدمة خطط توسع الأسطول من خلال المساهمة في تنظيم مراحل التوسع والتنسيق للمتطلبات التشغيلية المرتبطة بإضافة الموارد وفق احتياجات كل مشروع.</p>
+        <a href="services.html" class="card-link">اعرف المزيد ←</a>
+      </div>
+      <div class="card reveal">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        </div>
+        <h3>Performance Monitoring & Reporting</h3>
+        <p>تعنى هذه الخدمة بمتابعة مؤشرات الأداء التشغيلية وإعداد التقارير الدورية، بما يدعم وضوح المعلومات اللازمة لمتابعة سير العمليات واتخاذ القرارات التشغيلية.</p>
         <a href="services.html" class="card-link">اعرف المزيد ←</a>
       </div>
     </div>
@@ -249,54 +259,12 @@
   </div>
 </section>
 
-<!-- HOW WE OPERATE -->
-<section class="section section-dark operate-section">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <div class="eyebrow" style="color:var(--orange)">آلية عملنا</div>
-      <h2 style="color:#fff">منهجية تشغيلية واضحة في كل خطوة</h2>
-      <p style="color:var(--muted-dark)">نطبق منظومة تشغيلية ثابتة ومدروسة على كل حساب نخدمه.</p>
-    </div>
-    <div class="timeline">
-      <div class="t-step reveal">
-        <div class="t-marker">01</div>
-        <div class="t-body">
-          <h3>فهم المتطلبات</h3>
-          <p>نرسم خريطة دقيقة لحجم التوصيل ونطاق التغطية والأولويات التشغيلية قبل أي تنفيذ.</p>
-        </div>
-      </div>
-      <div class="t-step reveal">
-        <div class="t-marker">02</div>
-        <div class="t-body">
-          <h3>تجهيز العمليات</h3>
-          <p>نُعِد هيكل الأسطول ومناطق التغطية وآليات التصعيد بما يتوافق مع نمط عمل عميلنا.</p>
-        </div>
-      </div>
-      <div class="t-step reveal">
-        <div class="t-marker">03</div>
-        <div class="t-body">
-          <h3>المراقبة اليومية</h3>
-          <p>نتابع العمليات ونُعدّل الأداء في الوقت الفعلي لضمان اتساق التوصيل على مدار اليوم.</p>
-        </div>
-      </div>
-      <div class="t-step reveal">
-        <div class="t-marker">04</div>
-        <div class="t-body">
-          <h3>التحسين المستمر</h3>
-          <p>نستعرض الأداء بانتظام ونُطوِّر العمليات مع نمو أعمال عميلنا.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- INDUSTRIES -->
 <section class="section section-light" id="industries">
   <div class="wrap">
     <div class="section-head center reveal">
-      <div class="eyebrow">القطاعات التي نخدمها</div>
-      <h2>نخدم الشركات التي تعتمد على التشغيل اللوجستي والتوصيل</h2>
-      <p>حلول تشغيلية مُصمَّمة خصيصًا لكيفية عمل كل قطاع فعليًا.</p>
+      <h2>القطاعات التي نخدمها</h2>
+      <p>تقدم تودوما لوجستيك خدماتها لدعم مجموعة من القطاعات التي تعتمد على إدارة العمليات الميدانية والأساطيل والتنسيق التشغيلي. وقد صُممت خدماتنا بما يواكب طبيعة الاحتياجات التشغيلية لكل قطاع، مع الحفاظ على منهجية عمل مرنة تتكيف مع متطلبات الأنشطة المختلفة.</p>
     </div>
     <div class="industries-featured">
       <div class="ind-card featured reveal">
@@ -320,7 +288,7 @@
         </div>
         <div class="ind-body">
           <h3>شركات التوصيل والتجارة السريعة</h3>
-          <p>الحفاظ على الموثوقية خلال دورات الطلبات السريعة وعالية التردد — حيث تُحدد الدقائق تجربة العميل.</p>
+          <p>يعتمد هذا القطاع على تنسيق العمليات الميدانية وإدارة الأساطيل لدعم تنفيذ عمليات التوصيل اليومية، بما يتوافق مع متطلبات التشغيل وتنوع الأنشطة اللوجستية.</p>
         </div>
       </div>
       <div class="ind-card featured reveal">
@@ -340,7 +308,7 @@
         </div>
         <div class="ind-body">
           <h3>شركات التجارة الإلكترونية</h3>
-          <p>دعم التنفيذ القابل للتوسع مع نمو حجم الطلبات، مصمم لاستيعاب ارتفاعات الطلب دون انقطاع.</p>
+          <p>يعتمد هذا القطاع على تنسيق العمليات اللوجستية لدعم حركة الطلبات بين قنوات البيع المختلفة، بما يتوافق مع متطلبات التشغيل وتنوع أساليب تنفيذ الطلبات.</p>
         </div>
       </div>
     </div>
@@ -363,7 +331,7 @@
         </div>
         <div class="ind-body">
           <h3>شركات توزيع المنتجات</h3>
-          <p>دعم موزعي السلع الاستهلاكية والمواد الغذائية والإلكترونيات ومستلزمات التجميل.</p>
+          <p>يعتمد هذا القطاع على تنظيم حركة المنتجات بين مرافق التخزين ونقاط التوزيع، بما يتوافق مع متطلبات التشغيل وتعدد مراحل سلسلة التوزيع.</p>
         </div>
       </div>
       <div class="ind-card standard reveal">
@@ -385,7 +353,7 @@
         </div>
         <div class="ind-body">
           <h3>شركات اللوجستيات والنقل</h3>
-          <p>استمرارية تشغيلية متكاملة تُضاف إلى شبكات اللوجستيات والنقل القائمة.</p>
+          <p>يعتمد هذا القطاع على تنسيق حركة الموارد والعمليات التشغيلية عبر مراحل النقل المختلفة، بما يتوافق مع متطلبات التشغيل وتعدد نقاط الربط عبر سلسلة النقل.</p>
         </div>
       </div>
     </div>
@@ -395,52 +363,41 @@
   </div>
 </section>
 
-<!-- ABOUT SNIPPET -->
-<section class="section" id="about">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <div class="eyebrow">من نحن</div>
-      <h2>شريك تشغيلي، لا مجرد مزود خدمة</h2>
-      <p>تأسست تودوما لوجستيك لتكون شريكًا تشغيليًا يساعد الشركات على إدارة الأساطيل وتشغيل عمليات التوصيل والشحن الداخلي بكفاءة أعلى واستمرارية أكبر.</p>
-      <p>تعتمد العمليات اللوجستية الناجحة على إدارة دقيقة ومتابعة مستمرة لضمان الاستقرار والنمو — وهذا بالضبط ما تتولاه تودوما لوجستيك نيابةً عن عملائها حتى يتفرغوا لتنمية أعمالهم.</p>
-      <p>نتمركز حاليًا في القاهرة الكبرى — أحد أكثر أسواق اللوجستيات كثافةً وحيويةً في المنطقة — ونبني نموذجًا يُثبت موثوقيته قبل التوسع.</p>
-      <a href="about.html" class="btn btn-primary" style="margin-top:24px;">اعرف المزيد عنا</a>
+<!-- WHY CHOOSE TODOMA -->
+<section class="section" id="why-choose">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>لماذا تودوما</h2>
     </div>
-    <div class="about-visual reveal">
-      <div class="about-grid-bg"></div>
-      <div class="about-icon-center">
-        <svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V10l7-6 7 6v10M9 20v-6h6v6"/></svg>
+    <div class="services-grid">
+      <div class="card reveal">
+        <h3>منهجية تشغيل واضحة</h3>
+        <p>لا يعتمد اختيار الشريك اللوجستي على الخدمات التي يقدمها فقط، بل على الطريقة التي تُدار بها العمليات. تعتمد تودوما على منهجية تشغيل واضحة تنظم مراحل العمل وآلية إدارتها، بما يبتعد عن إدارة كل مهمة باعتبارها حالة مستقلة تُتخذ لها قرارات منفصلة.</p>
+      </div>
+      <div class="card reveal">
+        <h3>تكامل الخدمات اللوجستية</h3>
+        <p>لا تقتصر الخدمات اللوجستية على تنفيذ مهام منفصلة، بل تعتمد على تكامل المراحل المختلفة ضمن منظومة واحدة. تقدم تودوما مجموعة من الخدمات اللوجستية المترابطة التي تغطي احتياجات تشغيلية متعددة، بما يتيح التعامل مع متطلبات الأعمال من خلال إطار خدمي متكامل.</p>
+      </div>
+      <div class="card reveal">
+        <h3>فهم موجه للقطاعات</h3>
+        <p>تختلف المتطلبات التشغيلية باختلاف القطاعات، لذلك لا يعتمد تقديم الخدمات اللوجستية على نهج واحد يناسب جميع الأعمال. تستند تودوما إلى فهم طبيعة القطاعات التي تعمل معها.</p>
+      </div>
+      <div class="card reveal">
+        <h3>وضوح تشغيلي منذ البداية</h3>
+        <p>تبدأ العلاقة المهنية على أساس من الوضوح في كيفية التعاون منذ المراحل الأولى. تحرص تودوما على تقديم تصور واضح لطبيعة العمل وآلية التعاون.</p>
+      </div>
+      <div class="card reveal">
+        <h3>جاهزة للنمو التشغيلي</h3>
+        <p>تتغير الاحتياجات التشغيلية مع تطور الأعمال، لذلك قد تتطلب مراحل النمو دعمًا يتناسب مع هذا التطور. توفر تودوما حلولًا مخصصة، بما يتيح استمرار التعاون مع تطور الأعمال.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- CAPABILITY BAND -->
-<section class="capability-band">
-  <div class="wrap capability-grid">
-    <div class="capability-item reveal">
-      <div class="capability-icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg></div>
-      <span>إدارة أساطيل</span>
-    </div>
-    <div class="capability-item reveal">
-      <div class="capability-icon"><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg></div>
-      <span>تقارير أداء</span>
-    </div>
-    <div class="capability-item reveal">
-      <div class="capability-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
-      <span>دعم ميداني</span>
-    </div>
-    <div class="capability-item reveal">
-      <div class="capability-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-      <span>متابعة تشغيلية</span>
-    </div>
-  </div>
-</section>
-
 <!-- FINAL CTA -->
 <section class="final-cta-band">
   <div class="wrap">
-    <h2>هل تبحث عن شريك لوجستي موثوق؟</h2>
+    <h2>ابدأ التواصل مع تودوما</h2>
+    <p>إذا كنتم تبحثون عن شريك لوجستي يدعم احتياجات أعمالكم، يمكنكم التواصل مع تودوما لمناقشة متطلباتكم التشغيلية والتعرف على الخدمات التي تقدمها الشركة.</p>
     <div class="cta-btns">
       <a href="https://wa.me/201008330999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" class="wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="white"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.017.5 3.922 1.38 5.594L0 24l6.557-1.358A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.214-3.733.772.799-3.625-.235-.372A9.818 9.818 0 1112 21.818z" fill="white" fill-rule="evenodd"/></svg>
@@ -514,10 +471,9 @@
           <option value="">اختر الخدمة المطلوبة</option>
           <option>إدارة عمليات الأسطول</option>
           <option>إدارة عمليات التوصيل</option>
-          <option>مراقبة الأداء والتقارير</option>
           <option>الدعم التشغيلي الميداني</option>
           <option>دعم توسيع الأسطول</option>
-          <option>الشحن الداخلي</option>
+          <option>مراقبة الأداء والتقارير</option>
           <option>غير متأكد — أحتاج إلى استشارة</option>
         </select>
       </div>
@@ -542,7 +498,7 @@
         <a href="index.html" class="logo logo-white">
           <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="55">
         </a>
-        <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
+        <p>شريكك في إدارة الأساطيل وعمليات التوصيل في القاهرة الكبرى.</p>
       </div>
       <div>
         <h4>روابط سريعة</h4>

@@ -54,11 +54,18 @@
       "https://instagram.com/todoma.logistics",
       "https://linkedin.com/company/todomalogistics",
       "https://wa.me/201008330999"
-    ]
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+201008330999",
+      "email": "info@todomalogistics.com",
+      "contactType": "customer service",
+      "areaServed": "EG"
+    }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=block" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     .services-hero { padding: 67px 0 56px; background: var(--navy); }
@@ -109,6 +116,15 @@
   .logo-img { display: block; height: 90px; width: auto; object-fit: contain; }
   .logo-img-footer { height: 55px; filter: brightness(0) invert(1); }
   @media (max-width: 768px) { .logo-img { height: 68px; } .logo-img-footer { height: 45px; } }
+    .card h3 .ar { font-weight: 500; font-size: 0.85em; color: var(--muted); }
+    .choose-table-wrap { overflow-x: auto; }
+    .choose-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .choose-table th { background: var(--navy); color: #fff; text-align: right; padding: 16px 20px; font-size: 15px; font-weight: 600; }
+    .choose-table td { padding: 18px 20px; border-bottom: 1px solid var(--border); font-size: 15px; vertical-align: top; }
+    .choose-table tr:last-child td { border-bottom: none; }
+    .choose-table td:last-child { white-space: nowrap; font-weight: 600; }
+    .choose-table td a { color: var(--orange); text-decoration: none; }
+    .choose-table td a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -144,123 +160,132 @@
 <!-- HERO -->
 <section class="services-hero">
   <div class="wrap reveal in">
-    <div class="eyebrow">خدماتنا</div>
-    <h1>خدمات لوجستية وتشغيلية مصممة لدعم نمو أعمالك</h1>
-    <p>تقدم تودوما لوجستيك مجموعة متكاملة من الخدمات اللوجستية والتشغيلية التي تساعد الشركات على إدارة الأساطيل، وتشغيل عمليات التوصيل، وتحسين الأداء التشغيلي، ودعم التوسع بكفاءة واستمرارية.</p>
+    <h1>خدمات مصممة لتلبية الاحتياجات التشغيلية للأعمال اللوجستية</h1>
+    <p>تضم تودوما لوجستيك مجموعة من الخدمات التشغيلية التي تدعم احتياجات الأعمال في مختلف مجالات العمليات اللوجستية. وتقدم هذه الصفحة نظرة عامة على هذه الخدمات، تمهيدًا للانتقال إلى الصفحات المخصصة التي تعرض تفاصيل كل خدمة على حدة.</p>
   </div>
 </section>
 
-<!-- SERVICE 1 -->
-<section class="service-block">
-  <div class="wrap service-inner reveal">
-    <div>
-      <div class="service-num">01</div>
-      <div class="service-title-en">Fleet Operations Management</div>
-      <h2>إدارة عمليات الأسطول</h2>
-      <p>نتولى الإشراف على العمليات اليومية للأسطول لضمان كفاءة التشغيل واستمرارية الأداء وفق معايير واضحة وقابلة للقياس.</p>
-      <ul class="service-points">
-        <li>متابعة العمليات اليومية</li>
-        <li>تنظيم سير العمل</li>
-        <li>دعم اتخاذ القرار التشغيلي</li>
-        <li>تحسين كفاءة التشغيل</li>
-      </ul>
-    </div>
-    <div class="service-visual sv-1">
-      <div class="sv-grid"></div>
-      <div class="sv-icon"><span class="service-num-tag">01</span><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 2 -->
-<section class="service-block">
-  <div class="wrap service-inner reverse reveal">
-    <div class="service-visual sv-2">
-      <div class="sv-grid"></div>
-      <div class="sv-icon"><span class="service-num-tag">02</span><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg></div>
-    </div>
-    <div>
-      <div class="service-num">02</div>
-      <div class="service-title-en">Managed Delivery Operations</div>
-      <h2>إدارة عمليات التوصيل</h2>
-      <p>إدارة متكاملة لعمليات التوصيل اليومية بما يضمن تنفيذ العمليات بسلاسة واستقرار مع الحفاظ على جودة الخدمة.</p>
-      <ul class="service-points">
-        <li>إدارة دورة التوصيل</li>
-        <li>متابعة العمليات التشغيلية</li>
-        <li>التنسيق بين الأطراف المختلفة</li>
-        <li>دعم استمرارية الخدمة</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 3 -->
-<section class="service-block">
-  <div class="wrap service-inner reveal">
-    <div>
-      <div class="service-num">03</div>
-      <div class="service-title-en">Performance Monitoring & Reporting</div>
-      <h2>مراقبة الأداء والتقارير</h2>
-      <p>توفير رؤية تشغيلية واضحة من خلال متابعة الأداء وإعداد التقارير الدورية لدعم القرارات الإدارية والتشغيلية.</p>
-      <ul class="service-points">
-        <li>متابعة مؤشرات الأداء</li>
-        <li>تقارير تشغيلية دورية</li>
-        <li>رصد فرص التحسين</li>
-        <li>دعم القرارات التشغيلية</li>
-      </ul>
-    </div>
-    <div class="service-visual sv-3">
-      <div class="sv-grid"></div>
-      <div class="sv-icon"><span class="service-num-tag">03</span><svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg></div>
+<!-- SERVICES OVERVIEW CARDS -->
+<section class="section" id="services-overview">
+  <div class="wrap">
+    <div class="services-grid">
+      <div class="card reveal">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="1.5"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        </div>
+        <h3>Fleet Operations Management <span class="ar">(إدارة عمليات الأسطول)</span></h3>
+        <p>إدارة العمليات اليومية لأساطيل النقل من خلال تنظيم الأنشطة التشغيلية ودعم استمرارية الأداء.</p>
+        <a href="fleet-operations-management.html" class="card-link">اعرف المزيد ←</a>
+      </div>
+      <div class="card reveal">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><path d="M3 19h18"/></svg>
+        </div>
+        <h3>Managed Delivery Operations <span class="ar">(إدارة عمليات التوصيل)</span></h3>
+        <p>تنسيق عمليات التسليم بما يضمن انتظام سير العمل ومتابعة تنفيذ المهام التشغيلية.</p>
+        <a href="managed-delivery-operations.html" class="card-link">اعرف المزيد ←</a>
+      </div>
+      <div class="card reveal">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg>
+        </div>
+        <h3>Field Operational Support <span class="ar">(الدعم التشغيلي الميداني)</span></h3>
+        <p>الإشراف على الأنشطة الميدانية اليومية وتنسيقها بما يدعم اتصال العمل بين فرق التنفيذ في مواقع العمل.</p>
+        <a href="field-operational-support.html" class="card-link">اعرف المزيد ←</a>
+      </div>
+      <div class="card reveal">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        </div>
+        <h3>Fleet Expansion Support <span class="ar">(دعم توسيع الأسطول)</span></h3>
+        <p>المساهمة في تنظيم مراحل توسع الأسطول بما يتوافق مع نمو حجم العمليات.</p>
+        <a href="fleet-expansion-support.html" class="card-link">اعرف المزيد ←</a>
+      </div>
+      <div class="card reveal">
+        <div class="badge">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9M11 19V5M18 19v-7"/><polyline points="1 1 1 7 7 7"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+        </div>
+        <h3>Performance Monitoring &amp; Reporting <span class="ar">(مراقبة الأداء والتقارير)</span></h3>
+        <p>متابعة الأداء التشغيلي وإعداد التقارير التي تدعم وضوح مؤشرات التشغيل واتخاذ القرار.</p>
+        <a href="performance-monitoring-reporting.html" class="card-link">اعرف المزيد ←</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICE 4 -->
-<section class="service-block">
-  <div class="wrap service-inner reverse reveal">
-    <div class="service-visual sv-4">
-      <div class="sv-grid"></div>
-      <div class="sv-icon"><span class="service-num-tag">04</span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
+<!-- CHOOSING THE RIGHT SERVICE -->
+<section class="section section-light" id="choosing-service">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p>تختلف الاحتياجات التشغيلية للشركات باختلاف طبيعة عملياتها الحالية. ويساعد التعرف على موقع هذه العمليات على تحديد نقطة الانطلاق المناسبة، قبل الانتقال إلى الصفحة التفصيلية للخدمة المرتبطة بها.</p>
     </div>
-    <div>
-      <div class="service-num">04</div>
-      <div class="service-title-en">Field Operational Support</div>
-      <h2>الدعم التشغيلي الميداني</h2>
-      <p>تقديم الدعم التشغيلي الميداني لضمان استقرار العمليات اليومية والتعامل السريع مع المتغيرات التشغيلية.</p>
-      <ul class="service-points">
-        <li>متابعة العمليات الميدانية</li>
-        <li>دعم تنفيذ الإجراءات التشغيلية</li>
-        <li>تعزيز استمرارية العمل</li>
-        <li>تحسين التنسيق التشغيلي</li>
-      </ul>
+    <div class="choose-table-wrap reveal">
+      <table class="choose-table">
+        <thead>
+          <tr>
+            <th>أين تقع عملياتك الآن؟</th>
+            <th>الخدمة المناسبة</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>تُدار عمليات الأسطول داخليًا، مع الحاجة إلى تنظيم العمل اليومي بصورة أكثر اتساقًا.</td>
+            <td><a href="fleet-operations-management.html">Fleet Operations Management</a></td>
+          </tr>
+          <tr>
+            <td>أصبحت عمليات التسليم نشاطًا مستقلًا يحتاج إلى تنسيق تشغيلي مخصص.</td>
+            <td><a href="managed-delivery-operations.html">Managed Delivery Operations</a></td>
+          </tr>
+          <tr>
+            <td>تتوزع فرق التنفيذ بين مواقع متعددة وتتطلب متابعة ميدانية مستمرة.</td>
+            <td><a href="field-operational-support.html">Field Operational Support</a></td>
+          </tr>
+          <tr>
+            <td>تشهد العمليات توسعًا في الحجم أو النطاق التشغيلي.</td>
+            <td><a href="fleet-expansion-support.html">Fleet Expansion Support</a></td>
+          </tr>
+          <tr>
+            <td>أصبحت العمليات أكثر استقرارًا، وبات اتخاذ القرار يعتمد على رؤية منتظمة لمؤشرات الأداء.</td>
+            <td><a href="performance-monitoring-reporting.html">Performance Monitoring &amp; Reporting</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="center" style="max-width:640px;margin:32px auto 0;color:var(--muted);">يساعد هذا التصنيف على تحديد نقطة انطلاق مناسبة، تمهيدًا لاستكشاف كيفية عمل كل خدمة بمزيد من التفصيل.</p>
+  </div>
+</section>
+
+<!-- WORKING TOGETHER -->
+<section class="section" id="working-together">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p>قد تتطلب بعض العمليات الاستفادة من أكثر من خدمة في الوقت نفسه، بحسب طبيعة النشاط واحتياجاته التشغيلية. وتحتفظ كل خدمة بنطاقها المستقل، سواء استُخدمت منفردة أو ضمن مجموعة من الخدمات المتكاملة.</p>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
+      <div class="card" style="text-align:center;">
+        <p>قد تستفيد بعض العمليات من الجمع بين Fleet Operations Management وManaged Delivery Operations عندما تتطلب إدارة الأسطول وتنسيق عمليات التسليم في الوقت نفسه.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <p>قد يجمع بعض العملاء بين Fleet Operations Management وFleet Expansion Support عند التخطيط لتوسيع نطاق الأسطول مع الحفاظ على انتظام العمليات القائمة.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <p>قد تستدعي بعض العمليات الجمع بين Field Operational Support وPerformance Monitoring &amp; Reporting لدعم فرق التنفيذ الميدانية مع متابعة مؤشرات الأداء في آن واحد.</p>
+      </div>
+    </div>
+    <p class="center" style="max-width:640px;margin:32px auto 0;color:var(--muted);">يمكن الاطلاع على تفاصيل كل خدمة من خلال صفحاتها المخصصة، لفهم نطاقها وتحديد المزيج الأنسب عند الحاجة.</p>
+  </div>
+</section>
+
+<!-- CLOSING TRANSITION -->
+<section class="section section-light" id="closing-transition">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p>صُممت خدمات تودوما لوجستيك لتغطية احتياجات تشغيلية متنوعة، سواء بشكل مستقل أو ضمن مجموعة من الخدمات المتكاملة، بما يتوافق مع طبيعة كل عملية ومرحلة تطورها.</p>
+      <p>يمكن الاطلاع على الصفحات التفصيلية لكل خدمة لفهم نطاقها وتحديد المزيج الأنسب وفقًا للاحتياجات التشغيلية.</p>
     </div>
   </div>
 </section>
 
-<!-- SERVICE 5 -->
-<section class="service-block">
-  <div class="wrap service-inner reveal">
-    <div>
-      <div class="service-num">05</div>
-      <div class="service-title-en">Fleet Expansion Support</div>
-      <h2>دعم توسيع الأسطول</h2>
-      <p>مساعدة الشركات على التخطيط للتوسع التشغيلي وتطوير قدرات الأسطول بما يتوافق مع أهداف النمو المستقبلية.</p>
-      <ul class="service-points">
-        <li>تخطيط التوسع</li>
-        <li>تقييم الاحتياجات التشغيلية</li>
-        <li>دعم الجاهزية التشغيلية</li>
-        <li>مواءمة النمو مع متطلبات السوق</li>
-      </ul>
-    </div>
-    <div class="service-visual sv-5">
-      <div class="sv-grid"></div>
-      <div class="sv-icon"><span class="service-num-tag">05</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY TODOMA SERVICES -->
 <section class="why-band">
   <div class="wrap">
     <h2>أكثر من مزود خدمة... شريك تشغيلي</h2>
@@ -280,7 +305,7 @@
   <div class="wrap center">
     <div class="eyebrow">القطاعات</div>
     <h2 style="margin-bottom:14px;">نخدم القطاعات التي تعتمد على التشغيل اللوجستي</h2>
-    <p style="max-width:520px;margin:0 auto 32px;">شركات التوصيل والتجارة السريعة، التجارة الإلكترونية، توزيع المنتجات، واللوجستيات والنقل.</p>
+    <p style="max-width:520px;margin:0 auto 32px;">شركات التوصيل والتجارة السريعة، شركات التجارة الإلكترونية، شركات توزيع المنتجات، وشركات اللوجستيات والنقل.</p>
     <a href="industries.html" class="btn btn-outline">استعرض القطاعات التي ندعمها</a>
   </div>
 </section>
@@ -308,7 +333,7 @@
         <a href="index.html" class="logo logo-white">
           <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="55">
         </a>
-        <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
+        <p>شريكك في إدارة الأساطيل وعمليات التوصيل في القاهرة الكبرى.</p>
       </div>
       <div>
         <h4>روابط سريعة</h4>

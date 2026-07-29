@@ -54,11 +54,18 @@
       "https://instagram.com/todoma.logistics",
       "https://linkedin.com/company/todomalogistics",
       "https://wa.me/201008330999"
-    ]
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+201008330999",
+      "email": "info@todomalogistics.com",
+      "contactType": "customer service",
+      "areaServed": "EG"
+    }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cairo:wght@400;500;600;700&display=block" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
     .industries-hero { padding: 67px 0 56px; background: var(--navy); }
@@ -91,15 +98,7 @@
     .priority-badge { position: absolute; top: 16px; right: 16px; background: rgba(255,107,53,0.95); color: #fff; font-size: 12px; font-weight: 800; padding: 5px 12px; border-radius: 20px; z-index: 3; letter-spacing: 0.04em; }
     @media (max-width: 640px) { .ind-visual-inner { height: 260px; } }
 
-    .coverage-band { background: var(--navy); padding: 56px 0; }
-    .coverage-band h2 { color: #fff; text-align: center; margin-bottom: 48px; }
-    .coverage-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-    .cov-card { border-radius: var(--radius); padding: 36px 28px; text-align: center; border: 1.5px solid rgba(255,255,255,0.12); }
-    .cov-card.active { border-color: var(--orange); background: rgba(255,107,53,0.08); }
-    .cov-num { font-size: 36px; font-weight: 800; color: var(--orange); margin-bottom: 8px; }
-    .cov-card h3 { color: #fff; font-size: 18px; margin-bottom: 8px; }
-    .cov-card p  { color: var(--muted-dark); font-size: 14px; }
-
+    
     .cta-band { background: var(--bg-light); padding: 56px 0; text-align: center; border-top: 1px solid var(--border); }
     .cta-band h2 { margin-bottom: 14px; }
     .cta-band p  { color: var(--muted); margin-bottom: 36px; font-size: 17px; }
@@ -108,13 +107,25 @@
     @media (max-width: 980px) {
       .industry-inner { grid-template-columns: 1fr; gap: 36px; }
       .industry-inner.reverse { direction: rtl; }
-      .coverage-grid { grid-template-columns: 1fr; }
       .industries-hero h1 { font-size: 32px; }
     }
   
   .logo-img { display: block; height: 90px; width: auto; object-fit: contain; }
   .logo-img-footer { height: 55px; filter: brightness(0) invert(1); }
   @media (max-width: 768px) { .logo-img { height: 68px; } .logo-img-footer { height: 45px; } }
+    .characteristics-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 20px; }
+    .characteristics-grid .card { grid-column: span 2; }
+    .char-card-4 { grid-column: 2 / span 2; }
+    .char-card-5 { grid-column: 4 / span 2; }
+    @media (max-width: 980px) {
+      .characteristics-grid { grid-template-columns: 1fr 1fr; }
+      .characteristics-grid .card,
+      .char-card-4,
+      .char-card-5 { grid-column: auto; }
+    }
+    @media (max-width: 768px) {
+      .characteristics-grid { grid-template-columns: 1fr; }
+    }
 </style>
 </head>
 <body>
@@ -150,9 +161,15 @@
 <!-- HERO -->
 <section class="industries-hero">
   <div class="wrap reveal in">
-    <div class="eyebrow">القطاعات التي ندعمها</div>
-    <h1>حلول تشغيلية مصممة للقطاعات التي تعتمد على الحركة والتوصيل</h1>
-    <p>تدعم تودوما لوجستيك مجموعة من القطاعات التي تعتمد على الكفاءة التشغيلية وسرعة التنفيذ واستمرارية الخدمة، من خلال حلول متخصصة في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي.</p>
+    <h1>القطاعات التي نخدمها</h1>
+    <p>تقدم تودوما لوجستيك خدماتها لعدد من القطاعات التي تعتمد على العمليات اللوجستية وإدارة الأساطيل وحركة المركبات في أنشطتها اليومية. وتوضح هذه الصفحة القطاعات التي تعمل ضمنها الشركة، مع بيان طبيعة البيئة التشغيلية لكل قطاع، دون أن يعني ذلك اختلاف نطاق الخدمات الأساسية المقدمة.</p>
+  </div>
+</section>
+
+<!-- SECTION 2 INTRO -->
+<section class="section" style="padding-bottom:0;">
+  <div class="wrap reveal">
+    <p style="max-width:760px;">تعمل تودوما لوجستيك مع مجموعة من القطاعات ضمن بيئات تشغيلية متنوعة. وتوضح القطاعات التالية أمثلة لمجالات التطبيق التي تقدم الشركة خدماتها ضمنها.</p>
   </div>
 </section>
 
@@ -161,18 +178,8 @@
   <div class="wrap industry-inner reveal">
     <div>
       <div class="ind-num">01</div>
-      <span class="ind-tag">سوق أساسي</span>
       <h2>شركات التوصيل والتجارة السريعة</h2>
-      <p>تعتمد شركات التوصيل والتجارة السريعة على سرعة التنفيذ واستمرارية العمليات اليومية. تساعد تودوما لوجستيك هذه الشركات على إدارة الأساطيل وتشغيل عمليات التوصيل بكفاءة أعلى مع دعم الاستقرار التشغيلي وتحسين الأداء.</p>
-      <div class="related-services">
-        <h4>الخدمات المرتبطة</h4>
-        <div class="service-tags">
-          <span class="stag">إدارة عمليات الأسطول</span>
-          <span class="stag">إدارة عمليات التوصيل</span>
-          <span class="stag">مراقبة الأداء والتقارير</span>
-          <span class="stag">الدعم التشغيلي الميداني</span>
-        </div>
-      </div>
+      <p>يشمل هذا القطاع الشركات التي تعتمد على تنفيذ عمليات التوصيل اليومية وإدارة أساطيل المركبات لدعم خدمات التجارة السريعة. وتتميز البيئة التشغيلية لهذا القطاع بتعدد الرحلات، وسرعة تنفيذ العمليات، والحاجة إلى متابعة مستمرة للأنشطة التشغيلية.</p>
     </div>
     <div class="ind-visual">
       <div class="ind-visual-inner iv-1">
@@ -230,18 +237,8 @@
     </div>
     <div>
       <div class="ind-num">02</div>
-      <span class="ind-tag">سوق أساسي</span>
       <h2>شركات التجارة الإلكترونية</h2>
-      <p>مع نمو الطلبات وتوسع نطاق التغطية، تحتاج شركات التجارة الإلكترونية إلى عمليات توصيل أكثر تنظيمًا وقابلية للتوسع. تقدم تودوما لوجستيك حلولًا تشغيلية تساعد على دعم النمو وتحسين كفاءة التنفيذ.</p>
-      <div class="related-services">
-        <h4>الخدمات المرتبطة</h4>
-        <div class="service-tags">
-          <span class="stag">إدارة عمليات التوصيل</span>
-          <span class="stag">مراقبة الأداء والتقارير</span>
-          <span class="stag">دعم توسيع الأسطول</span>
-          <span class="stag">الشحن الداخلي</span>
-        </div>
-      </div>
+      <p>يشمل هذا القطاع الشركات التي تعتمد على الخدمات اللوجستية لدعم عمليات تنفيذ الطلبات ونقل المنتجات إلى العملاء. وتتميز البيئة التشغيلية بتكامل حركة الطلبات مع عمليات النقل والتوزيع وإدارة الأساطيل.</p>
     </div>
   </div>
 </section>
@@ -252,16 +249,7 @@
     <div>
       <div class="ind-num">03</div>
       <h2>شركات توزيع المنتجات</h2>
-      <p>تعتمد شركات التوزيع على التنسيق المستمر بين المخزون والنقل والتسليم. تساعد تودوما لوجستيك على تحسين العمليات التشغيلية المرتبطة بالتوزيع ودعم استمرارية الحركة اليومية للمنتجات في قطاعات مثل مستلزمات التجميل، والسلع الاستهلاكية، والمواد الغذائية، والإلكترونيات.</p>
-      <div class="related-services">
-        <h4>الخدمات المرتبطة</h4>
-        <div class="service-tags">
-          <span class="stag">إدارة عمليات الأسطول</span>
-          <span class="stag">الدعم التشغيلي الميداني</span>
-          <span class="stag">مراقبة الأداء والتقارير</span>
-          <span class="stag">الشحن الداخلي</span>
-        </div>
-      </div>
+      <p>يشمل هذا القطاع الشركات التي تدير عمليات توزيع المنتجات بين مراكز التشغيل والعملاء أو نقاط البيع. وتعتمد البيئة التشغيلية على تخطيط وتنفيذ ومتابعة عمليات التوزيع وفق متطلبات التشغيل اليومية.</p>
     </div>
     <div class="ind-visual">
       <div class="ind-visual-inner iv-3">
@@ -318,40 +306,63 @@
     <div>
       <div class="ind-num">04</div>
       <h2>شركات اللوجستيات والنقل</h2>
-      <p>توفر تودوما لوجستيك دعمًا تشغيليًا مرنًا للشركات العاملة في مجال اللوجستيات والنقل، بما يساعد على تعزيز الكفاءة التشغيلية وتحسين إدارة العمليات اليومية.</p>
-      <div class="related-services">
-        <h4>الخدمات المرتبطة</h4>
-        <div class="service-tags">
-          <span class="stag">إدارة عمليات الأسطول</span>
-          <span class="stag">دعم توسيع الأسطول</span>
-          <span class="stag">الدعم التشغيلي الميداني</span>
-          <span class="stag">مراقبة الأداء والتقارير</span>
-        </div>
+      <p>يشمل هذا القطاع الشركات التي تدير عمليات النقل والخدمات اللوجستية ضمن سلاسل الإمداد وحركة البضائع. وتتميز البيئة التشغيلية بتعدد مسارات التشغيل، وإدارة الأساطيل، ومتابعة العمليات التشغيلية عبر مراحل التنفيذ المختلفة.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: OPERATIONAL CHARACTERISTICS -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <h2>خصائص تشغيلية مشتركة</h2>
+      <p>على الرغم من اختلاف طبيعة القطاعات التي تعمل ضمنها تودوما لوجستيك، إلا أنها قد تشترك في عدد من الخصائص التشغيلية التي تؤثر على إدارة العمليات اليومية.</p>
+    </div>
+    <div class="characteristics-grid reveal">
+      <div class="card"><h3>تعدد مواقع التشغيل</h3>
+        <p>قد تشمل العمليات أكثر من موقع، مثل المكاتب أو المستودعات أو مراكز التشغيل أو نقاط التوزيع.</p>
+      </div>
+      <div class="card"><h3>حركة المركبات</h3>
+        <p>تعتمد العمليات على تنفيذ حركة المركبات بين مواقع مختلفة وفق متطلبات التشغيل.</p>
+      </div>
+      <div class="card"><h3>متابعة الأنشطة التشغيلية</h3>
+        <p>تتطلب العمليات متابعة تنفيذ الأنشطة التشغيلية خلال مراحل العمل المختلفة.</p>
+      </div>
+      <div class="card char-card-4"><h3>إدارة البيانات التشغيلية</h3>
+        <p>ينتج عن العمليات بيانات تشغيلية قد تُستخدم في المتابعة وإعداد التقارير.</p>
+      </div>
+      <div class="card char-card-5"><h3>اختلاف حجم العمليات</h3>
+        <p>قد تختلف طبيعة العمليات من حيث عدد المركبات أو مواقع التشغيل أو حجم النشاط وفق متطلبات كل مشروع.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COVERAGE -->
-<section class="coverage-band">
+<!-- SECTION 4: SERVICE APPLICABILITY -->
+<section class="section">
   <div class="wrap">
-    <h2>نطاق التغطية الحالي وخطة التوسع</h2>
-    <div class="coverage-grid reveal">
-      <div class="cov-card active">
-        <div class="cov-num">01</div>
-        <h3>المرحلة الحالية</h3>
-        <p>القاهرة الكبرى — القاهرة والجيزة</p>
-      </div>
-      <div class="cov-card">
-        <div class="cov-num">02</div>
-        <h3>المرحلة التالية</h3>
-        <p>جميع محافظات مصر</p>
-      </div>
-      <div class="cov-card">
-        <div class="cov-num">03</div>
-        <h3>المرحلة المستقبلية</h3>
-        <p>الشحن الدولي</p>
-      </div>
+    <div class="section-head center reveal">
+      <p>تقدم تودوما لوجستيك خدماتها وفق متطلبات كل مشروع وطبيعة عملياته التشغيلية. ولذلك، قد يختلف نطاق الخدمات المطبقة من مشروع إلى آخر، حتى عند العمل ضمن القطاع نفسه.</p>
+      <p>ولا يعني إدراج قطاع ضمن هذه الصفحة أن جميع الخدمات المقدمة من الشركة تنطبق عليه بالضرورة، وإنما يوضح أن هذا القطاع يمثل أحد مجالات التطبيق التي يمكن تقديم الخدمات ضمنها وفق متطلبات المشروع.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: SCOPE BOUNDARIES -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p>توضح القطاعات الواردة في هذه الصفحة أمثلة لمجالات التشغيل التي تقدم تودوما لوجستيك خدماتها ضمنها، ولا تمثل حصرًا لجميع القطاعات أو الأنشطة التي يمكن أن تعمل الشركة معها.</p>
+      <p>كما أن تصنيف أي مشروع ضمن أحد هذه القطاعات لا يغيّر نطاق الخدمات المقدمة أو حدود مسؤولياتها، والتي تظل محددة وفق نطاق كل خدمة على حدة.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: CLOSING TRANSITION -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p>توضح هذه الصفحة القطاعات التي تقدم تودوما لوجستيك خدماتها ضمنها، بينما تعرض صفحات الخدمات نطاق كل خدمة ومسؤولياتها بصورة مستقلة. ويمكن الرجوع إلى صفحات الخدمات للاطلاع على تفاصيل كل خدمة ونطاق تطبيقها.</p>
     </div>
   </div>
 </section>
@@ -380,7 +391,7 @@
         <a href="index.html" class="logo logo-white">
           <img src="logo.png" alt="تودوما لوجستيك — TODOMA LOGISTICS" class="logo-img logo-img-footer" height="55">
         </a>
-        <p>شريكك في إدارة الأساطيل وعمليات التوصيل والشحن الداخلي في القاهرة الكبرى.</p>
+        <p>شريكك في إدارة الأساطيل وعمليات التوصيل في القاهرة الكبرى.</p>
       </div>
       <div>
         <h4>روابط سريعة</h4>
