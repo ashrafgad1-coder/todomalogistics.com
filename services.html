@@ -127,6 +127,14 @@
     .choose-table td:last-child { white-space: nowrap; font-weight: 600; }
     .choose-table td a { color: var(--orange); text-decoration: none; }
     .choose-table td a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      .choose-table thead { display: none; }
+      .choose-table, .choose-table tbody, .choose-table tr, .choose-table td { display: block; width: 100%; }
+      .choose-table tr { border-bottom: 1px solid var(--border); }
+      .choose-table tr:last-child { border-bottom: none; }
+      .choose-table td { border-bottom: none; padding: 8px 20px; }
+      .choose-table td:last-child { white-space: normal; }
+    }
 </style>
 </head>
 <body>
@@ -143,6 +151,7 @@
       <a href="services.html" style="opacity:1;font-weight:700;">خدماتنا</a>
       <a href="industries.html">القطاعات</a>
       <a href="blog.html">المقالات</a>
+      <a href="academy/index.html">الأكاديمية</a>
       <a href="contact.html">تواصل معنا</a>
     </nav>
     <div class="nav-actions">
@@ -157,6 +166,7 @@
     <a href="services.html">خدماتنا</a>
     <a href="industries.html">القطاعات</a>
     <a href="blog.html">المقالات</a>
+    <a href="academy/index.html">الأكاديمية</a>
     <a href="contact.html">تواصل معنا</a>
     <a href="contact.html" class="btn btn-primary">طلب استشارة</a>
   </div>
@@ -346,6 +356,7 @@
         <a href="services.html">خدماتنا</a>
         <a href="industries.html">القطاعات</a>
         <a href="blog.html">المقالات</a>
+        <a href="academy/index.html">الأكاديمية</a>
         <a href="contact.html">تواصل معنا</a>
       </div>
       <div>
