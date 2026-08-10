@@ -1,0 +1,12 @@
+<!-- أضف هذه الروابط داخل <urlset> في sitemap.xml الحالي بالموقع -->
+  <url><loc>https://todomalogistics.com/academy/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://todomalogistics.com/academy/delivery-operations-basics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/how-to-start-delivery-driver.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/daily-trip-management.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/route-planning-time-management.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/handling-customers-delivery.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/order-problems-returns.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/driver-performance-metrics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/delivery-safety-discipline.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/operations-supervisor-role.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://todomalogistics.com/academy/operations-coordination-basics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
