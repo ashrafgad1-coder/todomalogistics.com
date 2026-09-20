@@ -146,22 +146,6 @@
   </url>
 
   <url>
-    <loc>https://todomalogistics.com/contact.html</loc>
-    <lastmod>2026-08-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://todomalogistics.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://todomalogistics.com/en/contact.html"/>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://todomalogistics.com/en/contact.html</loc>
-    <lastmod>2026-08-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://todomalogistics.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://todomalogistics.com/en/contact.html"/>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://todomalogistics.com/blog.html</loc>
     <lastmod>2026-08-16</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://todomalogistics.com/blog.html"/>

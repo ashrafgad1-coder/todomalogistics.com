@@ -1,15 +1,17 @@
-# حزمة الرفع النهائية — أكاديمية تودوما (محدّثة)
+# TODOMA Logistics — Upload Notes
 
-ارفع الملفات مع الحفاظ على البنية:
+هذه الحزمة مبنية من المستودع الأصلي، بعد تنظيف بيانات الاتصال القديمة وتوحيد الواجهة.
 
-- `academy/` → مجلد جديد في جذر الموقع (الصفحة الرئيسية + 10 مقالات).
-- صفحات الجذر (استبدال) — وكلها تحمل رابط «الأكاديمية» في Header + Mobile + Footer:
-  `index.html` · `about.html` · `services.html` · `industries.html` · `blog.html` · `contact.html` · `third-party-logistics.html` · `fleet-management.html`
-  (services/industries بهما أيضًا إصلاحا QA-031/QA-032.)
+## ما تم تغييره
+- إزالة صفحة `contact.html` العربية و`en/contact.html` الإنجليزية لأنها لم تعد مطلوبة في المرحلة الحالية.
+- إزالة روابط «تواصل معنا» وطلبات الاستشارة المرتبطة بهذه الصفحة من القوائم والتذييل والدعوات التجارية.
+- إزالة رقم الهاتف والعنوان القديمين وWhatsApp المرتبط بالرقم القديم.
+- الإبقاء على البريد `info@todomalogistics.com` كوسيلة اتصال مباشرة.
+- الإبقاء على روابط Facebook وInstagram وLinkedIn وX وYouTube.
+- الإبقاء على AdSense وGA4 وMicrosoft Clarity ونموذج/أكواد الموقع غير المرتبطة بصفحة التواصل.
+- حذف `academy-sitemap-snippet.xml` لأنه ليس Sitemap XML مستقلًا.
+- تحديث `sitemap.xml` ليتوافق مع الصفحات الفعلية بعد حذف صفحات التواصل.
+- تعديل الصياغات الرئيسية التي كانت توحي بتشغيل تجاري حالي، مع الحفاظ على هوية TODOMA وخطتها المستقبلية.
 
-## خطوتان يدويتان بعد الرفع
-1. **sitemap.xml:** ادمج محتوى `academy-sitemap-snippet.xml` داخل `<urlset>` في sitemap.xml الحي.
-2. **مقالات B2B المتبقية غير المرفقة** (المقالات الأخرى ما عدا fleet و3PL): أضِف في Nav وMobile وFooter بعد «المقالات»:
-   `<a href="academy/index.html">الأكاديمية</a>`
-
-> Content Lock (v3) — لم يتغيّر أي محتوى أو تصميم. الصفحات about/blog/contact أضيف لها الرابط فقط (لا شيء آخر).
+## الرفع
+ارفع محتويات مجلد `todomalogistics.com-main` إلى مستودع GitHub مع الحفاظ على البنية الحالية.
